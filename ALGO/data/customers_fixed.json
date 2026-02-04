@@ -1,0 +1,5002 @@
+[
+    {
+        "Customer ID": "ACC_1000",
+        "Date of Birth": "1991-12-15",
+        "Gender": "Male",
+        "Location": "Quang Ninh",
+        "Account balance": 7739000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 151000000,
+        "Transaction_Count": 484
+    },
+    {
+        "Customer ID": "ACC_1001",
+        "Date of Birth": "1973-06-30",
+        "Gender": "Female",
+        "Location": "Vung Tau",
+        "Account balance": 14000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 18
+    },
+    {
+        "Customer ID": "ACC_1002",
+        "Date of Birth": "1997-09-14",
+        "Gender": "Female",
+        "Location": "Binh Duong",
+        "Account balance": 7759000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 356000000,
+        "Transaction_Count": 151
+    },
+    {
+        "Customer ID": "ACC_1003",
+        "Date of Birth": "2004-05-03",
+        "Gender": "Female",
+        "Location": "Ho Chi Minh City",
+        "Account balance": 13000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 23
+    },
+    {
+        "Customer ID": "ACC_1004",
+        "Date of Birth": "1972-11-30",
+        "Gender": "Male",
+        "Location": "Hanoi",
+        "Account balance": 0,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 44
+    },
+    {
+        "Customer ID": "ACC_1005",
+        "Date of Birth": "1990-02-16",
+        "Gender": "Male",
+        "Location": "Hue",
+        "Account balance": 12000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 22
+    },
+    {
+        "Customer ID": "ACC_1006",
+        "Date of Birth": "1984-06-01",
+        "Gender": "Male",
+        "Location": "Da Nang",
+        "Account balance": 4378000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 375000000,
+        "Transaction_Count": 439
+    },
+    {
+        "Customer ID": "ACC_1007",
+        "Date of Birth": "2000-02-15",
+        "Gender": "Female",
+        "Location": "Thanh Hoa",
+        "Account balance": 8469000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 366000000,
+        "Transaction_Count": 357
+    },
+    {
+        "Customer ID": "ACC_1008",
+        "Date of Birth": "1996-12-14",
+        "Gender": "Male",
+        "Location": "Nha Trang",
+        "Account balance": 9232000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 315000000,
+        "Transaction_Count": 213
+    },
+    {
+        "Customer ID": "ACC_1009",
+        "Date of Birth": "2001-01-31",
+        "Gender": "Female",
+        "Location": "Ho Chi Minh City",
+        "Account balance": 6706000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 225000000,
+        "Transaction_Count": 145
+    },
+    {
+        "Customer ID": "ACC_1010",
+        "Date of Birth": "2004-11-29",
+        "Gender": "Male",
+        "Location": "Binh Duong",
+        "Account balance": 5846000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 370000000,
+        "Transaction_Count": 421
+    },
+    {
+        "Customer ID": "ACC_1011",
+        "Date of Birth": "1995-02-22",
+        "Gender": "Male",
+        "Location": "Hai Phong",
+        "Account balance": 3230000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 233000000,
+        "Transaction_Count": 493
+    },
+    {
+        "Customer ID": "ACC_1012",
+        "Date of Birth": "1990-04-05",
+        "Gender": "Female",
+        "Location": "Dong Nai",
+        "Account balance": 7281000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 233000000,
+        "Transaction_Count": 171
+    },
+    {
+        "Customer ID": "ACC_1013",
+        "Date of Birth": "2001-07-09",
+        "Gender": "Male",
+        "Location": "Thanh Hoa",
+        "Account balance": 5421000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 60000000,
+        "Transaction_Count": 220
+    },
+    {
+        "Customer ID": "ACC_1014",
+        "Date of Birth": "1981-04-24",
+        "Gender": "Female",
+        "Location": "Vung Tau",
+        "Account balance": 3940000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 7000000,
+        "Transaction_Count": 170
+    },
+    {
+        "Customer ID": "ACC_1015",
+        "Date of Birth": "1972-04-19",
+        "Gender": "Male",
+        "Location": "Hai Phong",
+        "Account balance": 11000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 35
+    },
+    {
+        "Customer ID": "ACC_1016",
+        "Date of Birth": "1999-11-30",
+        "Gender": "Male",
+        "Location": "Vung Tau",
+        "Account balance": 8850000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 463000000,
+        "Transaction_Count": 301
+    },
+    {
+        "Customer ID": "ACC_1017",
+        "Date of Birth": "1986-03-15",
+        "Gender": "Male",
+        "Location": "Can Tho",
+        "Account balance": 6147000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 9000000,
+        "Transaction_Count": 324
+    },
+    {
+        "Customer ID": "ACC_1018",
+        "Date of Birth": "1978-08-29",
+        "Gender": "Female",
+        "Location": "Binh Duong",
+        "Account balance": 9839000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 8000000,
+        "Transaction_Count": 132
+    },
+    {
+        "Customer ID": "ACC_1019",
+        "Date of Birth": "1993-04-16",
+        "Gender": "Female",
+        "Location": "Nha Trang",
+        "Account balance": 490000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 322000000,
+        "Transaction_Count": 16
+    },
+    {
+        "Customer ID": "ACC_1020",
+        "Date of Birth": "1970-01-06",
+        "Gender": "Male",
+        "Location": "Hue",
+        "Account balance": 6831000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 6000000,
+        "Transaction_Count": 272
+    },
+    {
+        "Customer ID": "ACC_1021",
+        "Date of Birth": "1973-07-02",
+        "Gender": "Male",
+        "Location": "Hai Phong",
+        "Account balance": 1000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 22
+    },
+    {
+        "Customer ID": "ACC_1022",
+        "Date of Birth": "1987-01-02",
+        "Gender": "Male",
+        "Location": "Quang Ninh",
+        "Account balance": 7000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 35
+    },
+    {
+        "Customer ID": "ACC_1023",
+        "Date of Birth": "1978-05-20",
+        "Gender": "Male",
+        "Location": "Ho Chi Minh City",
+        "Account balance": 4000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 3
+    },
+    {
+        "Customer ID": "ACC_1024",
+        "Date of Birth": "1990-10-02",
+        "Gender": "Male",
+        "Location": "Hai Phong",
+        "Account balance": 2000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 21
+    },
+    {
+        "Customer ID": "ACC_1025",
+        "Date of Birth": "1975-09-01",
+        "Gender": "Female",
+        "Location": "Hai Phong",
+        "Account balance": 4038000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 48000000,
+        "Transaction_Count": 193
+    },
+    {
+        "Customer ID": "ACC_1026",
+        "Date of Birth": "1970-02-25",
+        "Gender": "Male",
+        "Location": "Vung Tau",
+        "Account balance": 12000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 37
+    },
+    {
+        "Customer ID": "ACC_1027",
+        "Date of Birth": "1973-07-13",
+        "Gender": "Male",
+        "Location": "Thanh Hoa",
+        "Account balance": 6383000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 439000000,
+        "Transaction_Count": 80
+    },
+    {
+        "Customer ID": "ACC_1028",
+        "Date of Birth": "1979-11-23",
+        "Gender": "Female",
+        "Location": "Hai Phong",
+        "Account balance": 1502000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 181000000,
+        "Transaction_Count": 470
+    },
+    {
+        "Customer ID": "ACC_1029",
+        "Date of Birth": "1975-08-09",
+        "Gender": "Male",
+        "Location": "Can Tho",
+        "Account balance": 3933000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 491000000,
+        "Transaction_Count": 168
+    },
+    {
+        "Customer ID": "ACC_1030",
+        "Date of Birth": "1993-03-25",
+        "Gender": "Female",
+        "Location": "Hue",
+        "Account balance": 4631000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 417000000,
+        "Transaction_Count": 147
+    },
+    {
+        "Customer ID": "ACC_1031",
+        "Date of Birth": "1976-08-04",
+        "Gender": "Male",
+        "Location": "Da Nang",
+        "Account balance": 8000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 20
+    },
+    {
+        "Customer ID": "ACC_1032",
+        "Date of Birth": "2002-08-18",
+        "Gender": "Male",
+        "Location": "Can Tho",
+        "Account balance": 976000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 352000000,
+        "Transaction_Count": 27
+    },
+    {
+        "Customer ID": "ACC_1033",
+        "Date of Birth": "1998-09-12",
+        "Gender": "Female",
+        "Location": "Hue",
+        "Account balance": 7010000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 47000000,
+        "Transaction_Count": 461
+    },
+    {
+        "Customer ID": "ACC_1034",
+        "Date of Birth": "1997-01-03",
+        "Gender": "Female",
+        "Location": "Hai Phong",
+        "Account balance": 2012000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 6000000,
+        "Transaction_Count": 393
+    },
+    {
+        "Customer ID": "ACC_1035",
+        "Date of Birth": "1972-03-03",
+        "Gender": "Female",
+        "Location": "Vung Tau",
+        "Account balance": 9304000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 100000000,
+        "Transaction_Count": 436
+    },
+    {
+        "Customer ID": "ACC_1036",
+        "Date of Birth": "1979-05-11",
+        "Gender": "Male",
+        "Location": "Quang Ninh",
+        "Account balance": 8989000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 339000000,
+        "Transaction_Count": 218
+    },
+    {
+        "Customer ID": "ACC_1037",
+        "Date of Birth": "1994-09-07",
+        "Gender": "Female",
+        "Location": "Can Tho",
+        "Account balance": 8548000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 239000000,
+        "Transaction_Count": 100
+    },
+    {
+        "Customer ID": "ACC_1038",
+        "Date of Birth": "1989-01-05",
+        "Gender": "Male",
+        "Location": "Hanoi",
+        "Account balance": 6000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 11
+    },
+    {
+        "Customer ID": "ACC_1039",
+        "Date of Birth": "2004-08-28",
+        "Gender": "Female",
+        "Location": "Dong Nai",
+        "Account balance": 12000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 0
+    },
+    {
+        "Customer ID": "ACC_1040",
+        "Date of Birth": "1995-10-29",
+        "Gender": "Male",
+        "Location": "Hai Phong",
+        "Account balance": 0,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 30
+    },
+    {
+        "Customer ID": "ACC_1041",
+        "Date of Birth": "1998-07-11",
+        "Gender": "Female",
+        "Location": "Dong Nai",
+        "Account balance": 9216000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 367000000,
+        "Transaction_Count": 85
+    },
+    {
+        "Customer ID": "ACC_1042",
+        "Date of Birth": "1992-04-17",
+        "Gender": "Male",
+        "Location": "Binh Duong",
+        "Account balance": 6107000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 463000000,
+        "Transaction_Count": 460
+    },
+    {
+        "Customer ID": "ACC_1043",
+        "Date of Birth": "1995-08-25",
+        "Gender": "Male",
+        "Location": "Ho Chi Minh City",
+        "Account balance": 3000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 16
+    },
+    {
+        "Customer ID": "ACC_1044",
+        "Date of Birth": "1996-01-22",
+        "Gender": "Female",
+        "Location": "Quang Ninh",
+        "Account balance": 15000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 0
+    },
+    {
+        "Customer ID": "ACC_1045",
+        "Date of Birth": "1977-04-01",
+        "Gender": "Female",
+        "Location": "Dong Nai",
+        "Account balance": 1831000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 358000000,
+        "Transaction_Count": 239
+    },
+    {
+        "Customer ID": "ACC_1046",
+        "Date of Birth": "1974-10-17",
+        "Gender": "Female",
+        "Location": "Quang Ninh",
+        "Account balance": 8000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 35
+    },
+    {
+        "Customer ID": "ACC_1047",
+        "Date of Birth": "1980-10-07",
+        "Gender": "Male",
+        "Location": "Da Nang",
+        "Account balance": 2549000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 8000000,
+        "Transaction_Count": 65
+    },
+    {
+        "Customer ID": "ACC_1048",
+        "Date of Birth": "1992-07-01",
+        "Gender": "Female",
+        "Location": "Can Tho",
+        "Account balance": 6552000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 403000000,
+        "Transaction_Count": 481
+    },
+    {
+        "Customer ID": "ACC_1049",
+        "Date of Birth": "1988-09-15",
+        "Gender": "Female",
+        "Location": "Hanoi",
+        "Account balance": 8692000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 412000000,
+        "Transaction_Count": 407
+    },
+    {
+        "Customer ID": "ACC_1050",
+        "Date of Birth": "1990-01-01",
+        "Gender": "Male",
+        "Location": "Hanoi",
+        "Account balance": 3793000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 445000000,
+        "Transaction_Count": 166
+    },
+    {
+        "Customer ID": "ACC_1051",
+        "Date of Birth": "1995-03-30",
+        "Gender": "Female",
+        "Location": "Hanoi",
+        "Account balance": 8544000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 6000000,
+        "Transaction_Count": 357
+    },
+    {
+        "Customer ID": "ACC_1052",
+        "Date of Birth": "1992-03-02",
+        "Gender": "Male",
+        "Location": "Hue",
+        "Account balance": 8002000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 264000000,
+        "Transaction_Count": 387
+    },
+    {
+        "Customer ID": "ACC_1053",
+        "Date of Birth": "2002-12-11",
+        "Gender": "Male",
+        "Location": "Hai Phong",
+        "Account balance": 6872000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 15000000,
+        "Transaction_Count": 86
+    },
+    {
+        "Customer ID": "ACC_1054",
+        "Date of Birth": "1998-12-19",
+        "Gender": "Female",
+        "Location": "Hue",
+        "Account balance": 0,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 21
+    },
+    {
+        "Customer ID": "ACC_1055",
+        "Date of Birth": "1985-11-04",
+        "Gender": "Female",
+        "Location": "Hue",
+        "Account balance": 8746000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 209000000,
+        "Transaction_Count": 122
+    },
+    {
+        "Customer ID": "ACC_1056",
+        "Date of Birth": "1981-03-21",
+        "Gender": "Female",
+        "Location": "Quang Ninh",
+        "Account balance": 13000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 13
+    },
+    {
+        "Customer ID": "ACC_1057",
+        "Date of Birth": "1990-06-26",
+        "Gender": "Female",
+        "Location": "Hanoi",
+        "Account balance": 6833000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 368
+    },
+    {
+        "Customer ID": "ACC_1058",
+        "Date of Birth": "1983-07-05",
+        "Gender": "Female",
+        "Location": "Binh Duong",
+        "Account balance": 0,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 28
+    },
+    {
+        "Customer ID": "ACC_1059",
+        "Date of Birth": "2002-11-17",
+        "Gender": "Male",
+        "Location": "Hanoi",
+        "Account balance": 2900000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 144
+    },
+    {
+        "Customer ID": "ACC_1060",
+        "Date of Birth": "1989-10-20",
+        "Gender": "Male",
+        "Location": "Quang Ninh",
+        "Account balance": 13000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 28
+    },
+    {
+        "Customer ID": "ACC_1061",
+        "Date of Birth": "1999-08-03",
+        "Gender": "Male",
+        "Location": "Vung Tau",
+        "Account balance": 4000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 3
+    },
+    {
+        "Customer ID": "ACC_1062",
+        "Date of Birth": "1987-02-08",
+        "Gender": "Female",
+        "Location": "Vung Tau",
+        "Account balance": 4160000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 8000000,
+        "Transaction_Count": 423
+    },
+    {
+        "Customer ID": "ACC_1063",
+        "Date of Birth": "1971-04-19",
+        "Gender": "Female",
+        "Location": "Vung Tau",
+        "Account balance": 7987000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 8000000,
+        "Transaction_Count": 259
+    },
+    {
+        "Customer ID": "ACC_1064",
+        "Date of Birth": "2002-03-31",
+        "Gender": "Female",
+        "Location": "Da Nang",
+        "Account balance": 1209000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 57000000,
+        "Transaction_Count": 140
+    },
+    {
+        "Customer ID": "ACC_1065",
+        "Date of Birth": "1979-12-07",
+        "Gender": "Female",
+        "Location": "Ho Chi Minh City",
+        "Account balance": 6283000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 137000000,
+        "Transaction_Count": 424
+    },
+    {
+        "Customer ID": "ACC_1066",
+        "Date of Birth": "2005-08-08",
+        "Gender": "Male",
+        "Location": "Hanoi",
+        "Account balance": 4746000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 17000000,
+        "Transaction_Count": 215
+    },
+    {
+        "Customer ID": "ACC_1067",
+        "Date of Birth": "2005-05-24",
+        "Gender": "Female",
+        "Location": "Binh Duong",
+        "Account balance": 15000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 1
+    },
+    {
+        "Customer ID": "ACC_1068",
+        "Date of Birth": "1988-03-01",
+        "Gender": "Female",
+        "Location": "Binh Duong",
+        "Account balance": 9613000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 144000000,
+        "Transaction_Count": 170
+    },
+    {
+        "Customer ID": "ACC_1069",
+        "Date of Birth": "1979-12-12",
+        "Gender": "Female",
+        "Location": "Hanoi",
+        "Account balance": 7540000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 387000000,
+        "Transaction_Count": 333
+    },
+    {
+        "Customer ID": "ACC_1070",
+        "Date of Birth": "2003-01-12",
+        "Gender": "Female",
+        "Location": "Hai Phong",
+        "Account balance": 7456000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 7000000,
+        "Transaction_Count": 175
+    },
+    {
+        "Customer ID": "ACC_1071",
+        "Date of Birth": "1989-07-24",
+        "Gender": "Male",
+        "Location": "Vung Tau",
+        "Account balance": 2720000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 6000000,
+        "Transaction_Count": 460
+    },
+    {
+        "Customer ID": "ACC_1072",
+        "Date of Birth": "1988-12-24",
+        "Gender": "Female",
+        "Location": "Quang Ninh",
+        "Account balance": 3047000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 459000000,
+        "Transaction_Count": 467
+    },
+    {
+        "Customer ID": "ACC_1073",
+        "Date of Birth": "1990-08-21",
+        "Gender": "Male",
+        "Location": "Thanh Hoa",
+        "Account balance": 3612000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 15000000,
+        "Transaction_Count": 389
+    },
+    {
+        "Customer ID": "ACC_1074",
+        "Date of Birth": "2005-04-19",
+        "Gender": "Female",
+        "Location": "Nha Trang",
+        "Account balance": 6550000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 192000000,
+        "Transaction_Count": 248
+    },
+    {
+        "Customer ID": "ACC_1075",
+        "Date of Birth": "1977-03-05",
+        "Gender": "Female",
+        "Location": "Hanoi",
+        "Account balance": 6979000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 473000000,
+        "Transaction_Count": 449
+    },
+    {
+        "Customer ID": "ACC_1076",
+        "Date of Birth": "1991-05-19",
+        "Gender": "Female",
+        "Location": "Thanh Hoa",
+        "Account balance": 8478000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 46000000,
+        "Transaction_Count": 430
+    },
+    {
+        "Customer ID": "ACC_1077",
+        "Date of Birth": "1993-02-27",
+        "Gender": "Female",
+        "Location": "Dong Nai",
+        "Account balance": 5058000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 7000000,
+        "Transaction_Count": 314
+    },
+    {
+        "Customer ID": "ACC_1078",
+        "Date of Birth": "1985-04-18",
+        "Gender": "Female",
+        "Location": "Thanh Hoa",
+        "Account balance": 778000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 486000000,
+        "Transaction_Count": 4
+    },
+    {
+        "Customer ID": "ACC_1079",
+        "Date of Birth": "1978-02-23",
+        "Gender": "Female",
+        "Location": "Can Tho",
+        "Account balance": 7440000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 8000000,
+        "Transaction_Count": 384
+    },
+    {
+        "Customer ID": "ACC_1080",
+        "Date of Birth": "1980-05-05",
+        "Gender": "Female",
+        "Location": "Binh Duong",
+        "Account balance": 2747000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 5000000,
+        "Transaction_Count": 254
+    },
+    {
+        "Customer ID": "ACC_1081",
+        "Date of Birth": "1972-09-12",
+        "Gender": "Male",
+        "Location": "Hai Phong",
+        "Account balance": 3018000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 261000000,
+        "Transaction_Count": 248
+    },
+    {
+        "Customer ID": "ACC_1082",
+        "Date of Birth": "1990-03-31",
+        "Gender": "Female",
+        "Location": "Da Nang",
+        "Account balance": 5713000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 7000000,
+        "Transaction_Count": 131
+    },
+    {
+        "Customer ID": "ACC_1083",
+        "Date of Birth": "1999-06-19",
+        "Gender": "Male",
+        "Location": "Hue",
+        "Account balance": 9015000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 406000000,
+        "Transaction_Count": 332
+    },
+    {
+        "Customer ID": "ACC_1084",
+        "Date of Birth": "1980-09-01",
+        "Gender": "Male",
+        "Location": "Dong Nai",
+        "Account balance": 4056000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 62000000,
+        "Transaction_Count": 210
+    },
+    {
+        "Customer ID": "ACC_1085",
+        "Date of Birth": "1992-12-18",
+        "Gender": "Male",
+        "Location": "Can Tho",
+        "Account balance": 6356000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 165
+    },
+    {
+        "Customer ID": "ACC_1086",
+        "Date of Birth": "1974-09-13",
+        "Gender": "Male",
+        "Location": "Hanoi",
+        "Account balance": 13000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 21
+    },
+    {
+        "Customer ID": "ACC_1087",
+        "Date of Birth": "1995-05-11",
+        "Gender": "Male",
+        "Location": "Nha Trang",
+        "Account balance": 2000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 42
+    },
+    {
+        "Customer ID": "ACC_1088",
+        "Date of Birth": "1992-02-05",
+        "Gender": "Male",
+        "Location": "Binh Duong",
+        "Account balance": 2911000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 161
+    },
+    {
+        "Customer ID": "ACC_1089",
+        "Date of Birth": "2003-10-19",
+        "Gender": "Male",
+        "Location": "Hue",
+        "Account balance": 11000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 16
+    },
+    {
+        "Customer ID": "ACC_1090",
+        "Date of Birth": "1989-10-03",
+        "Gender": "Female",
+        "Location": "Da Nang",
+        "Account balance": 9000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 34
+    },
+    {
+        "Customer ID": "ACC_1091",
+        "Date of Birth": "1977-04-27",
+        "Gender": "Female",
+        "Location": "Hanoi",
+        "Account balance": 8842000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 174000000,
+        "Transaction_Count": 174
+    },
+    {
+        "Customer ID": "ACC_1092",
+        "Date of Birth": "1985-03-15",
+        "Gender": "Female",
+        "Location": "Hai Phong",
+        "Account balance": 4000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 7
+    },
+    {
+        "Customer ID": "ACC_1093",
+        "Date of Birth": "2005-10-21",
+        "Gender": "Male",
+        "Location": "Hanoi",
+        "Account balance": 3405000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 213000000,
+        "Transaction_Count": 240
+    },
+    {
+        "Customer ID": "ACC_1094",
+        "Date of Birth": "1984-12-13",
+        "Gender": "Female",
+        "Location": "Vung Tau",
+        "Account balance": 9000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 7
+    },
+    {
+        "Customer ID": "ACC_1095",
+        "Date of Birth": "1989-09-13",
+        "Gender": "Male",
+        "Location": "Vung Tau",
+        "Account balance": 9268000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 163000000,
+        "Transaction_Count": 459
+    },
+    {
+        "Customer ID": "ACC_1096",
+        "Date of Birth": "1971-07-19",
+        "Gender": "Female",
+        "Location": "Dong Nai",
+        "Account balance": 5154000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 381000000,
+        "Transaction_Count": 323
+    },
+    {
+        "Customer ID": "ACC_1097",
+        "Date of Birth": "1994-05-11",
+        "Gender": "Female",
+        "Location": "Quang Ninh",
+        "Account balance": 3000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 2
+    },
+    {
+        "Customer ID": "ACC_1098",
+        "Date of Birth": "2002-11-10",
+        "Gender": "Female",
+        "Location": "Hai Phong",
+        "Account balance": 3214000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 6000000,
+        "Transaction_Count": 324
+    },
+    {
+        "Customer ID": "ACC_1099",
+        "Date of Birth": "2000-12-01",
+        "Gender": "Female",
+        "Location": "Binh Duong",
+        "Account balance": 15000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 6
+    },
+    {
+        "Customer ID": "ACC_1100",
+        "Date of Birth": "1999-04-21",
+        "Gender": "Male",
+        "Location": "Thanh Hoa",
+        "Account balance": 1000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 33
+    },
+    {
+        "Customer ID": "ACC_1101",
+        "Date of Birth": "1983-01-25",
+        "Gender": "Male",
+        "Location": "Hue",
+        "Account balance": 5942000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 392000000,
+        "Transaction_Count": 361
+    },
+    {
+        "Customer ID": "ACC_1102",
+        "Date of Birth": "1976-02-18",
+        "Gender": "Male",
+        "Location": "Binh Duong",
+        "Account balance": 7377000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 5000000,
+        "Transaction_Count": 374
+    },
+    {
+        "Customer ID": "ACC_1103",
+        "Date of Birth": "1986-08-08",
+        "Gender": "Male",
+        "Location": "Quang Ninh",
+        "Account balance": 6810000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 177000000,
+        "Transaction_Count": 395
+    },
+    {
+        "Customer ID": "ACC_1104",
+        "Date of Birth": "1970-01-01",
+        "Gender": "Female",
+        "Location": "Nha Trang",
+        "Account balance": 10000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 17
+    },
+    {
+        "Customer ID": "ACC_1105",
+        "Date of Birth": "1975-09-28",
+        "Gender": "Male",
+        "Location": "Da Nang",
+        "Account balance": 3679000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 5000000,
+        "Transaction_Count": 437
+    },
+    {
+        "Customer ID": "ACC_1106",
+        "Date of Birth": "1997-10-27",
+        "Gender": "Male",
+        "Location": "Hai Phong",
+        "Account balance": 3699000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 187
+    },
+    {
+        "Customer ID": "ACC_1107",
+        "Date of Birth": "1996-11-13",
+        "Gender": "Male",
+        "Location": "Thanh Hoa",
+        "Account balance": 4569000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 7000000,
+        "Transaction_Count": 58
+    },
+    {
+        "Customer ID": "ACC_1108",
+        "Date of Birth": "2000-05-06",
+        "Gender": "Female",
+        "Location": "Da Nang",
+        "Account balance": 8000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 26
+    },
+    {
+        "Customer ID": "ACC_1109",
+        "Date of Birth": "1985-02-07",
+        "Gender": "Male",
+        "Location": "Hanoi",
+        "Account balance": 6197000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 371000000,
+        "Transaction_Count": 372
+    },
+    {
+        "Customer ID": "ACC_1110",
+        "Date of Birth": "1990-06-15",
+        "Gender": "Male",
+        "Location": "Hai Phong",
+        "Account balance": 5000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 12
+    },
+    {
+        "Customer ID": "ACC_1111",
+        "Date of Birth": "1994-09-01",
+        "Gender": "Female",
+        "Location": "Can Tho",
+        "Account balance": 2771000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 493000000,
+        "Transaction_Count": 62
+    },
+    {
+        "Customer ID": "ACC_1112",
+        "Date of Birth": "1985-08-28",
+        "Gender": "Male",
+        "Location": "Da Nang",
+        "Account balance": 7701000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 195
+    },
+    {
+        "Customer ID": "ACC_1113",
+        "Date of Birth": "1972-08-29",
+        "Gender": "Female",
+        "Location": "Vung Tau",
+        "Account balance": 6381000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 233000000,
+        "Transaction_Count": 224
+    },
+    {
+        "Customer ID": "ACC_1114",
+        "Date of Birth": "1995-02-03",
+        "Gender": "Male",
+        "Location": "Quang Ninh",
+        "Account balance": 7933000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 455000000,
+        "Transaction_Count": 113
+    },
+    {
+        "Customer ID": "ACC_1115",
+        "Date of Birth": "1978-05-26",
+        "Gender": "Female",
+        "Location": "Hue",
+        "Account balance": 15000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 10
+    },
+    {
+        "Customer ID": "ACC_1116",
+        "Date of Birth": "1982-12-15",
+        "Gender": "Male",
+        "Location": "Binh Duong",
+        "Account balance": 0,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 43
+    },
+    {
+        "Customer ID": "ACC_1117",
+        "Date of Birth": "1976-01-17",
+        "Gender": "Male",
+        "Location": "Vung Tau",
+        "Account balance": 1511000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 219000000,
+        "Transaction_Count": 391
+    },
+    {
+        "Customer ID": "ACC_1118",
+        "Date of Birth": "1981-08-25",
+        "Gender": "Male",
+        "Location": "Quang Ninh",
+        "Account balance": 8260000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 336000000,
+        "Transaction_Count": 123
+    },
+    {
+        "Customer ID": "ACC_1119",
+        "Date of Birth": "1997-07-26",
+        "Gender": "Male",
+        "Location": "Hai Phong",
+        "Account balance": 8000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 4
+    },
+    {
+        "Customer ID": "ACC_1120",
+        "Date of Birth": "1998-07-17",
+        "Gender": "Male",
+        "Location": "Ho Chi Minh City",
+        "Account balance": 6394000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 463000000,
+        "Transaction_Count": 274
+    },
+    {
+        "Customer ID": "ACC_1121",
+        "Date of Birth": "1992-02-03",
+        "Gender": "Male",
+        "Location": "Dong Nai",
+        "Account balance": 12000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 33
+    },
+    {
+        "Customer ID": "ACC_1122",
+        "Date of Birth": "1998-10-05",
+        "Gender": "Male",
+        "Location": "Can Tho",
+        "Account balance": 6752000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 300000000,
+        "Transaction_Count": 174
+    },
+    {
+        "Customer ID": "ACC_1123",
+        "Date of Birth": "1984-09-14",
+        "Gender": "Female",
+        "Location": "Hue",
+        "Account balance": 6774000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 178000000,
+        "Transaction_Count": 88
+    },
+    {
+        "Customer ID": "ACC_1124",
+        "Date of Birth": "1975-07-03",
+        "Gender": "Female",
+        "Location": "Vung Tau",
+        "Account balance": 774000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 347000000,
+        "Transaction_Count": 37
+    },
+    {
+        "Customer ID": "ACC_1125",
+        "Date of Birth": "2002-12-19",
+        "Gender": "Female",
+        "Location": "Can Tho",
+        "Account balance": 3000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 4
+    },
+    {
+        "Customer ID": "ACC_1126",
+        "Date of Birth": "1986-07-21",
+        "Gender": "Female",
+        "Location": "Quang Ninh",
+        "Account balance": 8085000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 143000000,
+        "Transaction_Count": 206
+    },
+    {
+        "Customer ID": "ACC_1127",
+        "Date of Birth": "1974-02-03",
+        "Gender": "Male",
+        "Location": "Hanoi",
+        "Account balance": 3000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 38
+    },
+    {
+        "Customer ID": "ACC_1128",
+        "Date of Birth": "1990-11-09",
+        "Gender": "Female",
+        "Location": "Hai Phong",
+        "Account balance": 8000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 17
+    },
+    {
+        "Customer ID": "ACC_1129",
+        "Date of Birth": "2004-10-27",
+        "Gender": "Male",
+        "Location": "Binh Duong",
+        "Account balance": 14000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 48
+    },
+    {
+        "Customer ID": "ACC_1130",
+        "Date of Birth": "1996-01-30",
+        "Gender": "Female",
+        "Location": "Thanh Hoa",
+        "Account balance": 3086000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 7000000,
+        "Transaction_Count": 309
+    },
+    {
+        "Customer ID": "ACC_1131",
+        "Date of Birth": "1982-02-26",
+        "Gender": "Male",
+        "Location": "Thanh Hoa",
+        "Account balance": 15000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 49
+    },
+    {
+        "Customer ID": "ACC_1132",
+        "Date of Birth": "2002-02-25",
+        "Gender": "Female",
+        "Location": "Quang Ninh",
+        "Account balance": 8321000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 5000000,
+        "Transaction_Count": 328
+    },
+    {
+        "Customer ID": "ACC_1133",
+        "Date of Birth": "2001-08-09",
+        "Gender": "Male",
+        "Location": "Quang Ninh",
+        "Account balance": 3538000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 291
+    },
+    {
+        "Customer ID": "ACC_1134",
+        "Date of Birth": "1998-10-08",
+        "Gender": "Female",
+        "Location": "Can Tho",
+        "Account balance": 15000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 43
+    },
+    {
+        "Customer ID": "ACC_1135",
+        "Date of Birth": "1991-07-10",
+        "Gender": "Male",
+        "Location": "Binh Duong",
+        "Account balance": 5000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 38
+    },
+    {
+        "Customer ID": "ACC_1136",
+        "Date of Birth": "1996-05-08",
+        "Gender": "Female",
+        "Location": "Thanh Hoa",
+        "Account balance": 5018000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 5000000,
+        "Transaction_Count": 190
+    },
+    {
+        "Customer ID": "ACC_1137",
+        "Date of Birth": "1974-03-03",
+        "Gender": "Male",
+        "Location": "Binh Duong",
+        "Account balance": 0,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 47
+    },
+    {
+        "Customer ID": "ACC_1138",
+        "Date of Birth": "1992-06-17",
+        "Gender": "Female",
+        "Location": "Dong Nai",
+        "Account balance": 1078000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 319000000,
+        "Transaction_Count": 206
+    },
+    {
+        "Customer ID": "ACC_1139",
+        "Date of Birth": "1999-10-21",
+        "Gender": "Female",
+        "Location": "Hue",
+        "Account balance": 1000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 21
+    },
+    {
+        "Customer ID": "ACC_1140",
+        "Date of Birth": "1999-01-07",
+        "Gender": "Male",
+        "Location": "Nha Trang",
+        "Account balance": 8024000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 5000000,
+        "Transaction_Count": 280
+    },
+    {
+        "Customer ID": "ACC_1141",
+        "Date of Birth": "1994-11-23",
+        "Gender": "Female",
+        "Location": "Dong Nai",
+        "Account balance": 7916000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 252000000,
+        "Transaction_Count": 94
+    },
+    {
+        "Customer ID": "ACC_1142",
+        "Date of Birth": "1989-01-14",
+        "Gender": "Female",
+        "Location": "Da Nang",
+        "Account balance": 11000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 11
+    },
+    {
+        "Customer ID": "ACC_1143",
+        "Date of Birth": "1977-01-16",
+        "Gender": "Male",
+        "Location": "Hue",
+        "Account balance": 0,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 24
+    },
+    {
+        "Customer ID": "ACC_1144",
+        "Date of Birth": "1995-11-25",
+        "Gender": "Male",
+        "Location": "Thanh Hoa",
+        "Account balance": 4000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 18
+    },
+    {
+        "Customer ID": "ACC_1145",
+        "Date of Birth": "2002-09-08",
+        "Gender": "Male",
+        "Location": "Can Tho",
+        "Account balance": 11000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 14
+    },
+    {
+        "Customer ID": "ACC_1146",
+        "Date of Birth": "2005-08-14",
+        "Gender": "Male",
+        "Location": "Hai Phong",
+        "Account balance": 747000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 68000000,
+        "Transaction_Count": 16
+    },
+    {
+        "Customer ID": "ACC_1147",
+        "Date of Birth": "1984-12-07",
+        "Gender": "Female",
+        "Location": "Can Tho",
+        "Account balance": 10000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 29
+    },
+    {
+        "Customer ID": "ACC_1148",
+        "Date of Birth": "2005-09-17",
+        "Gender": "Female",
+        "Location": "Vung Tau",
+        "Account balance": 0,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 1
+    },
+    {
+        "Customer ID": "ACC_1149",
+        "Date of Birth": "1992-08-26",
+        "Gender": "Male",
+        "Location": "Binh Duong",
+        "Account balance": 1217000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 426000000,
+        "Transaction_Count": 106
+    },
+    {
+        "Customer ID": "ACC_1150",
+        "Date of Birth": "2002-01-18",
+        "Gender": "Male",
+        "Location": "Quang Ninh",
+        "Account balance": 3650000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 6000000,
+        "Transaction_Count": 178
+    },
+    {
+        "Customer ID": "ACC_1151",
+        "Date of Birth": "1978-11-17",
+        "Gender": "Female",
+        "Location": "Can Tho",
+        "Account balance": 7432000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 426000000,
+        "Transaction_Count": 122
+    },
+    {
+        "Customer ID": "ACC_1152",
+        "Date of Birth": "1988-02-05",
+        "Gender": "Female",
+        "Location": "Hanoi",
+        "Account balance": 8118000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 54000000,
+        "Transaction_Count": 242
+    },
+    {
+        "Customer ID": "ACC_1153",
+        "Date of Birth": "2005-09-20",
+        "Gender": "Male",
+        "Location": "Quang Ninh",
+        "Account balance": 7000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 20
+    },
+    {
+        "Customer ID": "ACC_1154",
+        "Date of Birth": "1995-09-22",
+        "Gender": "Female",
+        "Location": "Dong Nai",
+        "Account balance": 3281000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 55
+    },
+    {
+        "Customer ID": "ACC_1155",
+        "Date of Birth": "1978-12-13",
+        "Gender": "Male",
+        "Location": "Binh Duong",
+        "Account balance": 9403000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 435000000,
+        "Transaction_Count": 197
+    },
+    {
+        "Customer ID": "ACC_1156",
+        "Date of Birth": "1982-06-14",
+        "Gender": "Female",
+        "Location": "Vung Tau",
+        "Account balance": 6000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 36
+    },
+    {
+        "Customer ID": "ACC_1157",
+        "Date of Birth": "1986-06-21",
+        "Gender": "Male",
+        "Location": "Vung Tau",
+        "Account balance": 7215000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 371000000,
+        "Transaction_Count": 220
+    },
+    {
+        "Customer ID": "ACC_1158",
+        "Date of Birth": "1982-03-05",
+        "Gender": "Female",
+        "Location": "Vung Tau",
+        "Account balance": 4000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 7000000,
+        "Transaction_Count": 47
+    },
+    {
+        "Customer ID": "ACC_1159",
+        "Date of Birth": "1997-02-13",
+        "Gender": "Male",
+        "Location": "Vung Tau",
+        "Account balance": 4402000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 357000000,
+        "Transaction_Count": 358
+    },
+    {
+        "Customer ID": "ACC_1160",
+        "Date of Birth": "1999-02-22",
+        "Gender": "Female",
+        "Location": "Hanoi",
+        "Account balance": 2000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 13
+    },
+    {
+        "Customer ID": "ACC_1161",
+        "Date of Birth": "1977-08-18",
+        "Gender": "Female",
+        "Location": "Da Nang",
+        "Account balance": 6000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 5
+    },
+    {
+        "Customer ID": "ACC_1162",
+        "Date of Birth": "1987-08-16",
+        "Gender": "Male",
+        "Location": "Can Tho",
+        "Account balance": 6303000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 105
+    },
+    {
+        "Customer ID": "ACC_1163",
+        "Date of Birth": "1978-03-19",
+        "Gender": "Male",
+        "Location": "Quang Ninh",
+        "Account balance": 9000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 41
+    },
+    {
+        "Customer ID": "ACC_1164",
+        "Date of Birth": "1991-10-27",
+        "Gender": "Female",
+        "Location": "Binh Duong",
+        "Account balance": 3813000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 328000000,
+        "Transaction_Count": 166
+    },
+    {
+        "Customer ID": "ACC_1165",
+        "Date of Birth": "2002-04-05",
+        "Gender": "Male",
+        "Location": "Dong Nai",
+        "Account balance": 5405000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 396000000,
+        "Transaction_Count": 429
+    },
+    {
+        "Customer ID": "ACC_1166",
+        "Date of Birth": "1984-11-01",
+        "Gender": "Female",
+        "Location": "Hanoi",
+        "Account balance": 6530000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 196000000,
+        "Transaction_Count": 313
+    },
+    {
+        "Customer ID": "ACC_1167",
+        "Date of Birth": "1989-09-23",
+        "Gender": "Male",
+        "Location": "Dong Nai",
+        "Account balance": 9000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 44
+    },
+    {
+        "Customer ID": "ACC_1168",
+        "Date of Birth": "1987-08-13",
+        "Gender": "Male",
+        "Location": "Quang Ninh",
+        "Account balance": 11000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 2
+    },
+    {
+        "Customer ID": "ACC_1169",
+        "Date of Birth": "1988-03-17",
+        "Gender": "Female",
+        "Location": "Thanh Hoa",
+        "Account balance": 6402000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 7000000,
+        "Transaction_Count": 374
+    },
+    {
+        "Customer ID": "ACC_1170",
+        "Date of Birth": "1985-06-19",
+        "Gender": "Male",
+        "Location": "Ho Chi Minh City",
+        "Account balance": 48000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 7000000,
+        "Transaction_Count": 31
+    },
+    {
+        "Customer ID": "ACC_1171",
+        "Date of Birth": "1975-04-01",
+        "Gender": "Female",
+        "Location": "Hue",
+        "Account balance": 2415000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 419
+    },
+    {
+        "Customer ID": "ACC_1172",
+        "Date of Birth": "1998-04-25",
+        "Gender": "Female",
+        "Location": "Binh Duong",
+        "Account balance": 13000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 43
+    },
+    {
+        "Customer ID": "ACC_1173",
+        "Date of Birth": "1991-07-19",
+        "Gender": "Male",
+        "Location": "Dong Nai",
+        "Account balance": 8245000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 5000000,
+        "Transaction_Count": 268
+    },
+    {
+        "Customer ID": "ACC_1174",
+        "Date of Birth": "1994-02-20",
+        "Gender": "Female",
+        "Location": "Binh Duong",
+        "Account balance": 6552000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 483000000,
+        "Transaction_Count": 50
+    },
+    {
+        "Customer ID": "ACC_1175",
+        "Date of Birth": "1986-11-24",
+        "Gender": "Female",
+        "Location": "Vung Tau",
+        "Account balance": 1000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 41
+    },
+    {
+        "Customer ID": "ACC_1176",
+        "Date of Birth": "1983-10-15",
+        "Gender": "Male",
+        "Location": "Quang Ninh",
+        "Account balance": 13000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 14
+    },
+    {
+        "Customer ID": "ACC_1177",
+        "Date of Birth": "1999-07-16",
+        "Gender": "Female",
+        "Location": "Can Tho",
+        "Account balance": 2000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 47
+    },
+    {
+        "Customer ID": "ACC_1178",
+        "Date of Birth": "1972-01-08",
+        "Gender": "Female",
+        "Location": "Quang Ninh",
+        "Account balance": 1460000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 53000000,
+        "Transaction_Count": 260
+    },
+    {
+        "Customer ID": "ACC_1179",
+        "Date of Birth": "2002-02-22",
+        "Gender": "Female",
+        "Location": "Da Nang",
+        "Account balance": 14000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 19
+    },
+    {
+        "Customer ID": "ACC_1180",
+        "Date of Birth": "1971-07-04",
+        "Gender": "Male",
+        "Location": "Hai Phong",
+        "Account balance": 14000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 30
+    },
+    {
+        "Customer ID": "ACC_1181",
+        "Date of Birth": "1986-03-26",
+        "Gender": "Male",
+        "Location": "Ho Chi Minh City",
+        "Account balance": 5286000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 6000000,
+        "Transaction_Count": 424
+    },
+    {
+        "Customer ID": "ACC_1182",
+        "Date of Birth": "1981-05-27",
+        "Gender": "Male",
+        "Location": "Da Nang",
+        "Account balance": 1940000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 329000000,
+        "Transaction_Count": 296
+    },
+    {
+        "Customer ID": "ACC_1183",
+        "Date of Birth": "1993-09-13",
+        "Gender": "Female",
+        "Location": "Hanoi",
+        "Account balance": 3262000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 398000000,
+        "Transaction_Count": 425
+    },
+    {
+        "Customer ID": "ACC_1184",
+        "Date of Birth": "1996-03-18",
+        "Gender": "Female",
+        "Location": "Ho Chi Minh City",
+        "Account balance": 9000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 42
+    },
+    {
+        "Customer ID": "ACC_1185",
+        "Date of Birth": "1998-01-23",
+        "Gender": "Female",
+        "Location": "Quang Ninh",
+        "Account balance": 4000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 36
+    },
+    {
+        "Customer ID": "ACC_1186",
+        "Date of Birth": "1977-10-13",
+        "Gender": "Female",
+        "Location": "Hai Phong",
+        "Account balance": 1000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 32
+    },
+    {
+        "Customer ID": "ACC_1187",
+        "Date of Birth": "1989-01-30",
+        "Gender": "Female",
+        "Location": "Da Nang",
+        "Account balance": 3308000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 6000000,
+        "Transaction_Count": 467
+    },
+    {
+        "Customer ID": "ACC_1188",
+        "Date of Birth": "1995-04-19",
+        "Gender": "Male",
+        "Location": "Dong Nai",
+        "Account balance": 5737000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 8000000,
+        "Transaction_Count": 68
+    },
+    {
+        "Customer ID": "ACC_1189",
+        "Date of Birth": "1985-07-23",
+        "Gender": "Female",
+        "Location": "Hai Phong",
+        "Account balance": 12000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 42
+    },
+    {
+        "Customer ID": "ACC_1190",
+        "Date of Birth": "1995-09-09",
+        "Gender": "Male",
+        "Location": "Quang Ninh",
+        "Account balance": 8000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 30
+    },
+    {
+        "Customer ID": "ACC_1191",
+        "Date of Birth": "1993-02-25",
+        "Gender": "Female",
+        "Location": "Ho Chi Minh City",
+        "Account balance": 12000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 5
+    },
+    {
+        "Customer ID": "ACC_1192",
+        "Date of Birth": "1986-01-23",
+        "Gender": "Female",
+        "Location": "Can Tho",
+        "Account balance": 8279000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 6000000,
+        "Transaction_Count": 331
+    },
+    {
+        "Customer ID": "ACC_1193",
+        "Date of Birth": "1971-09-02",
+        "Gender": "Female",
+        "Location": "Can Tho",
+        "Account balance": 0,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 6
+    },
+    {
+        "Customer ID": "ACC_1194",
+        "Date of Birth": "1990-06-11",
+        "Gender": "Female",
+        "Location": "Hanoi",
+        "Account balance": 2000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 29
+    },
+    {
+        "Customer ID": "ACC_1195",
+        "Date of Birth": "1973-05-27",
+        "Gender": "Male",
+        "Location": "Ho Chi Minh City",
+        "Account balance": 12000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 23
+    },
+    {
+        "Customer ID": "ACC_1196",
+        "Date of Birth": "1989-11-06",
+        "Gender": "Female",
+        "Location": "Da Nang",
+        "Account balance": 1000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 19
+    },
+    {
+        "Customer ID": "ACC_1197",
+        "Date of Birth": "1998-02-10",
+        "Gender": "Female",
+        "Location": "Nha Trang",
+        "Account balance": 13000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 38
+    },
+    {
+        "Customer ID": "ACC_1198",
+        "Date of Birth": "1976-11-27",
+        "Gender": "Female",
+        "Location": "Can Tho",
+        "Account balance": 2000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 36
+    },
+    {
+        "Customer ID": "ACC_1199",
+        "Date of Birth": "1982-07-15",
+        "Gender": "Male",
+        "Location": "Da Nang",
+        "Account balance": 15000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 5
+    },
+    {
+        "Customer ID": "ACC_1200",
+        "Date of Birth": "1970-07-09",
+        "Gender": "Male",
+        "Location": "Hai Phong",
+        "Account balance": 9000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 36
+    },
+    {
+        "Customer ID": "ACC_1201",
+        "Date of Birth": "1981-03-27",
+        "Gender": "Male",
+        "Location": "Hanoi",
+        "Account balance": 13000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 44
+    },
+    {
+        "Customer ID": "ACC_1202",
+        "Date of Birth": "1973-04-17",
+        "Gender": "Female",
+        "Location": "Nha Trang",
+        "Account balance": 4571000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 109
+    },
+    {
+        "Customer ID": "ACC_1203",
+        "Date of Birth": "1975-11-07",
+        "Gender": "Female",
+        "Location": "Hanoi",
+        "Account balance": 4382000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 369
+    },
+    {
+        "Customer ID": "ACC_1204",
+        "Date of Birth": "1977-09-17",
+        "Gender": "Female",
+        "Location": "Thanh Hoa",
+        "Account balance": 8000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 15
+    },
+    {
+        "Customer ID": "ACC_1205",
+        "Date of Birth": "1993-03-14",
+        "Gender": "Male",
+        "Location": "Vung Tau",
+        "Account balance": 70000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 5000000,
+        "Transaction_Count": 40
+    },
+    {
+        "Customer ID": "ACC_1206",
+        "Date of Birth": "1979-05-03",
+        "Gender": "Male",
+        "Location": "Binh Duong",
+        "Account balance": 6442000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 356
+    },
+    {
+        "Customer ID": "ACC_1207",
+        "Date of Birth": "1985-04-02",
+        "Gender": "Female",
+        "Location": "Quang Ninh",
+        "Account balance": 7016000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 204000000,
+        "Transaction_Count": 194
+    },
+    {
+        "Customer ID": "ACC_1208",
+        "Date of Birth": "2003-07-01",
+        "Gender": "Male",
+        "Location": "Binh Duong",
+        "Account balance": 6108000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 6000000,
+        "Transaction_Count": 377
+    },
+    {
+        "Customer ID": "ACC_1209",
+        "Date of Birth": "1971-10-20",
+        "Gender": "Female",
+        "Location": "Da Nang",
+        "Account balance": 3000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 18
+    },
+    {
+        "Customer ID": "ACC_1210",
+        "Date of Birth": "1997-02-18",
+        "Gender": "Male",
+        "Location": "Nha Trang",
+        "Account balance": 7499000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 163000000,
+        "Transaction_Count": 382
+    },
+    {
+        "Customer ID": "ACC_1211",
+        "Date of Birth": "1984-06-14",
+        "Gender": "Male",
+        "Location": "Ho Chi Minh City",
+        "Account balance": 10000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 6
+    },
+    {
+        "Customer ID": "ACC_1212",
+        "Date of Birth": "2001-10-09",
+        "Gender": "Female",
+        "Location": "Thanh Hoa",
+        "Account balance": 4476000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 398
+    },
+    {
+        "Customer ID": "ACC_1213",
+        "Date of Birth": "2003-09-27",
+        "Gender": "Male",
+        "Location": "Hanoi",
+        "Account balance": 2000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 47
+    },
+    {
+        "Customer ID": "ACC_1214",
+        "Date of Birth": "1984-12-02",
+        "Gender": "Male",
+        "Location": "Dong Nai",
+        "Account balance": 8592000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 195
+    },
+    {
+        "Customer ID": "ACC_1215",
+        "Date of Birth": "1975-11-07",
+        "Gender": "Female",
+        "Location": "Nha Trang",
+        "Account balance": 8000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 12
+    },
+    {
+        "Customer ID": "ACC_1216",
+        "Date of Birth": "1976-11-09",
+        "Gender": "Female",
+        "Location": "Thanh Hoa",
+        "Account balance": 5000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 50
+    },
+    {
+        "Customer ID": "ACC_1217",
+        "Date of Birth": "2003-12-25",
+        "Gender": "Male",
+        "Location": "Dong Nai",
+        "Account balance": 1000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 0
+    },
+    {
+        "Customer ID": "ACC_1218",
+        "Date of Birth": "1995-07-23",
+        "Gender": "Male",
+        "Location": "Hai Phong",
+        "Account balance": 815000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 320000000,
+        "Transaction_Count": 17
+    },
+    {
+        "Customer ID": "ACC_1219",
+        "Date of Birth": "1997-12-09",
+        "Gender": "Male",
+        "Location": "Hai Phong",
+        "Account balance": 9000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 5
+    },
+    {
+        "Customer ID": "ACC_1220",
+        "Date of Birth": "1981-09-13",
+        "Gender": "Female",
+        "Location": "Da Nang",
+        "Account balance": 306000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 50
+    },
+    {
+        "Customer ID": "ACC_1221",
+        "Date of Birth": "2000-07-19",
+        "Gender": "Female",
+        "Location": "Dong Nai",
+        "Account balance": 3000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 43
+    },
+    {
+        "Customer ID": "ACC_1222",
+        "Date of Birth": "1984-08-24",
+        "Gender": "Female",
+        "Location": "Can Tho",
+        "Account balance": 3489000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 452000000,
+        "Transaction_Count": 291
+    },
+    {
+        "Customer ID": "ACC_1223",
+        "Date of Birth": "1990-04-12",
+        "Gender": "Female",
+        "Location": "Ho Chi Minh City",
+        "Account balance": 8177000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 317000000,
+        "Transaction_Count": 368
+    },
+    {
+        "Customer ID": "ACC_1224",
+        "Date of Birth": "1976-08-14",
+        "Gender": "Female",
+        "Location": "Thanh Hoa",
+        "Account balance": 7346000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 454000000,
+        "Transaction_Count": 108
+    },
+    {
+        "Customer ID": "ACC_1225",
+        "Date of Birth": "1992-11-18",
+        "Gender": "Female",
+        "Location": "Hue",
+        "Account balance": 6000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 34
+    },
+    {
+        "Customer ID": "ACC_1226",
+        "Date of Birth": "1993-04-05",
+        "Gender": "Female",
+        "Location": "Quang Ninh",
+        "Account balance": 9000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 50
+    },
+    {
+        "Customer ID": "ACC_1227",
+        "Date of Birth": "1978-05-01",
+        "Gender": "Female",
+        "Location": "Da Nang",
+        "Account balance": 9312000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 7000000,
+        "Transaction_Count": 131
+    },
+    {
+        "Customer ID": "ACC_1228",
+        "Date of Birth": "1983-12-08",
+        "Gender": "Male",
+        "Location": "Hanoi",
+        "Account balance": 11000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 15
+    },
+    {
+        "Customer ID": "ACC_1229",
+        "Date of Birth": "2004-05-19",
+        "Gender": "Male",
+        "Location": "Hue",
+        "Account balance": 3316000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 57000000,
+        "Transaction_Count": 441
+    },
+    {
+        "Customer ID": "ACC_1230",
+        "Date of Birth": "1981-06-26",
+        "Gender": "Female",
+        "Location": "Thanh Hoa",
+        "Account balance": 4186000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 375000000,
+        "Transaction_Count": 222
+    },
+    {
+        "Customer ID": "ACC_1231",
+        "Date of Birth": "1982-02-02",
+        "Gender": "Female",
+        "Location": "Ho Chi Minh City",
+        "Account balance": 8566000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 490000000,
+        "Transaction_Count": 270
+    },
+    {
+        "Customer ID": "ACC_1232",
+        "Date of Birth": "1980-05-02",
+        "Gender": "Male",
+        "Location": "Hai Phong",
+        "Account balance": 8000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 49
+    },
+    {
+        "Customer ID": "ACC_1233",
+        "Date of Birth": "2002-12-22",
+        "Gender": "Female",
+        "Location": "Can Tho",
+        "Account balance": 2000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 10
+    },
+    {
+        "Customer ID": "ACC_1234",
+        "Date of Birth": "1987-08-05",
+        "Gender": "Male",
+        "Location": "Hai Phong",
+        "Account balance": 623000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 40
+    },
+    {
+        "Customer ID": "ACC_1235",
+        "Date of Birth": "1973-10-04",
+        "Gender": "Female",
+        "Location": "Quang Ninh",
+        "Account balance": 9735000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 181000000,
+        "Transaction_Count": 164
+    },
+    {
+        "Customer ID": "ACC_1236",
+        "Date of Birth": "1987-11-22",
+        "Gender": "Female",
+        "Location": "Hanoi",
+        "Account balance": 154000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 79000000,
+        "Transaction_Count": 50
+    },
+    {
+        "Customer ID": "ACC_1237",
+        "Date of Birth": "2003-07-18",
+        "Gender": "Female",
+        "Location": "Thanh Hoa",
+        "Account balance": 7000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 26
+    },
+    {
+        "Customer ID": "ACC_1238",
+        "Date of Birth": "1983-04-09",
+        "Gender": "Male",
+        "Location": "Ho Chi Minh City",
+        "Account balance": 8629000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 7000000,
+        "Transaction_Count": 198
+    },
+    {
+        "Customer ID": "ACC_1239",
+        "Date of Birth": "1999-07-06",
+        "Gender": "Male",
+        "Location": "Hue",
+        "Account balance": 6000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 40
+    },
+    {
+        "Customer ID": "ACC_1240",
+        "Date of Birth": "1974-05-14",
+        "Gender": "Female",
+        "Location": "Thanh Hoa",
+        "Account balance": 1558000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 116000000,
+        "Transaction_Count": 316
+    },
+    {
+        "Customer ID": "ACC_1241",
+        "Date of Birth": "2002-10-07",
+        "Gender": "Male",
+        "Location": "Hue",
+        "Account balance": 40000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 173000000,
+        "Transaction_Count": 5
+    },
+    {
+        "Customer ID": "ACC_1242",
+        "Date of Birth": "1999-08-09",
+        "Gender": "Female",
+        "Location": "Hue",
+        "Account balance": 409000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 327000000,
+        "Transaction_Count": 50
+    },
+    {
+        "Customer ID": "ACC_1243",
+        "Date of Birth": "1992-05-11",
+        "Gender": "Female",
+        "Location": "Hai Phong",
+        "Account balance": 8066000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 415000000,
+        "Transaction_Count": 439
+    },
+    {
+        "Customer ID": "ACC_1244",
+        "Date of Birth": "1979-04-28",
+        "Gender": "Male",
+        "Location": "Thanh Hoa",
+        "Account balance": 4873000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 379000000,
+        "Transaction_Count": 363
+    },
+    {
+        "Customer ID": "ACC_1245",
+        "Date of Birth": "1978-05-27",
+        "Gender": "Female",
+        "Location": "Da Nang",
+        "Account balance": 2946000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 316000000,
+        "Transaction_Count": 484
+    },
+    {
+        "Customer ID": "ACC_1246",
+        "Date of Birth": "2002-12-29",
+        "Gender": "Male",
+        "Location": "Quang Ninh",
+        "Account balance": 9888000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 461
+    },
+    {
+        "Customer ID": "ACC_1247",
+        "Date of Birth": "1977-06-07",
+        "Gender": "Male",
+        "Location": "Nha Trang",
+        "Account balance": 2849000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 255000000,
+        "Transaction_Count": 264
+    },
+    {
+        "Customer ID": "ACC_1248",
+        "Date of Birth": "1973-07-30",
+        "Gender": "Female",
+        "Location": "Dong Nai",
+        "Account balance": 7000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 13
+    },
+    {
+        "Customer ID": "ACC_1249",
+        "Date of Birth": "1992-09-04",
+        "Gender": "Male",
+        "Location": "Quang Ninh",
+        "Account balance": 2473000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 264000000,
+        "Transaction_Count": 462
+    },
+    {
+        "Customer ID": "ACC_1250",
+        "Date of Birth": "1980-10-16",
+        "Gender": "Female",
+        "Location": "Can Tho",
+        "Account balance": 6778000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 427
+    },
+    {
+        "Customer ID": "ACC_1251",
+        "Date of Birth": "1983-02-02",
+        "Gender": "Female",
+        "Location": "Hue",
+        "Account balance": 9184000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 7000000,
+        "Transaction_Count": 286
+    },
+    {
+        "Customer ID": "ACC_1252",
+        "Date of Birth": "1971-05-11",
+        "Gender": "Female",
+        "Location": "Ho Chi Minh City",
+        "Account balance": 9038000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 432000000,
+        "Transaction_Count": 154
+    },
+    {
+        "Customer ID": "ACC_1253",
+        "Date of Birth": "2001-05-02",
+        "Gender": "Female",
+        "Location": "Hue",
+        "Account balance": 1788000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 496000000,
+        "Transaction_Count": 82
+    },
+    {
+        "Customer ID": "ACC_1254",
+        "Date of Birth": "1983-01-13",
+        "Gender": "Female",
+        "Location": "Dong Nai",
+        "Account balance": 2420000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 464000000,
+        "Transaction_Count": 247
+    },
+    {
+        "Customer ID": "ACC_1255",
+        "Date of Birth": "1990-07-16",
+        "Gender": "Male",
+        "Location": "Thanh Hoa",
+        "Account balance": 3250000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 323000000,
+        "Transaction_Count": 169
+    },
+    {
+        "Customer ID": "ACC_1256",
+        "Date of Birth": "1972-08-07",
+        "Gender": "Female",
+        "Location": "Thanh Hoa",
+        "Account balance": 12000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 28
+    },
+    {
+        "Customer ID": "ACC_1257",
+        "Date of Birth": "1973-02-24",
+        "Gender": "Male",
+        "Location": "Vung Tau",
+        "Account balance": 5222000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 5000000,
+        "Transaction_Count": 472
+    },
+    {
+        "Customer ID": "ACC_1258",
+        "Date of Birth": "1990-12-27",
+        "Gender": "Male",
+        "Location": "Quang Ninh",
+        "Account balance": 9255000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 6000000,
+        "Transaction_Count": 149
+    },
+    {
+        "Customer ID": "ACC_1259",
+        "Date of Birth": "2004-05-16",
+        "Gender": "Female",
+        "Location": "Da Nang",
+        "Account balance": 7118000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 66000000,
+        "Transaction_Count": 88
+    },
+    {
+        "Customer ID": "ACC_1260",
+        "Date of Birth": "1991-06-30",
+        "Gender": "Female",
+        "Location": "Thanh Hoa",
+        "Account balance": 2024000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 483000000,
+        "Transaction_Count": 345
+    },
+    {
+        "Customer ID": "ACC_1261",
+        "Date of Birth": "1974-02-26",
+        "Gender": "Male",
+        "Location": "Hue",
+        "Account balance": 13000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 1
+    },
+    {
+        "Customer ID": "ACC_1262",
+        "Date of Birth": "1997-12-27",
+        "Gender": "Female",
+        "Location": "Can Tho",
+        "Account balance": 4008000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 267000000,
+        "Transaction_Count": 207
+    },
+    {
+        "Customer ID": "ACC_1263",
+        "Date of Birth": "1977-06-03",
+        "Gender": "Male",
+        "Location": "Da Nang",
+        "Account balance": 13000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 19
+    },
+    {
+        "Customer ID": "ACC_1264",
+        "Date of Birth": "1993-04-19",
+        "Gender": "Female",
+        "Location": "Binh Duong",
+        "Account balance": 2140000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 488000000,
+        "Transaction_Count": 305
+    },
+    {
+        "Customer ID": "ACC_1265",
+        "Date of Birth": "1977-11-16",
+        "Gender": "Female",
+        "Location": "Da Nang",
+        "Account balance": 7069000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 169
+    },
+    {
+        "Customer ID": "ACC_1266",
+        "Date of Birth": "1978-02-22",
+        "Gender": "Female",
+        "Location": "Thanh Hoa",
+        "Account balance": 1000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 5
+    },
+    {
+        "Customer ID": "ACC_1267",
+        "Date of Birth": "1980-01-02",
+        "Gender": "Female",
+        "Location": "Hanoi",
+        "Account balance": 8841000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 71000000,
+        "Transaction_Count": 314
+    },
+    {
+        "Customer ID": "ACC_1268",
+        "Date of Birth": "1976-12-21",
+        "Gender": "Male",
+        "Location": "Hai Phong",
+        "Account balance": 12000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 16
+    },
+    {
+        "Customer ID": "ACC_1269",
+        "Date of Birth": "1975-09-07",
+        "Gender": "Male",
+        "Location": "Can Tho",
+        "Account balance": 6120000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 8000000,
+        "Transaction_Count": 371
+    },
+    {
+        "Customer ID": "ACC_1270",
+        "Date of Birth": "1999-03-29",
+        "Gender": "Female",
+        "Location": "Hanoi",
+        "Account balance": 7551000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 272000000,
+        "Transaction_Count": 154
+    },
+    {
+        "Customer ID": "ACC_1271",
+        "Date of Birth": "1975-08-04",
+        "Gender": "Female",
+        "Location": "Hanoi",
+        "Account balance": 12000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 41
+    },
+    {
+        "Customer ID": "ACC_1272",
+        "Date of Birth": "2004-02-22",
+        "Gender": "Male",
+        "Location": "Quang Ninh",
+        "Account balance": 1000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 49
+    },
+    {
+        "Customer ID": "ACC_1273",
+        "Date of Birth": "1992-10-29",
+        "Gender": "Female",
+        "Location": "Quang Ninh",
+        "Account balance": 11000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 46
+    },
+    {
+        "Customer ID": "ACC_1274",
+        "Date of Birth": "1979-05-30",
+        "Gender": "Male",
+        "Location": "Da Nang",
+        "Account balance": 15000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 12
+    },
+    {
+        "Customer ID": "ACC_1275",
+        "Date of Birth": "1989-02-05",
+        "Gender": "Female",
+        "Location": "Hanoi",
+        "Account balance": 4006000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 418000000,
+        "Transaction_Count": 297
+    },
+    {
+        "Customer ID": "ACC_1276",
+        "Date of Birth": "1997-04-13",
+        "Gender": "Female",
+        "Location": "Can Tho",
+        "Account balance": 375000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 186000000,
+        "Transaction_Count": 17
+    },
+    {
+        "Customer ID": "ACC_1277",
+        "Date of Birth": "1991-04-03",
+        "Gender": "Female",
+        "Location": "Hai Phong",
+        "Account balance": 7579000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 31000000,
+        "Transaction_Count": 130
+    },
+    {
+        "Customer ID": "ACC_1278",
+        "Date of Birth": "1982-09-28",
+        "Gender": "Male",
+        "Location": "Vung Tau",
+        "Account balance": 6888000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 217000000,
+        "Transaction_Count": 375
+    },
+    {
+        "Customer ID": "ACC_1279",
+        "Date of Birth": "2003-06-17",
+        "Gender": "Female",
+        "Location": "Binh Duong",
+        "Account balance": 8000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 7
+    },
+    {
+        "Customer ID": "ACC_1280",
+        "Date of Birth": "1979-02-17",
+        "Gender": "Female",
+        "Location": "Nha Trang",
+        "Account balance": 2844000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 6000000,
+        "Transaction_Count": 272
+    },
+    {
+        "Customer ID": "ACC_1281",
+        "Date of Birth": "1973-12-16",
+        "Gender": "Male",
+        "Location": "Binh Duong",
+        "Account balance": 1210000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 480000000,
+        "Transaction_Count": 419
+    },
+    {
+        "Customer ID": "ACC_1282",
+        "Date of Birth": "1980-12-26",
+        "Gender": "Male",
+        "Location": "Nha Trang",
+        "Account balance": 8876000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 7000000,
+        "Transaction_Count": 95
+    },
+    {
+        "Customer ID": "ACC_1283",
+        "Date of Birth": "2002-10-28",
+        "Gender": "Female",
+        "Location": "Vung Tau",
+        "Account balance": 5275000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 6000000,
+        "Transaction_Count": 107
+    },
+    {
+        "Customer ID": "ACC_1284",
+        "Date of Birth": "2004-09-16",
+        "Gender": "Male",
+        "Location": "Da Nang",
+        "Account balance": 15000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 26
+    },
+    {
+        "Customer ID": "ACC_1285",
+        "Date of Birth": "2004-04-18",
+        "Gender": "Male",
+        "Location": "Nha Trang",
+        "Account balance": 863000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 162000000,
+        "Transaction_Count": 6
+    },
+    {
+        "Customer ID": "ACC_1286",
+        "Date of Birth": "1974-07-01",
+        "Gender": "Male",
+        "Location": "Da Nang",
+        "Account balance": 14000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 0
+    },
+    {
+        "Customer ID": "ACC_1287",
+        "Date of Birth": "1973-05-04",
+        "Gender": "Female",
+        "Location": "Binh Duong",
+        "Account balance": 9000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 35
+    },
+    {
+        "Customer ID": "ACC_1288",
+        "Date of Birth": "1973-10-17",
+        "Gender": "Male",
+        "Location": "Binh Duong",
+        "Account balance": 10000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 35
+    },
+    {
+        "Customer ID": "ACC_1289",
+        "Date of Birth": "1991-03-27",
+        "Gender": "Female",
+        "Location": "Vung Tau",
+        "Account balance": 0,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 46
+    },
+    {
+        "Customer ID": "ACC_1290",
+        "Date of Birth": "1994-06-14",
+        "Gender": "Male",
+        "Location": "Binh Duong",
+        "Account balance": 1526000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 411
+    },
+    {
+        "Customer ID": "ACC_1291",
+        "Date of Birth": "1975-09-13",
+        "Gender": "Male",
+        "Location": "Binh Duong",
+        "Account balance": 5547000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 39000000,
+        "Transaction_Count": 70
+    },
+    {
+        "Customer ID": "ACC_1292",
+        "Date of Birth": "1980-07-15",
+        "Gender": "Female",
+        "Location": "Can Tho",
+        "Account balance": 1194000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 253
+    },
+    {
+        "Customer ID": "ACC_1293",
+        "Date of Birth": "1990-10-20",
+        "Gender": "Female",
+        "Location": "Vung Tau",
+        "Account balance": 8000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 49
+    },
+    {
+        "Customer ID": "ACC_1294",
+        "Date of Birth": "1970-03-09",
+        "Gender": "Male",
+        "Location": "Hai Phong",
+        "Account balance": 10000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 25
+    },
+    {
+        "Customer ID": "ACC_1295",
+        "Date of Birth": "1979-10-17",
+        "Gender": "Female",
+        "Location": "Hai Phong",
+        "Account balance": 5000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 4
+    },
+    {
+        "Customer ID": "ACC_1296",
+        "Date of Birth": "1973-09-27",
+        "Gender": "Male",
+        "Location": "Quang Ninh",
+        "Account balance": 257000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 32
+    },
+    {
+        "Customer ID": "ACC_1297",
+        "Date of Birth": "1988-11-16",
+        "Gender": "Male",
+        "Location": "Da Nang",
+        "Account balance": 11000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 41
+    },
+    {
+        "Customer ID": "ACC_1298",
+        "Date of Birth": "2003-06-12",
+        "Gender": "Male",
+        "Location": "Quang Ninh",
+        "Account balance": 15000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 23
+    },
+    {
+        "Customer ID": "ACC_1299",
+        "Date of Birth": "1993-10-26",
+        "Gender": "Male",
+        "Location": "Quang Ninh",
+        "Account balance": 7555000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 8000000,
+        "Transaction_Count": 325
+    },
+    {
+        "Customer ID": "ACC_1300",
+        "Date of Birth": "1995-06-09",
+        "Gender": "Female",
+        "Location": "Da Nang",
+        "Account balance": 5901000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 7000000,
+        "Transaction_Count": 87
+    },
+    {
+        "Customer ID": "ACC_1301",
+        "Date of Birth": "1993-03-30",
+        "Gender": "Male",
+        "Location": "Binh Duong",
+        "Account balance": 0,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 29
+    },
+    {
+        "Customer ID": "ACC_1302",
+        "Date of Birth": "1979-08-16",
+        "Gender": "Female",
+        "Location": "Hanoi",
+        "Account balance": 5549000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 294000000,
+        "Transaction_Count": 157
+    },
+    {
+        "Customer ID": "ACC_1303",
+        "Date of Birth": "1988-11-26",
+        "Gender": "Male",
+        "Location": "Da Nang",
+        "Account balance": 9398000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 388000000,
+        "Transaction_Count": 131
+    },
+    {
+        "Customer ID": "ACC_1304",
+        "Date of Birth": "1998-10-02",
+        "Gender": "Female",
+        "Location": "Hue",
+        "Account balance": 8774000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 317
+    },
+    {
+        "Customer ID": "ACC_1305",
+        "Date of Birth": "1974-04-23",
+        "Gender": "Male",
+        "Location": "Hai Phong",
+        "Account balance": 4000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 25
+    },
+    {
+        "Customer ID": "ACC_1306",
+        "Date of Birth": "1982-02-05",
+        "Gender": "Male",
+        "Location": "Quang Ninh",
+        "Account balance": 8000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 39
+    },
+    {
+        "Customer ID": "ACC_1307",
+        "Date of Birth": "2002-03-05",
+        "Gender": "Male",
+        "Location": "Quang Ninh",
+        "Account balance": 8241000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 169
+    },
+    {
+        "Customer ID": "ACC_1308",
+        "Date of Birth": "1998-12-29",
+        "Gender": "Female",
+        "Location": "Da Nang",
+        "Account balance": 3766000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 5000000,
+        "Transaction_Count": 196
+    },
+    {
+        "Customer ID": "ACC_1309",
+        "Date of Birth": "1990-09-02",
+        "Gender": "Male",
+        "Location": "Hai Phong",
+        "Account balance": 6865000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 84000000,
+        "Transaction_Count": 400
+    },
+    {
+        "Customer ID": "ACC_1310",
+        "Date of Birth": "1978-01-17",
+        "Gender": "Male",
+        "Location": "Hai Phong",
+        "Account balance": 4000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 30
+    },
+    {
+        "Customer ID": "ACC_1311",
+        "Date of Birth": "1982-10-08",
+        "Gender": "Female",
+        "Location": "Nha Trang",
+        "Account balance": 8559000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 10000000,
+        "Transaction_Count": 251
+    },
+    {
+        "Customer ID": "ACC_1312",
+        "Date of Birth": "1975-05-29",
+        "Gender": "Female",
+        "Location": "Hanoi",
+        "Account balance": 4991000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 398000000,
+        "Transaction_Count": 114
+    },
+    {
+        "Customer ID": "ACC_1313",
+        "Date of Birth": "1988-12-04",
+        "Gender": "Female",
+        "Location": "Hue",
+        "Account balance": 9000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 2
+    },
+    {
+        "Customer ID": "ACC_1314",
+        "Date of Birth": "2003-09-14",
+        "Gender": "Female",
+        "Location": "Hue",
+        "Account balance": 9014000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 309000000,
+        "Transaction_Count": 189
+    },
+    {
+        "Customer ID": "ACC_1315",
+        "Date of Birth": "1976-10-20",
+        "Gender": "Female",
+        "Location": "Thanh Hoa",
+        "Account balance": 8665000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 154
+    },
+    {
+        "Customer ID": "ACC_1316",
+        "Date of Birth": "1992-02-20",
+        "Gender": "Male",
+        "Location": "Nha Trang",
+        "Account balance": 12000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 1
+    },
+    {
+        "Customer ID": "ACC_1317",
+        "Date of Birth": "2004-05-27",
+        "Gender": "Female",
+        "Location": "Ho Chi Minh City",
+        "Account balance": 6547000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 5000000,
+        "Transaction_Count": 456
+    },
+    {
+        "Customer ID": "ACC_1318",
+        "Date of Birth": "1990-01-09",
+        "Gender": "Female",
+        "Location": "Dong Nai",
+        "Account balance": 6863000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 43000000,
+        "Transaction_Count": 169
+    },
+    {
+        "Customer ID": "ACC_1319",
+        "Date of Birth": "1977-01-19",
+        "Gender": "Male",
+        "Location": "Binh Duong",
+        "Account balance": 11000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 4
+    },
+    {
+        "Customer ID": "ACC_1320",
+        "Date of Birth": "2002-08-09",
+        "Gender": "Female",
+        "Location": "Hanoi",
+        "Account balance": 3000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 22
+    },
+    {
+        "Customer ID": "ACC_1321",
+        "Date of Birth": "1977-11-12",
+        "Gender": "Female",
+        "Location": "Vung Tau",
+        "Account balance": 1437000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 259000000,
+        "Transaction_Count": 190
+    },
+    {
+        "Customer ID": "ACC_1322",
+        "Date of Birth": "2001-02-05",
+        "Gender": "Male",
+        "Location": "Hanoi",
+        "Account balance": 6434000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 356
+    },
+    {
+        "Customer ID": "ACC_1323",
+        "Date of Birth": "1989-03-06",
+        "Gender": "Female",
+        "Location": "Dong Nai",
+        "Account balance": 2643000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 5000000,
+        "Transaction_Count": 477
+    },
+    {
+        "Customer ID": "ACC_1324",
+        "Date of Birth": "1973-02-17",
+        "Gender": "Female",
+        "Location": "Da Nang",
+        "Account balance": 13000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 28
+    },
+    {
+        "Customer ID": "ACC_1325",
+        "Date of Birth": "1983-09-18",
+        "Gender": "Male",
+        "Location": "Da Nang",
+        "Account balance": 1839000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 94000000,
+        "Transaction_Count": 377
+    },
+    {
+        "Customer ID": "ACC_1326",
+        "Date of Birth": "1985-04-22",
+        "Gender": "Male",
+        "Location": "Ho Chi Minh City",
+        "Account balance": 5573000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 197000000,
+        "Transaction_Count": 403
+    },
+    {
+        "Customer ID": "ACC_1327",
+        "Date of Birth": "2004-10-26",
+        "Gender": "Female",
+        "Location": "Hue",
+        "Account balance": 2095000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 6000000,
+        "Transaction_Count": 118
+    },
+    {
+        "Customer ID": "ACC_1328",
+        "Date of Birth": "1981-11-18",
+        "Gender": "Female",
+        "Location": "Dong Nai",
+        "Account balance": 2284000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 99000000,
+        "Transaction_Count": 309
+    },
+    {
+        "Customer ID": "ACC_1329",
+        "Date of Birth": "2001-07-28",
+        "Gender": "Female",
+        "Location": "Thanh Hoa",
+        "Account balance": 13000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 34
+    },
+    {
+        "Customer ID": "ACC_1330",
+        "Date of Birth": "1991-06-15",
+        "Gender": "Male",
+        "Location": "Hue",
+        "Account balance": 5094000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 144000000,
+        "Transaction_Count": 467
+    },
+    {
+        "Customer ID": "ACC_1331",
+        "Date of Birth": "1997-11-28",
+        "Gender": "Female",
+        "Location": "Da Nang",
+        "Account balance": 5000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 46
+    },
+    {
+        "Customer ID": "ACC_1332",
+        "Date of Birth": "1996-01-02",
+        "Gender": "Female",
+        "Location": "Quang Ninh",
+        "Account balance": 1133000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 137
+    },
+    {
+        "Customer ID": "ACC_1333",
+        "Date of Birth": "1972-09-10",
+        "Gender": "Female",
+        "Location": "Quang Ninh",
+        "Account balance": 15000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 27
+    },
+    {
+        "Customer ID": "ACC_1334",
+        "Date of Birth": "2005-06-27",
+        "Gender": "Male",
+        "Location": "Vung Tau",
+        "Account balance": 3386000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 184000000,
+        "Transaction_Count": 304
+    },
+    {
+        "Customer ID": "ACC_1335",
+        "Date of Birth": "1985-01-23",
+        "Gender": "Female",
+        "Location": "Da Nang",
+        "Account balance": 8000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 39
+    },
+    {
+        "Customer ID": "ACC_1336",
+        "Date of Birth": "1996-11-29",
+        "Gender": "Male",
+        "Location": "Vung Tau",
+        "Account balance": 404000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 115000000,
+        "Transaction_Count": 32
+    },
+    {
+        "Customer ID": "ACC_1337",
+        "Date of Birth": "1985-11-05",
+        "Gender": "Male",
+        "Location": "Quang Ninh",
+        "Account balance": 15000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 24
+    },
+    {
+        "Customer ID": "ACC_1338",
+        "Date of Birth": "1970-08-27",
+        "Gender": "Female",
+        "Location": "Hue",
+        "Account balance": 9014000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 210000000,
+        "Transaction_Count": 300
+    },
+    {
+        "Customer ID": "ACC_1339",
+        "Date of Birth": "1989-05-08",
+        "Gender": "Female",
+        "Location": "Can Tho",
+        "Account balance": 14000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 40
+    },
+    {
+        "Customer ID": "ACC_1340",
+        "Date of Birth": "1991-08-25",
+        "Gender": "Male",
+        "Location": "Hai Phong",
+        "Account balance": 2000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 8
+    },
+    {
+        "Customer ID": "ACC_1341",
+        "Date of Birth": "1998-07-25",
+        "Gender": "Male",
+        "Location": "Hai Phong",
+        "Account balance": 7000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 6
+    },
+    {
+        "Customer ID": "ACC_1342",
+        "Date of Birth": "1989-07-09",
+        "Gender": "Male",
+        "Location": "Nha Trang",
+        "Account balance": 0,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 27
+    },
+    {
+        "Customer ID": "ACC_1343",
+        "Date of Birth": "1979-01-29",
+        "Gender": "Male",
+        "Location": "Binh Duong",
+        "Account balance": 7631000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 373000000,
+        "Transaction_Count": 447
+    },
+    {
+        "Customer ID": "ACC_1344",
+        "Date of Birth": "1972-12-30",
+        "Gender": "Female",
+        "Location": "Da Nang",
+        "Account balance": 8139000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 488000000,
+        "Transaction_Count": 96
+    },
+    {
+        "Customer ID": "ACC_1345",
+        "Date of Birth": "1986-12-05",
+        "Gender": "Female",
+        "Location": "Quang Ninh",
+        "Account balance": 7608000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 354
+    },
+    {
+        "Customer ID": "ACC_1346",
+        "Date of Birth": "1970-08-18",
+        "Gender": "Male",
+        "Location": "Thanh Hoa",
+        "Account balance": 8000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 49
+    },
+    {
+        "Customer ID": "ACC_1347",
+        "Date of Birth": "1981-08-28",
+        "Gender": "Male",
+        "Location": "Dong Nai",
+        "Account balance": 1142000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 472
+    },
+    {
+        "Customer ID": "ACC_1348",
+        "Date of Birth": "2004-09-29",
+        "Gender": "Female",
+        "Location": "Can Tho",
+        "Account balance": 7000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 0
+    },
+    {
+        "Customer ID": "ACC_1349",
+        "Date of Birth": "1998-02-19",
+        "Gender": "Male",
+        "Location": "Ho Chi Minh City",
+        "Account balance": 15000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 9
+    },
+    {
+        "Customer ID": "ACC_1350",
+        "Date of Birth": "1970-05-04",
+        "Gender": "Female",
+        "Location": "Nha Trang",
+        "Account balance": 6000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 10
+    },
+    {
+        "Customer ID": "ACC_1351",
+        "Date of Birth": "2002-02-13",
+        "Gender": "Female",
+        "Location": "Can Tho",
+        "Account balance": 991000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 41000000,
+        "Transaction_Count": 14
+    },
+    {
+        "Customer ID": "ACC_1352",
+        "Date of Birth": "1988-01-30",
+        "Gender": "Female",
+        "Location": "Vung Tau",
+        "Account balance": 14000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 15
+    },
+    {
+        "Customer ID": "ACC_1353",
+        "Date of Birth": "2001-12-26",
+        "Gender": "Female",
+        "Location": "Da Nang",
+        "Account balance": 3522000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 8000000,
+        "Transaction_Count": 204
+    },
+    {
+        "Customer ID": "ACC_1354",
+        "Date of Birth": "1976-07-08",
+        "Gender": "Male",
+        "Location": "Binh Duong",
+        "Account balance": 3000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 45
+    },
+    {
+        "Customer ID": "ACC_1355",
+        "Date of Birth": "2004-08-31",
+        "Gender": "Male",
+        "Location": "Hue",
+        "Account balance": 9000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 3
+    },
+    {
+        "Customer ID": "ACC_1356",
+        "Date of Birth": "2002-05-05",
+        "Gender": "Male",
+        "Location": "Thanh Hoa",
+        "Account balance": 8374000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 402000000,
+        "Transaction_Count": 309
+    },
+    {
+        "Customer ID": "ACC_1357",
+        "Date of Birth": "1986-02-25",
+        "Gender": "Male",
+        "Location": "Vung Tau",
+        "Account balance": 8241000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 163
+    },
+    {
+        "Customer ID": "ACC_1358",
+        "Date of Birth": "1981-01-12",
+        "Gender": "Male",
+        "Location": "Hanoi",
+        "Account balance": 4557000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 83000000,
+        "Transaction_Count": 310
+    },
+    {
+        "Customer ID": "ACC_1359",
+        "Date of Birth": "1980-06-24",
+        "Gender": "Male",
+        "Location": "Hanoi",
+        "Account balance": 13000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 8
+    },
+    {
+        "Customer ID": "ACC_1360",
+        "Date of Birth": "1994-08-24",
+        "Gender": "Female",
+        "Location": "Ho Chi Minh City",
+        "Account balance": 13000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 7
+    },
+    {
+        "Customer ID": "ACC_1361",
+        "Date of Birth": "1989-09-01",
+        "Gender": "Female",
+        "Location": "Hue",
+        "Account balance": 708000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 483000000,
+        "Transaction_Count": 8
+    },
+    {
+        "Customer ID": "ACC_1362",
+        "Date of Birth": "2000-09-24",
+        "Gender": "Female",
+        "Location": "Quang Ninh",
+        "Account balance": 6180000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 9000000,
+        "Transaction_Count": 83
+    },
+    {
+        "Customer ID": "ACC_1363",
+        "Date of Birth": "2002-03-04",
+        "Gender": "Male",
+        "Location": "Thanh Hoa",
+        "Account balance": 7000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 7
+    },
+    {
+        "Customer ID": "ACC_1364",
+        "Date of Birth": "1981-09-25",
+        "Gender": "Male",
+        "Location": "Quang Ninh",
+        "Account balance": 5000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 48
+    },
+    {
+        "Customer ID": "ACC_1365",
+        "Date of Birth": "1976-12-23",
+        "Gender": "Female",
+        "Location": "Quang Ninh",
+        "Account balance": 3331000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 189000000,
+        "Transaction_Count": 221
+    },
+    {
+        "Customer ID": "ACC_1366",
+        "Date of Birth": "1984-01-25",
+        "Gender": "Female",
+        "Location": "Da Nang",
+        "Account balance": 14000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 21
+    },
+    {
+        "Customer ID": "ACC_1367",
+        "Date of Birth": "2003-11-11",
+        "Gender": "Male",
+        "Location": "Binh Duong",
+        "Account balance": 5331000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 412000000,
+        "Transaction_Count": 461
+    },
+    {
+        "Customer ID": "ACC_1368",
+        "Date of Birth": "1992-05-19",
+        "Gender": "Male",
+        "Location": "Binh Duong",
+        "Account balance": 2407000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 140000000,
+        "Transaction_Count": 175
+    },
+    {
+        "Customer ID": "ACC_1369",
+        "Date of Birth": "1979-09-06",
+        "Gender": "Female",
+        "Location": "Hue",
+        "Account balance": 14000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 43
+    },
+    {
+        "Customer ID": "ACC_1370",
+        "Date of Birth": "1983-08-07",
+        "Gender": "Male",
+        "Location": "Hue",
+        "Account balance": 680000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 427000000,
+        "Transaction_Count": 13
+    },
+    {
+        "Customer ID": "ACC_1371",
+        "Date of Birth": "1980-04-18",
+        "Gender": "Male",
+        "Location": "Da Nang",
+        "Account balance": 837000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 179000000,
+        "Transaction_Count": 37
+    },
+    {
+        "Customer ID": "ACC_1372",
+        "Date of Birth": "1971-11-20",
+        "Gender": "Female",
+        "Location": "Quang Ninh",
+        "Account balance": 800000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 126000000,
+        "Transaction_Count": 18
+    },
+    {
+        "Customer ID": "ACC_1373",
+        "Date of Birth": "1979-04-13",
+        "Gender": "Male",
+        "Location": "Ho Chi Minh City",
+        "Account balance": 7759000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 6000000,
+        "Transaction_Count": 135
+    },
+    {
+        "Customer ID": "ACC_1374",
+        "Date of Birth": "2004-10-25",
+        "Gender": "Female",
+        "Location": "Dong Nai",
+        "Account balance": 4460000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 129000000,
+        "Transaction_Count": 225
+    },
+    {
+        "Customer ID": "ACC_1375",
+        "Date of Birth": "1997-11-13",
+        "Gender": "Female",
+        "Location": "Thanh Hoa",
+        "Account balance": 7711000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 7000000,
+        "Transaction_Count": 463
+    },
+    {
+        "Customer ID": "ACC_1376",
+        "Date of Birth": "2003-05-02",
+        "Gender": "Female",
+        "Location": "Thanh Hoa",
+        "Account balance": 819000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 336000000,
+        "Transaction_Count": 37
+    },
+    {
+        "Customer ID": "ACC_1377",
+        "Date of Birth": "1991-06-01",
+        "Gender": "Female",
+        "Location": "Quang Ninh",
+        "Account balance": 666000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 212000000,
+        "Transaction_Count": 44
+    },
+    {
+        "Customer ID": "ACC_1378",
+        "Date of Birth": "1998-12-06",
+        "Gender": "Female",
+        "Location": "Hanoi",
+        "Account balance": 1000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 0
+    },
+    {
+        "Customer ID": "ACC_1379",
+        "Date of Birth": "1971-01-03",
+        "Gender": "Female",
+        "Location": "Thanh Hoa",
+        "Account balance": 7508000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 431000000,
+        "Transaction_Count": 109
+    },
+    {
+        "Customer ID": "ACC_1380",
+        "Date of Birth": "2000-01-04",
+        "Gender": "Female",
+        "Location": "Hai Phong",
+        "Account balance": 8243000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 156
+    },
+    {
+        "Customer ID": "ACC_1381",
+        "Date of Birth": "1987-06-30",
+        "Gender": "Female",
+        "Location": "Can Tho",
+        "Account balance": 5000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 50
+    },
+    {
+        "Customer ID": "ACC_1382",
+        "Date of Birth": "1986-05-30",
+        "Gender": "Female",
+        "Location": "Hanoi",
+        "Account balance": 7758000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 156000000,
+        "Transaction_Count": 115
+    },
+    {
+        "Customer ID": "ACC_1383",
+        "Date of Birth": "1977-01-21",
+        "Gender": "Male",
+        "Location": "Can Tho",
+        "Account balance": 10000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 28
+    },
+    {
+        "Customer ID": "ACC_1384",
+        "Date of Birth": "1977-08-01",
+        "Gender": "Female",
+        "Location": "Dong Nai",
+        "Account balance": 14000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 45
+    },
+    {
+        "Customer ID": "ACC_1385",
+        "Date of Birth": "1989-06-07",
+        "Gender": "Female",
+        "Location": "Nha Trang",
+        "Account balance": 12000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 1
+    },
+    {
+        "Customer ID": "ACC_1386",
+        "Date of Birth": "1986-05-21",
+        "Gender": "Female",
+        "Location": "Vung Tau",
+        "Account balance": 1721000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 461000000,
+        "Transaction_Count": 157
+    },
+    {
+        "Customer ID": "ACC_1387",
+        "Date of Birth": "2004-09-19",
+        "Gender": "Female",
+        "Location": "Nha Trang",
+        "Account balance": 8817000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 464
+    },
+    {
+        "Customer ID": "ACC_1388",
+        "Date of Birth": "1999-11-29",
+        "Gender": "Female",
+        "Location": "Hanoi",
+        "Account balance": 1000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 22
+    },
+    {
+        "Customer ID": "ACC_1389",
+        "Date of Birth": "1977-05-02",
+        "Gender": "Male",
+        "Location": "Hanoi",
+        "Account balance": 11000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 27
+    },
+    {
+        "Customer ID": "ACC_1390",
+        "Date of Birth": "1998-11-09",
+        "Gender": "Male",
+        "Location": "Quang Ninh",
+        "Account balance": 9000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 16
+    },
+    {
+        "Customer ID": "ACC_1391",
+        "Date of Birth": "1994-02-02",
+        "Gender": "Female",
+        "Location": "Da Nang",
+        "Account balance": 5737000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 374000000,
+        "Transaction_Count": 386
+    },
+    {
+        "Customer ID": "ACC_1392",
+        "Date of Birth": "1977-10-22",
+        "Gender": "Male",
+        "Location": "Hanoi",
+        "Account balance": 4000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 38
+    },
+    {
+        "Customer ID": "ACC_1393",
+        "Date of Birth": "2004-02-08",
+        "Gender": "Female",
+        "Location": "Hue",
+        "Account balance": 7342000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 365000000,
+        "Transaction_Count": 450
+    },
+    {
+        "Customer ID": "ACC_1394",
+        "Date of Birth": "1974-08-10",
+        "Gender": "Female",
+        "Location": "Vung Tau",
+        "Account balance": 8273000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 92000000,
+        "Transaction_Count": 72
+    },
+    {
+        "Customer ID": "ACC_1395",
+        "Date of Birth": "1976-12-26",
+        "Gender": "Male",
+        "Location": "Hai Phong",
+        "Account balance": 4458000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 164000000,
+        "Transaction_Count": 417
+    },
+    {
+        "Customer ID": "ACC_1396",
+        "Date of Birth": "2004-03-04",
+        "Gender": "Male",
+        "Location": "Can Tho",
+        "Account balance": 8278000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 390000000,
+        "Transaction_Count": 84
+    },
+    {
+        "Customer ID": "ACC_1397",
+        "Date of Birth": "1975-08-01",
+        "Gender": "Male",
+        "Location": "Dong Nai",
+        "Account balance": 5923000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 300000000,
+        "Transaction_Count": 99
+    },
+    {
+        "Customer ID": "ACC_1398",
+        "Date of Birth": "1974-12-29",
+        "Gender": "Female",
+        "Location": "Can Tho",
+        "Account balance": 10000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 9
+    },
+    {
+        "Customer ID": "ACC_1399",
+        "Date of Birth": "1980-12-10",
+        "Gender": "Female",
+        "Location": "Binh Duong",
+        "Account balance": 4756000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 105000000,
+        "Transaction_Count": 259
+    },
+    {
+        "Customer ID": "ACC_1400",
+        "Date of Birth": "1998-01-07",
+        "Gender": "Female",
+        "Location": "Vung Tau",
+        "Account balance": 11000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 4
+    },
+    {
+        "Customer ID": "ACC_1401",
+        "Date of Birth": "1999-11-20",
+        "Gender": "Male",
+        "Location": "Can Tho",
+        "Account balance": 1000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 39
+    },
+    {
+        "Customer ID": "ACC_1402",
+        "Date of Birth": "1978-11-27",
+        "Gender": "Female",
+        "Location": "Dong Nai",
+        "Account balance": 6337000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 190000000,
+        "Transaction_Count": 89
+    },
+    {
+        "Customer ID": "ACC_1403",
+        "Date of Birth": "1998-10-17",
+        "Gender": "Male",
+        "Location": "Thanh Hoa",
+        "Account balance": 15000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 39
+    },
+    {
+        "Customer ID": "ACC_1404",
+        "Date of Birth": "1985-12-27",
+        "Gender": "Male",
+        "Location": "Hue",
+        "Account balance": 17000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 6000000,
+        "Transaction_Count": 49
+    },
+    {
+        "Customer ID": "ACC_1405",
+        "Date of Birth": "1988-12-05",
+        "Gender": "Female",
+        "Location": "Nha Trang",
+        "Account balance": 10000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 48
+    },
+    {
+        "Customer ID": "ACC_1406",
+        "Date of Birth": "2000-01-28",
+        "Gender": "Male",
+        "Location": "Binh Duong",
+        "Account balance": 7929000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 176000000,
+        "Transaction_Count": 228
+    },
+    {
+        "Customer ID": "ACC_1407",
+        "Date of Birth": "1998-05-18",
+        "Gender": "Female",
+        "Location": "Vung Tau",
+        "Account balance": 7461000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 80
+    },
+    {
+        "Customer ID": "ACC_1408",
+        "Date of Birth": "1972-09-10",
+        "Gender": "Male",
+        "Location": "Quang Ninh",
+        "Account balance": 2000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 40
+    },
+    {
+        "Customer ID": "ACC_1409",
+        "Date of Birth": "1994-02-22",
+        "Gender": "Female",
+        "Location": "Binh Duong",
+        "Account balance": 5904000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 419000000,
+        "Transaction_Count": 278
+    },
+    {
+        "Customer ID": "ACC_1410",
+        "Date of Birth": "1994-11-12",
+        "Gender": "Male",
+        "Location": "Hai Phong",
+        "Account balance": 2648000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 8000000,
+        "Transaction_Count": 162
+    },
+    {
+        "Customer ID": "ACC_1411",
+        "Date of Birth": "1983-09-25",
+        "Gender": "Male",
+        "Location": "Nha Trang",
+        "Account balance": 5318000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 267
+    },
+    {
+        "Customer ID": "ACC_1412",
+        "Date of Birth": "1988-06-24",
+        "Gender": "Male",
+        "Location": "Nha Trang",
+        "Account balance": 2318000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 392
+    },
+    {
+        "Customer ID": "ACC_1413",
+        "Date of Birth": "1971-10-24",
+        "Gender": "Female",
+        "Location": "Can Tho",
+        "Account balance": 8459000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 251
+    },
+    {
+        "Customer ID": "ACC_1414",
+        "Date of Birth": "1975-08-18",
+        "Gender": "Female",
+        "Location": "Quang Ninh",
+        "Account balance": 9052000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 434
+    },
+    {
+        "Customer ID": "ACC_1415",
+        "Date of Birth": "2001-01-12",
+        "Gender": "Male",
+        "Location": "Thanh Hoa",
+        "Account balance": 4000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 22
+    },
+    {
+        "Customer ID": "ACC_1416",
+        "Date of Birth": "1990-02-18",
+        "Gender": "Male",
+        "Location": "Hue",
+        "Account balance": 1400000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 69000000,
+        "Transaction_Count": 466
+    },
+    {
+        "Customer ID": "ACC_1417",
+        "Date of Birth": "2005-01-21",
+        "Gender": "Male",
+        "Location": "Dong Nai",
+        "Account balance": 4000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 34
+    },
+    {
+        "Customer ID": "ACC_1418",
+        "Date of Birth": "1975-10-11",
+        "Gender": "Male",
+        "Location": "Hai Phong",
+        "Account balance": 14000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 44
+    },
+    {
+        "Customer ID": "ACC_1419",
+        "Date of Birth": "1997-01-11",
+        "Gender": "Female",
+        "Location": "Hai Phong",
+        "Account balance": 7000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 22
+    },
+    {
+        "Customer ID": "ACC_1420",
+        "Date of Birth": "1994-10-30",
+        "Gender": "Male",
+        "Location": "Thanh Hoa",
+        "Account balance": 2207000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 466000000,
+        "Transaction_Count": 478
+    },
+    {
+        "Customer ID": "ACC_1421",
+        "Date of Birth": "1971-06-19",
+        "Gender": "Female",
+        "Location": "Thanh Hoa",
+        "Account balance": 4000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 41
+    },
+    {
+        "Customer ID": "ACC_1422",
+        "Date of Birth": "2003-06-23",
+        "Gender": "Female",
+        "Location": "Hai Phong",
+        "Account balance": 6099000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 339000000,
+        "Transaction_Count": 478
+    },
+    {
+        "Customer ID": "ACC_1423",
+        "Date of Birth": "1989-08-08",
+        "Gender": "Female",
+        "Location": "Nha Trang",
+        "Account balance": 7282000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 84
+    },
+    {
+        "Customer ID": "ACC_1424",
+        "Date of Birth": "1997-02-24",
+        "Gender": "Male",
+        "Location": "Dong Nai",
+        "Account balance": 4293000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 96000000,
+        "Transaction_Count": 100
+    },
+    {
+        "Customer ID": "ACC_1425",
+        "Date of Birth": "1974-10-09",
+        "Gender": "Female",
+        "Location": "Hue",
+        "Account balance": 2641000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 31000000,
+        "Transaction_Count": 315
+    },
+    {
+        "Customer ID": "ACC_1426",
+        "Date of Birth": "1972-10-20",
+        "Gender": "Female",
+        "Location": "Dong Nai",
+        "Account balance": 8000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 29
+    },
+    {
+        "Customer ID": "ACC_1427",
+        "Date of Birth": "1998-06-22",
+        "Gender": "Female",
+        "Location": "Nha Trang",
+        "Account balance": 5320000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 8000000,
+        "Transaction_Count": 328
+    },
+    {
+        "Customer ID": "ACC_1428",
+        "Date of Birth": "1973-11-19",
+        "Gender": "Female",
+        "Location": "Quang Ninh",
+        "Account balance": 6000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 32
+    },
+    {
+        "Customer ID": "ACC_1429",
+        "Date of Birth": "1982-10-16",
+        "Gender": "Male",
+        "Location": "Hai Phong",
+        "Account balance": 11000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 38
+    },
+    {
+        "Customer ID": "ACC_1430",
+        "Date of Birth": "1987-03-28",
+        "Gender": "Female",
+        "Location": "Hanoi",
+        "Account balance": 9376000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 206000000,
+        "Transaction_Count": 147
+    },
+    {
+        "Customer ID": "ACC_1431",
+        "Date of Birth": "1980-03-31",
+        "Gender": "Male",
+        "Location": "Hanoi",
+        "Account balance": 15000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 18
+    },
+    {
+        "Customer ID": "ACC_1432",
+        "Date of Birth": "1999-05-28",
+        "Gender": "Female",
+        "Location": "Vung Tau",
+        "Account balance": 1000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 1
+    },
+    {
+        "Customer ID": "ACC_1433",
+        "Date of Birth": "1991-05-01",
+        "Gender": "Male",
+        "Location": "Dong Nai",
+        "Account balance": 3761000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 34000000,
+        "Transaction_Count": 494
+    },
+    {
+        "Customer ID": "ACC_1434",
+        "Date of Birth": "1996-01-06",
+        "Gender": "Female",
+        "Location": "Hanoi",
+        "Account balance": 13000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 15
+    },
+    {
+        "Customer ID": "ACC_1435",
+        "Date of Birth": "1990-05-14",
+        "Gender": "Male",
+        "Location": "Can Tho",
+        "Account balance": 7044000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 481000000,
+        "Transaction_Count": 359
+    },
+    {
+        "Customer ID": "ACC_1436",
+        "Date of Birth": "1986-06-05",
+        "Gender": "Female",
+        "Location": "Ho Chi Minh City",
+        "Account balance": 9034000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 446
+    },
+    {
+        "Customer ID": "ACC_1437",
+        "Date of Birth": "1978-12-17",
+        "Gender": "Male",
+        "Location": "Binh Duong",
+        "Account balance": 2497000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 40000000,
+        "Transaction_Count": 388
+    },
+    {
+        "Customer ID": "ACC_1438",
+        "Date of Birth": "2002-04-04",
+        "Gender": "Male",
+        "Location": "Hanoi",
+        "Account balance": 11000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 13
+    },
+    {
+        "Customer ID": "ACC_1439",
+        "Date of Birth": "1995-07-03",
+        "Gender": "Female",
+        "Location": "Quang Ninh",
+        "Account balance": 3955000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 398000000,
+        "Transaction_Count": 414
+    },
+    {
+        "Customer ID": "ACC_1440",
+        "Date of Birth": "1995-03-21",
+        "Gender": "Male",
+        "Location": "Quang Ninh",
+        "Account balance": 2624000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 5000000,
+        "Transaction_Count": 408
+    },
+    {
+        "Customer ID": "ACC_1441",
+        "Date of Birth": "1988-02-04",
+        "Gender": "Female",
+        "Location": "Quang Ninh",
+        "Account balance": 1000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 35
+    },
+    {
+        "Customer ID": "ACC_1442",
+        "Date of Birth": "1981-03-12",
+        "Gender": "Female",
+        "Location": "Can Tho",
+        "Account balance": 1000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 21
+    },
+    {
+        "Customer ID": "ACC_1443",
+        "Date of Birth": "2005-03-01",
+        "Gender": "Female",
+        "Location": "Quang Ninh",
+        "Account balance": 15000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 25
+    },
+    {
+        "Customer ID": "ACC_1444",
+        "Date of Birth": "1994-10-05",
+        "Gender": "Male",
+        "Location": "Quang Ninh",
+        "Account balance": 9645000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 155000000,
+        "Transaction_Count": 78
+    },
+    {
+        "Customer ID": "ACC_1445",
+        "Date of Birth": "1986-04-04",
+        "Gender": "Female",
+        "Location": "Da Nang",
+        "Account balance": 11000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 32
+    },
+    {
+        "Customer ID": "ACC_1446",
+        "Date of Birth": "1998-06-29",
+        "Gender": "Female",
+        "Location": "Can Tho",
+        "Account balance": 9000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 39
+    },
+    {
+        "Customer ID": "ACC_1447",
+        "Date of Birth": "1977-02-15",
+        "Gender": "Female",
+        "Location": "Da Nang",
+        "Account balance": 2034000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 368000000,
+        "Transaction_Count": 313
+    },
+    {
+        "Customer ID": "ACC_1448",
+        "Date of Birth": "1986-09-11",
+        "Gender": "Female",
+        "Location": "Vung Tau",
+        "Account balance": 13000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 5
+    },
+    {
+        "Customer ID": "ACC_1449",
+        "Date of Birth": "1979-07-26",
+        "Gender": "Female",
+        "Location": "Thanh Hoa",
+        "Account balance": 5007000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 483000000,
+        "Transaction_Count": 71
+    },
+    {
+        "Customer ID": "ACC_1450",
+        "Date of Birth": "1985-03-07",
+        "Gender": "Male",
+        "Location": "Binh Duong",
+        "Account balance": 3413000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 157000000,
+        "Transaction_Count": 155
+    },
+    {
+        "Customer ID": "ACC_1451",
+        "Date of Birth": "1985-03-05",
+        "Gender": "Male",
+        "Location": "Dong Nai",
+        "Account balance": 15000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 25
+    },
+    {
+        "Customer ID": "ACC_1452",
+        "Date of Birth": "1988-09-21",
+        "Gender": "Female",
+        "Location": "Hue",
+        "Account balance": 5215000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 227
+    },
+    {
+        "Customer ID": "ACC_1453",
+        "Date of Birth": "1996-05-23",
+        "Gender": "Female",
+        "Location": "Can Tho",
+        "Account balance": 4000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 9
+    },
+    {
+        "Customer ID": "ACC_1454",
+        "Date of Birth": "1972-04-12",
+        "Gender": "Female",
+        "Location": "Hai Phong",
+        "Account balance": 2835000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 8000000,
+        "Transaction_Count": 62
+    },
+    {
+        "Customer ID": "ACC_1455",
+        "Date of Birth": "1986-12-20",
+        "Gender": "Female",
+        "Location": "Quang Ninh",
+        "Account balance": 4000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 14
+    },
+    {
+        "Customer ID": "ACC_1456",
+        "Date of Birth": "1989-07-04",
+        "Gender": "Female",
+        "Location": "Hanoi",
+        "Account balance": 2000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 7
+    },
+    {
+        "Customer ID": "ACC_1457",
+        "Date of Birth": "1998-05-02",
+        "Gender": "Female",
+        "Location": "Dong Nai",
+        "Account balance": 7000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 4
+    },
+    {
+        "Customer ID": "ACC_1458",
+        "Date of Birth": "1986-11-16",
+        "Gender": "Male",
+        "Location": "Vung Tau",
+        "Account balance": 7706000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 432000000,
+        "Transaction_Count": 378
+    },
+    {
+        "Customer ID": "ACC_1459",
+        "Date of Birth": "1982-10-30",
+        "Gender": "Male",
+        "Location": "Ho Chi Minh City",
+        "Account balance": 2783000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 444000000,
+        "Transaction_Count": 442
+    },
+    {
+        "Customer ID": "ACC_1460",
+        "Date of Birth": "1976-09-08",
+        "Gender": "Male",
+        "Location": "Nha Trang",
+        "Account balance": 7685000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 162000000,
+        "Transaction_Count": 214
+    },
+    {
+        "Customer ID": "ACC_1461",
+        "Date of Birth": "1979-08-29",
+        "Gender": "Female",
+        "Location": "Ho Chi Minh City",
+        "Account balance": 1199000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 483000000,
+        "Transaction_Count": 252
+    },
+    {
+        "Customer ID": "ACC_1462",
+        "Date of Birth": "2001-07-14",
+        "Gender": "Female",
+        "Location": "Binh Duong",
+        "Account balance": 0,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 8
+    },
+    {
+        "Customer ID": "ACC_1463",
+        "Date of Birth": "2005-09-21",
+        "Gender": "Male",
+        "Location": "Hue",
+        "Account balance": 2994000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 482000000,
+        "Transaction_Count": 203
+    },
+    {
+        "Customer ID": "ACC_1464",
+        "Date of Birth": "1985-11-16",
+        "Gender": "Male",
+        "Location": "Ho Chi Minh City",
+        "Account balance": 7288000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 305000000,
+        "Transaction_Count": 55
+    },
+    {
+        "Customer ID": "ACC_1465",
+        "Date of Birth": "1998-03-26",
+        "Gender": "Female",
+        "Location": "Vung Tau",
+        "Account balance": 0,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 44
+    },
+    {
+        "Customer ID": "ACC_1466",
+        "Date of Birth": "1982-09-04",
+        "Gender": "Male",
+        "Location": "Thanh Hoa",
+        "Account balance": 7000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 7
+    },
+    {
+        "Customer ID": "ACC_1467",
+        "Date of Birth": "1976-08-04",
+        "Gender": "Male",
+        "Location": "Binh Duong",
+        "Account balance": 3000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 24
+    },
+    {
+        "Customer ID": "ACC_1468",
+        "Date of Birth": "2000-02-11",
+        "Gender": "Female",
+        "Location": "Hue",
+        "Account balance": 6677000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 301000000,
+        "Transaction_Count": 418
+    },
+    {
+        "Customer ID": "ACC_1469",
+        "Date of Birth": "1982-05-21",
+        "Gender": "Male",
+        "Location": "Binh Duong",
+        "Account balance": 12000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 22
+    },
+    {
+        "Customer ID": "ACC_1470",
+        "Date of Birth": "1977-07-22",
+        "Gender": "Male",
+        "Location": "Ho Chi Minh City",
+        "Account balance": 10000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 20
+    },
+    {
+        "Customer ID": "ACC_1471",
+        "Date of Birth": "1995-04-24",
+        "Gender": "Male",
+        "Location": "Vung Tau",
+        "Account balance": 7652000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 273
+    },
+    {
+        "Customer ID": "ACC_1472",
+        "Date of Birth": "1993-05-10",
+        "Gender": "Female",
+        "Location": "Hai Phong",
+        "Account balance": 6061000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 478000000,
+        "Transaction_Count": 74
+    },
+    {
+        "Customer ID": "ACC_1473",
+        "Date of Birth": "2004-03-29",
+        "Gender": "Male",
+        "Location": "Hanoi",
+        "Account balance": 14000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 29
+    },
+    {
+        "Customer ID": "ACC_1474",
+        "Date of Birth": "2002-09-06",
+        "Gender": "Female",
+        "Location": "Da Nang",
+        "Account balance": 7517000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 8000000,
+        "Transaction_Count": 212
+    },
+    {
+        "Customer ID": "ACC_1475",
+        "Date of Birth": "1978-05-20",
+        "Gender": "Male",
+        "Location": "Binh Duong",
+        "Account balance": 5332000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 7000000,
+        "Transaction_Count": 363
+    },
+    {
+        "Customer ID": "ACC_1476",
+        "Date of Birth": "1997-10-30",
+        "Gender": "Female",
+        "Location": "Can Tho",
+        "Account balance": 1344000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 280000000,
+        "Transaction_Count": 466
+    },
+    {
+        "Customer ID": "ACC_1477",
+        "Date of Birth": "1979-05-16",
+        "Gender": "Female",
+        "Location": "Nha Trang",
+        "Account balance": 3000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 43
+    },
+    {
+        "Customer ID": "ACC_1478",
+        "Date of Birth": "1991-07-25",
+        "Gender": "Female",
+        "Location": "Quang Ninh",
+        "Account balance": 6334000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 89000000,
+        "Transaction_Count": 413
+    },
+    {
+        "Customer ID": "ACC_1479",
+        "Date of Birth": "1972-10-02",
+        "Gender": "Female",
+        "Location": "Quang Ninh",
+        "Account balance": 4447000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 5000000,
+        "Transaction_Count": 304
+    },
+    {
+        "Customer ID": "ACC_1480",
+        "Date of Birth": "2004-04-24",
+        "Gender": "Male",
+        "Location": "Hanoi",
+        "Account balance": 2083000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 62000000,
+        "Transaction_Count": 481
+    },
+    {
+        "Customer ID": "ACC_1481",
+        "Date of Birth": "1983-01-02",
+        "Gender": "Female",
+        "Location": "Binh Duong",
+        "Account balance": 13000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 0
+    },
+    {
+        "Customer ID": "ACC_1482",
+        "Date of Birth": "2000-05-25",
+        "Gender": "Female",
+        "Location": "Hanoi",
+        "Account balance": 7968000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 394000000,
+        "Transaction_Count": 285
+    },
+    {
+        "Customer ID": "ACC_1483",
+        "Date of Birth": "1992-11-11",
+        "Gender": "Male",
+        "Location": "Thanh Hoa",
+        "Account balance": 4630000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 338000000,
+        "Transaction_Count": 189
+    },
+    {
+        "Customer ID": "ACC_1484",
+        "Date of Birth": "1977-07-30",
+        "Gender": "Male",
+        "Location": "Da Nang",
+        "Account balance": 2187000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 259000000,
+        "Transaction_Count": 364
+    },
+    {
+        "Customer ID": "ACC_1485",
+        "Date of Birth": "1976-10-20",
+        "Gender": "Male",
+        "Location": "Can Tho",
+        "Account balance": 8944000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 446
+    },
+    {
+        "Customer ID": "ACC_1486",
+        "Date of Birth": "1972-03-15",
+        "Gender": "Male",
+        "Location": "Da Nang",
+        "Account balance": 6549000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 130
+    },
+    {
+        "Customer ID": "ACC_1487",
+        "Date of Birth": "1992-10-25",
+        "Gender": "Male",
+        "Location": "Hai Phong",
+        "Account balance": 15000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 13
+    },
+    {
+        "Customer ID": "ACC_1488",
+        "Date of Birth": "1970-03-17",
+        "Gender": "Male",
+        "Location": "Ho Chi Minh City",
+        "Account balance": 4000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 26
+    },
+    {
+        "Customer ID": "ACC_1489",
+        "Date of Birth": "1980-06-13",
+        "Gender": "Female",
+        "Location": "Vung Tau",
+        "Account balance": 7651000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 15000000,
+        "Transaction_Count": 165
+    },
+    {
+        "Customer ID": "ACC_1490",
+        "Date of Birth": "2004-07-29",
+        "Gender": "Male",
+        "Location": "Hanoi",
+        "Account balance": 2000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 38
+    },
+    {
+        "Customer ID": "ACC_1491",
+        "Date of Birth": "1999-01-05",
+        "Gender": "Male",
+        "Location": "Hanoi",
+        "Account balance": 1596000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 182
+    },
+    {
+        "Customer ID": "ACC_1492",
+        "Date of Birth": "1992-09-10",
+        "Gender": "Male",
+        "Location": "Hanoi",
+        "Account balance": 9000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 11
+    },
+    {
+        "Customer ID": "ACC_1493",
+        "Date of Birth": "1987-02-18",
+        "Gender": "Female",
+        "Location": "Ho Chi Minh City",
+        "Account balance": 8382000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 32000000,
+        "Transaction_Count": 476
+    },
+    {
+        "Customer ID": "ACC_1494",
+        "Date of Birth": "1983-12-12",
+        "Gender": "Male",
+        "Location": "Quang Ninh",
+        "Account balance": 218000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 229000000,
+        "Transaction_Count": 44
+    },
+    {
+        "Customer ID": "ACC_1495",
+        "Date of Birth": "1982-02-18",
+        "Gender": "Female",
+        "Location": "Binh Duong",
+        "Account balance": 9914000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 338000000,
+        "Transaction_Count": 107
+    },
+    {
+        "Customer ID": "ACC_1496",
+        "Date of Birth": "1985-08-21",
+        "Gender": "Male",
+        "Location": "Ho Chi Minh City",
+        "Account balance": 6844000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 24000000,
+        "Transaction_Count": 490
+    },
+    {
+        "Customer ID": "ACC_1497",
+        "Date of Birth": "1976-03-22",
+        "Gender": "Female",
+        "Location": "Hanoi",
+        "Account balance": 7000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 49
+    },
+    {
+        "Customer ID": "ACC_1498",
+        "Date of Birth": "1978-04-03",
+        "Gender": "Male",
+        "Location": "Binh Duong",
+        "Account balance": 17000000,
+        "Working Status": "Employed",
+        "Salary (per month)": 6000000,
+        "Transaction_Count": 11
+    },
+    {
+        "Customer ID": "ACC_1499",
+        "Date of Birth": "1995-03-31",
+        "Gender": "Female",
+        "Location": "Dong Nai",
+        "Account balance": 13000000,
+        "Working Status": "Unemployed",
+        "Salary (per month)": 0,
+        "Transaction_Count": 49
+    }
+]
