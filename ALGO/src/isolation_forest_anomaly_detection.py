@@ -250,7 +250,7 @@ def main():
     print("="*70)
     
     # Đường dẫn file dữ liệu
-    data_path = 'dataset1.0/transactions.json'
+    data_path = r'C:\Users\Admin\Documents\Algorithm_Inno\ALGO\data\Transactions_25k.json'
     
     # Khởi tạo detector
     # contamination=0.1 nghĩa là dự kiến 10% dữ liệu là anomaly
