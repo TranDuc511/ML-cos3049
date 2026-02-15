@@ -1,104 +1,66 @@
-# ALGO - Isolation Forest Anomaly Detection
+# Transaction Anomaly Detection System
 
-Dự án phát hiện giao dịch bất thường bằng thuật toán Isolation Forest.
+This project implements a machine learning system to detect anomalous financial transactions using a combination of **Isolation Forest** (for unsupervised anomaly detection) and **Random Forest** (for supervised classification/explanation).
 
-## Cấu trúc thư mục
+## Features
+
+- **Automated Anomaly Detection**: Uses Isolation Forest to identify suspicious transactions without prior labeling.
+- **Supervised Learning Integration**: Uses Random Forest to learn the patterns of detected anomalies.
+- **Explainable AI**: Provides feature importance to explain *why* a transaction is considered anomalous.
+
+## Project Structure
+
+Algorithm_Inno/ML/
+├── data/
+│   ├── data.json           # Raw transaction data
+│   └── data_labeled.json   # Data labeled by Isolation Forest
+├── docs/
+│   ├── random_forest_explanation.md    # Simlified explanation of Random Forest
+│   └── isolation_forest_explanation.md # Simplified explanation of Isolation Forest
+├── src/
+│   ├── isolation_forest_anomaly_detection.py
+│   └── random_forest.py
+└── README.md
 
 ```
-ALGO/
-├── data/                   # Dữ liệu gốc
-│   ├── transactions.json   # Dữ liệu giao dịch
-│   └── customers_fixed.json # Dữ liệu khách hàng
-│
-├── src/                    # Source code
-│   └── isolation_forest_anomaly_detection.py  # Script phát hiện anomaly
-│
-├── results/                # Kết quả phân tích
-│   ├── anomaly_results.json                   # Toàn bộ kết quả
-│   └── anomaly_results_anomalies_only.json    # Chỉ giao dịch bất thường
-│
-├── visualizations/         # Biểu đồ và hình ảnh
-│   └── anomaly_visualization.png              # Biểu đồ phân tích
-│
-├── docs/                   # Tài liệu
-│   └── ISOLATION_FOREST_EXPLAINED.md          # Giải thích thuật toán
-│
-└── README.md              # File này
-```
 
-## Giới thiệu
+## Instructions for Students
 
-Dự án sử dụng **Isolation Forest** để tự động phát hiện các giao dịch bất thường (anomalies) trong dữ liệu giao dịch ngân hàng. Thuật toán hoạt động dựa trên nguyên lý: "Những điểm bất thường dễ dàng bị cô lập hơn những điểm bình thường".
+This project demonstrates two powerful machine learning algorithms: **Isolation Forest** (for finding anomalies) and **Random Forest** (for classifying them).
 
-## Yêu cầu
+### 1. Understanding the Algorithms
+
+Before running the code, please read the simplified explanations:
+
+- [📖 Random Forest Explanation](docs/random_forest_explanation.md)
+- [📖 Isolation Forest Explanation](docs/isolation_forest_explanation.md)
+
+### 2. Running the Code
+
+The workflow consists of two steps. Run them in order:
+
+**Step 1: Generate Labels (Isolation Forest)**
+This script reads the raw data, identifies anomalies, and saves a labeled dataset.
 
 ```bash
-pip install pandas scikit-learn matplotlib seaborn numpy
+python src/isolation_forest_anomaly_detection.py
 ```
 
-## Cách sử dụng
-
-### 1. Chạy phân tích
+**Step 2: Train Classifier (Random Forest)**
+This script reads the labeled dataset and trains a model to understand the anomalies.
 
 ```bash
-cd src
-python isolation_forest_anomaly_detection.py
+python src/random_forest.py
 ```
 
-### 2. Xem kết quả
+### 3. Expected Output
 
-- **Kết quả chi tiết**: `results/anomaly_results.json`
-- **Chỉ anomalies**: `results/anomaly_results_anomalies_only.json`
-- **Biểu đồ trực quan**: `visualizations/anomaly_visualization.png`
+- **Isolation Forest**: Will print the top 5 most anomalous transactions.
+- **Random Forest**: Will print the accuracy of the model and the top 5 features that contribute to the anomaly (e.g., Transaction Amount, Location).
 
-### 3. Tìm hiểu thuật toán
+## Requirements
 
-Đọc tài liệu chi tiết tại: `docs/ISOLATION_FOREST_EXPLAINED.md`
-
-## Kết quả
-
-Script đã phát hiện **50 giao dịch bất thường** từ tổng số 5000 giao dịch (10%).
-
-### Top 3 giao dịch bất thường nhất:
-
-1. **TXN_1002** (Score: -0.615)
-   - Số tiền: $7,270
-   - Loại: Crypto exchange funding
-   - Địa điểm: Singapore
-   - Thiết bị: Android Emulator (Cảnh báo!)
-
-2. **TXN_1032** (Score: -0.615)
-   - Số tiền: $13,795
-   - Loại: Offshore service fee
-   - Địa điểm: Tokyo
-
-3. **TXN_1103** (Score: -0.608)
-   - Số tiền: $14,580
-   - Loại: Gaming wallet top-up
-   - Địa điểm: Tokyo
-   - Thiết bị: Android Emulator (Cảnh báo!)
-
-## Đặc điểm giao dịch bất thường
-
-- Số tiền cao bất thường (>$7,000)
-- Loại giao dịch nguy hiểm: Crypto, Gaming, P2P loan, Offshore
-- Địa điểm quốc tế: Tokyo, Singapore, Paris, New York
-- Thiết bị đáng ngờ: Android Emulator
-
-## Tùy chỉnh
-
-Để điều chỉnh tỷ lệ phát hiện anomaly, sửa tham số `contamination` trong file `src/isolation_forest_anomaly_detection.py`:
-
-```python
-detector = TransactionAnomalyDetector(contamination=0.1)  # 10% anomalies
-# Thay đổi thành 0.05 (5%), 0.15 (15%), v.v.
-```
-
-## Tham khảo
-
-- Paper gốc: Liu, Fei Tony, et al. "Isolation forest." 2008
-- Scikit-learn: https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html
-
-## License
-
-MIT License
+- Python 3.x
+- pandas
+- scikit-learn
+- numpy
