@@ -23,11 +23,13 @@ from sklearn.preprocessing import LabelEncoder
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', 1000)
 
+
 def load_data(file_path):
+
     """
-    Bước 1: Đọc dữ liệu từ file JSON
+    Step 1: Đọc dữ liệu từ file JSON
     """
-    print(f"\n[BƯỚC 1] Đang đọc dữ liệu từ: {file_path}")
+    print(f"\n[STEP 1] Reading data from: {file_path}")
     try:
         # Thử đọc trực tiếp bằng pandas
         data_frame = pd.read_json(file_path)
@@ -37,18 +39,17 @@ def load_data(file_path):
             data = json.load(file)
         data_frame = pd.DataFrame(data)
     
-    print(f"   -> Đã tải {len(data_frame)} dòng dữ liệu.")
+    print(f"   -> uploaded {len(data_frame)} data.")
     return data_frame
 
 def clean_and_process_data(data_frame):
     """
-    Bước 2: Làm sạch và chuẩn bị dữ liệu
+    Step 2: Làm sạch và chuẩn bị dữ liệu
     """
-    print("\n[BƯỚC 2] Đang xử lý dữ liệu...")
+    print("\n[Step 2] Đang xử lý dữ liệu...")
     
     # 2.1. Làm sạch các cột số (loại bỏ dấu phẩy và chuyển thành số)
     numeric_columns = ['Transaction amount', 'Account balance', 'Salary (per month)']
-    
     for column in numeric_columns:
         # Chuyển thành chuỗi (string) để xử lý
         data_frame[column] = data_frame[column].astype(str)
@@ -90,9 +91,9 @@ def clean_and_process_data(data_frame):
 
 def detect_anomalies(data_frame, data_frame_processed):
     """
-    Bước 3: Phát hiện bất thường bằng Isolation Forest
+    Step 3: Phát hiện bất thường bằng Isolation Forest
     """
-    print("\n[BƯỚC 3] Đang tìm kiếm giao dịch bất thường...")
+    print("\n[Step 3] Đang tìm kiếm giao dịch bất thường...")
     
     # Chọn các cột dữ liệu để đưa vào thuật toán (chỉ chọn cột số)
     features = [
@@ -132,9 +133,9 @@ def detect_anomalies(data_frame, data_frame_processed):
 
 def save_result(data_frame, output_path):
     """
-    Bước 4: Lưu kết quả
+    Step 4: Lưu kết quả
     """
-    print(f"\n[BƯỚC 4] Lưu kết quả vào file: {output_path}")
+    print(f"\n[Step 4] Lưu kết quả vào file: {output_path}")
     
     # Chuyển cột thời gian về dạng chuỗi để lưu được vào JSON
     if 'DateTime' in data_frame.columns:
@@ -154,20 +155,20 @@ def print_top_anomalies(data_frame):
     # Lọc lấy giao dịch Fraud và sắp xếp theo điểm score tăng dần (càng thấp càng dị biệt)
     frauds = data_frame[data_frame['is_fraud'] == 1].sort_values('anomaly_score')
     
-    # Chọn các cột quan trọng để hiển thị
+    # Show important columns
     columns_to_show = [
         'Transaction ID', 'Transaction amount', 'Transaction Detail', 
         'Location', 'anomaly_score'
     ]
     
-    # In 5 dòng đầu tiên
+    #print 5 columns
     print(frauds[columns_to_show].head(5).to_string(index=False))
     print("="*80)
 
 if __name__ == "__main__":
     # Đường dẫn file dữ liệu
-    input_file = 'data/data.json'
-    output_file = 'data/data_labeled.json'
+    input_file = 'ML/data/data.json'
+    output_file = 'ML/data/data_labeled.json'
     
     try:
         # 1. Đọc dữ liệu
@@ -185,9 +186,9 @@ if __name__ == "__main__":
         # 5. Lưu file
         save_result(df, output_file)
         
-        print("\nCHƯƠNG TRÌNH HOÀN THÀNH!")
+        print("DONE")
         
     except FileNotFoundError:
-        print(f"Lỗi: Không tìm thấy file {input_file}")
+        print(f"Error: Not found {input_file}")
     except Exception as e:
-        print(f"Lỗi không mong muốn: {e}")
+        print(f"Error: {e}")
