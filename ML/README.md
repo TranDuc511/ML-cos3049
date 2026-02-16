@@ -64,3 +64,10 @@ python src/random_forest.py
 - pandas
 - scikit-learn
 - numpy
+
+## Create virtual enviroment
+- install Anaconda
+- open Anaconda Prompt
+- conda create -n ml python=3.10
+- conda activate ml
+- pip install pandas numpy scikit-learn
