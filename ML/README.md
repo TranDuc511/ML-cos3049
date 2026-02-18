@@ -71,3 +71,9 @@ python src/random_forest.py
 - conda create -n ml python=3.10
 - conda activate ml
 - pip install pandas numpy scikit-learn
+
+## Checklist
+[x]Clustering (IsolationForest) -> [x] Labeling
+[x]Classification (RandomForest)
+[]Regression
+[]Model Evaluation

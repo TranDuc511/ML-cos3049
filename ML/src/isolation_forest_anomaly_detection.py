@@ -19,7 +19,7 @@ import pandas as pd
 from sklearn.ensemble import IsolationForest
 from sklearn.preprocessing import LabelEncoder
 
-# Cấu hình in ra terminal đẹp hơn
+# print to terminal
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', 1000)
 
@@ -27,14 +27,14 @@ pd.set_option('display.width', 1000)
 def load_data(file_path):
 
     """
-    Step 1: Đọc dữ liệu từ file JSON
+    Step 1: Read from Json
     """
     print(f"\n[STEP 1] Reading data from: {file_path}")
     try:
-        # Thử đọc trực tiếp bằng pandas
+        # using pandas to read
         data_frame = pd.read_json(file_path)
     except ValueError:
-        # Nếu lỗi (do format JSON), đọc thủ công rồi chuyển sang DataFrame
+        # if wrong json format, read manualy and switch to dataframe
         with open(file_path, 'r', encoding='utf-8') as file:
             data = json.load(file)
         data_frame = pd.DataFrame(data)
@@ -70,20 +70,20 @@ def clean_and_process_data(data_frame):
         data_frame['Hour'] = data_frame['DateTime'].dt.hour
         data_frame['DayOfWeek'] = data_frame['DateTime'].dt.dayofweek
     
-    # 2.3. Mã hóa dữ liệu chữ thành số (Label Encoding)
-    # Máy tính chỉ hiểu số, nên phải chuyển các cột chữ (như Địa điểm, Loại giao dịch) thành số
+    # 2.3. Label Encoding
+    # Machine only understand number, so we need to convert text columns to numbers
     text_columns = [
         'Transaction Detail', 'Geological', 'Device Use', 
         'Gender', 'Location', 'Working Status'
     ]
     
-    # Tạo một bản sao để huấn luyện (chỉ chứa số)
+    # Create a copy to train (only contains numbers)
     data_frame_processed = data_frame.copy()
     
     for column in text_columns:
         if column in data_frame.columns:
             encoder = LabelEncoder()
-            # Tạo tên cột mới có đuôi _encoded
+            # Create new column name with _encoded suffix
             new_column_name = column + "_encoded"
             data_frame_processed[new_column_name] = encoder.fit_transform(data_frame[column].astype(str))
 
@@ -91,11 +91,11 @@ def clean_and_process_data(data_frame):
 
 def detect_anomalies(data_frame, data_frame_processed):
     """
-    Step 3: Phát hiện bất thường bằng Isolation Forest
+    Step 3: Detect anomalies using Isolation Forest
     """
     print("\n[Step 3] Đang tìm kiếm giao dịch bất thường...")
     
-    # Chọn các cột dữ liệu để đưa vào thuật toán (chỉ chọn cột số)
+    # Select features to train the model (only select numeric columns)
     features = [
         'Transaction amount', 'Account balance', 'Salary (per month)',
         'Hour', 'DayOfWeek',
