@@ -19,6 +19,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, accuracy_score
 from sklearn.preprocessing import LabelEncoder
+import joblib
+import os
 
 # Hiển thị đẹp hơn
 pd.set_option('display.max_columns', None)
@@ -64,12 +66,14 @@ def prepare_data(data_frame):
     text_columns = features.select_dtypes(include=['object']).columns
     print(f"   -> Đang mã hóa các cột: {list(text_columns)}")
     
+    label_encoders = {}
     for column in text_columns:
         encoder = LabelEncoder()
         # Chuyển chữ thành số (0, 1, 2...)
         features[column] = encoder.fit_transform(features[column].astype(str))
+        label_encoders[column] = encoder # Lưu lại encoder để dùng sau
         
-    return features, target, available_columns
+    return features, target, available_columns, label_encoders
 
 def train_model(features, target, feature_names):
     """
@@ -112,6 +116,25 @@ def train_model(features, target, feature_names):
         feature_name = feature_names[index]
         importance_score = importances[index]
         print(f"   {i+1}. {feature_name}: {importance_score:.4f}")
+        
+    return model
+
+def save_artifacts(model, label_encoders, feature_columns, output_dir='ML/models'):
+    """
+    Lưu model và các thành phần phụ trợ ra file
+    """
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+        
+    model_path = os.path.join(output_dir, 'fraud_detection_model.pkl')
+    encoders_path = os.path.join(output_dir, 'label_encoders.pkl')
+    features_path = os.path.join(output_dir, 'feature_columns.pkl')
+    
+    joblib.dump(model, model_path)
+    joblib.dump(label_encoders, encoders_path)
+    joblib.dump(feature_columns, features_path) # Cần lưu thứ tự cột để khớp khi dự đoán
+    
+    print(f"\n[Step 6] Đã lưu model tại: {model_path}")
 
 if __name__ == "__main__":
     file_path = 'ML/data/data_labeled.json'
@@ -121,9 +144,12 @@ if __name__ == "__main__":
     
     if df is not None:
         # 2. Chuẩn bị
-        X, y, columns = prepare_data(df)
+        X, y, columns, encoders = prepare_data(df)
         
         # 3. Huấn luyện
-        train_model(X, y, columns)
+        trained_model = train_model(X, y, columns)
+        
+        # 4. Lưu model
+        save_artifacts(trained_model, encoders, columns)
         
         print("DONE")
