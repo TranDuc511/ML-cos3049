@@ -44,7 +44,7 @@ def load_data(file_path):
 
 def clean_and_process_data(data_frame):
     """
-    Step 2: Làm sạch và chuẩn bị dữ liệu
+    Step 2: Clean and Process Data
     """
     print("\n[Step 2] Đang xử lý dữ liệu...")
     
@@ -54,19 +54,19 @@ def clean_and_process_data(data_frame):
         # Chuyển thành chuỗi (string) để xử lý
         data_frame[column] = data_frame[column].astype(str)
         
-        # Xóa dấu phẩy và dấu chấm thừa
+        # Remove comma and extra decimal points
         data_frame[column] = data_frame[column].str.replace(',', '', regex=False)
         data_frame[column] = data_frame[column].str.replace('.', '', regex=False)
         
-        # Chuyển thành số (nếu lỗi thì thành 0)
+        # Convert to number (if error then become 0)
         data_frame[column] = pd.to_numeric(data_frame[column], errors='coerce').fillna(0)
 
     # 2.2. Xử lý thời gian
     if 'Timestamp' in data_frame.columns:
-        # Chuyển đổi timestamp sang định dạng ngày giờ
+        # Convert timestamp to datetime
         data_frame['DateTime'] = pd.to_datetime(data_frame['Timestamp'], unit='ms')
         
-        # Tạo thêm cột Giờ và Thứ trong tuần
+        # Create additional columns for Hour and Day of Week
         data_frame['Hour'] = data_frame['DateTime'].dt.hour
         data_frame['DayOfWeek'] = data_frame['DateTime'].dt.dayofweek
     
@@ -91,9 +91,9 @@ def clean_and_process_data(data_frame):
 
 def detect_anomalies(data_frame, data_frame_processed):
     """
-    Step 3: Detect anomalies using Isolation Forest
+    Step 3: Detect Anomalies using Isolation Forest
     """
-    print("\n[Step 3] Đang tìm kiếm giao dịch bất thường...")
+    print("\n[Step 3] Detecting Anomalies...")
     
     # Select features to train the model (only select numeric columns)
     features = [
@@ -103,10 +103,10 @@ def detect_anomalies(data_frame, data_frame_processed):
         'Device Use_encoded', 'Location_encoded', 'Working Status_encoded'
     ]
     
-    # Lọc chỉ lấy các cột thực sự có trong dữ liệu
+    # Filter only columns that exist in the data
     selected_features = [col for col in features if col in data_frame_processed.columns]
     
-    # Tạo dữ liệu đầu vào cho mô hình (Features)
+    # Create model input data (Features)
     X = data_frame_processed[selected_features]
     
     # Khởi tạo thuật toán Isolation Forest
@@ -133,26 +133,26 @@ def detect_anomalies(data_frame, data_frame_processed):
 
 def save_result(data_frame, output_path):
     """
-    Step 4: Lưu kết quả
+    Step 4: Save Result
     """
-    print(f"\n[Step 4] Lưu kết quả vào file: {output_path}")
+    print(f"\n[Step 4] Saving result to file: {output_path}")
     
-    # Chuyển cột thời gian về dạng chuỗi để lưu được vào JSON
+    # Convert datetime column to string for JSON saving
     if 'DateTime' in data_frame.columns:
         data_frame['DateTime'] = data_frame['DateTime'].astype(str)
         
     data_frame.to_json(output_path, orient='records', indent=4, force_ascii=False)
-    print("   -> Đã lưu thành công.")
+    print("   -> Done!")
 
 def print_top_anomalies(data_frame):
     """
-    In ra 5 giao dịch bất thường nhất
+    Print top 5 anomalies
     """
     print("\n" + "="*80)
-    print("TOP 5 GIAO DỊCH ĐÁNG NGỜ NHẤT")
+    print("TOP 5 ANOMALIES")
     print("="*80)
     
-    # Lọc lấy giao dịch Fraud và sắp xếp theo điểm score tăng dần (càng thấp càng dị biệt)
+    # Filter Fraud transactions and sort by anomaly score (lower is more different)
     frauds = data_frame[data_frame['is_fraud'] == 1].sort_values('anomaly_score')
     
     # Show important columns
@@ -166,24 +166,24 @@ def print_top_anomalies(data_frame):
     print("="*80)
 
 if __name__ == "__main__":
-    # Đường dẫn file dữ liệu
+    # Path to input and output files
     input_file = 'ML/data/data.json'
     output_file = 'ML/data/data_labeled.json'
     
     try:
-        # 1. Đọc dữ liệu
+        # 1. Read data
         df = load_data(input_file)
         
-        # 2. Xử lý dữ liệu
+        # 2. Clean and process data
         df, df_processed = clean_and_process_data(df)
         
-        # 3. Phát hiện bất thường
+        # 3. Detect anomalies
         df = detect_anomalies(df, df_processed)
         
-        # 4. In báo cáo
+        # 4. Print top 5 anomalies
         print_top_anomalies(df)
         
-        # 5. Lưu file
+        # 5. Save result
         save_result(df, output_file)
         
         print("DONE")
