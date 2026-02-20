@@ -73,11 +73,11 @@ def prepare_data(data_frame):
 
 def train_model(features, target, feature_names):
     """
-    Step 3: Huấn luyện và Đánh giá
+    Step 3: Train and Evaluate
     """
-    print("\n[Step 3] Huấn luyện mô hình...")
+    print("\n[Step 3] Traing Model...")
     
-    # Chia dữ liệu: 80% để học (Train), 20% để kiểm tra (Test)
+    # Data Splitting: 80% Train, 20% Test
     X_train, X_test, y_train, y_test = train_test_split(features, target, test_size=0.2, random_state=42)
     
     # Khởi tạo mô hình Random Forest
@@ -85,16 +85,16 @@ def train_model(features, target, feature_names):
     
     # Bắt đầu học
     model.fit(X_train, y_train)
-    print("   -> Đã học xong!")
+    print("   -> Done!")
     
-    print("\n[Step 4] Đánh giá độ chính xác...")
+    print("\n[Step 4] Evaluating Model...")
     
     # Dự đoán trên tập kiểm tra
     predictions = model.predict(X_test)
     
     # Tính độ chính xác
     accuracy = accuracy_score(y_test, predictions)
-    print(f"   -> Độ chính xác tổng thể: {accuracy:.2%} (Tốt nếu > 80%)")
+    print(f"   -> Accuracy: {accuracy:.2%} (Tốt nếu > 80%)")
     
     print("\n   -> Bảng chi tiết:")
     # In bảng báo cáo (Precision, Recall, F1-score)
