@@ -37,20 +37,28 @@ Before running the code, please read the simplified explanations:
 
 ### 2. Running the Code
 
-The workflow consists of two steps. Run them in order:
+You have two ways to run this project:
+
+#### Option A: Run the Entire Pipeline (Recommended)
+You can run the entire process (Anomaly Detection -> Classification) with a single command from the `Algorithm_Inno` folder:
+
+```bash
+python run_pipeline.py
+```
+
+#### Option B: Run Step-by-Step
+If you want to understand each step individually, run them in this order from the `Algorithm_Inno` folder:
 
 **Step 1: Generate Labels (Isolation Forest)**
 This script reads the raw data, identifies anomalies, and saves a labeled dataset.
-
 ```bash
-python src/isolation_forest_anomaly_detection.py
+python ML/src/isolation_forest_anomaly_detection.py
 ```
 
 **Step 2: Train Classifier (Random Forest)**
 This script reads the labeled dataset and trains a model to understand the anomalies.
-
 ```bash
-python src/random_forest.py
+python ML/src/random_forest.py
 ```
 
 ### 3. Expected Output
