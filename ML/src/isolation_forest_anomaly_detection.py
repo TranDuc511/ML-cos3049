@@ -109,25 +109,25 @@ def detect_anomalies(data_frame, data_frame_processed):
     # Create model input data (Features)
     X = data_frame_processed[selected_features]
     
-    # Khởi tạo thuật toán Isolation Forest
-    # contamination=0.05 nghĩa là ta dự đoán có khoảng 5% dữ liệu là bất thường
+    # Initialize Isolation Forest
+    # contamination=0.05 means we predict that 5% of the data is anomalous
     model = IsolationForest(n_estimators=100, contamination=0.05, random_state=42)
     
-    # Huấn luyện mô hình
+    # Train model
     model.fit(X)
     
-    # Dự đoán kết quả (-1 là Bất thường, 1 là Bình thường)
+    # Predict (-1 is Anomaly, 1 is Normal)
     predictions = model.predict(X)
     
-    # Gán nhãn lại vào dữ liệu gốc: 1 = Gian lận (Fraud), 0 = Bình thường
-    # Nếu prediction là -1 thì là Fraud (1), ngược lại là 0
+    # Assign labels to the original data: 1 = Fraud, 0 = Normal
+    # If prediction is -1 then it is Fraud (1), otherwise it is 0
     data_frame['is_fraud'] = [1 if p == -1 else 0 for p in predictions]
     
-    # Tính điểm bất thường (Score càng thấp càng bất thường)
+    # Calculate anomaly score (Lower score means more anomalous)
     data_frame['anomaly_score'] = model.score_samples(X)
     
     fraud_count = data_frame['is_fraud'].sum()
-    print(f"   -> Đã tìm thấy {fraud_count} giao dịch đáng ngờ.")
+    print(f"   -> Found {fraud_count} suspicious transactions.")
     
     return data_frame
 
