@@ -51,7 +51,10 @@ def prepare_data(data_frame):
     ]
     
     # Lọc lấy cột nào có trong dữ liệu
-    available_columns = [col for col in feature_columns if col in data_frame.columns]
+    available_columns = []
+    for col in feature_columns:
+        if col in data_frame.columns:
+            available_columns.append(col)
     
     # Tạo bảng dữ liệu đầu vào (Input Features - X)
     features = data_frame[available_columns].copy()
