@@ -47,8 +47,11 @@ def prepare_data(data_frame: pd.DataFrame) -> Tuple[pd.DataFrame, pd.Series, Lis
         'Transaction Detail', 'Geological', 'Device Use', 'Location', 'Working Status'
     ]
     
-    # Lọc lấy những cột thực sự tồn tại trong dữ liệu
-    available_columns = [col for col in feature_columns if col in data_frame.columns]
+    # Lọc lấy cột nào có trong dữ liệu
+    available_columns = []
+    for col in feature_columns:
+        if col in data_frame.columns:
+            available_columns.append(col)
     
     features = data_frame[available_columns].copy()
     target = data_frame['is_fraud']
