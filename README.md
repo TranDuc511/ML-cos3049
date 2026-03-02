@@ -69,11 +69,17 @@ python run_pipeline.py
 ## Checklist
 
 []Clustering (IsolationForest) -> [x] Labeling
+
 [x]Classification (RandomForest)
+
 []Regression (RandomForest)
+
 [x]Model Evaluation
+
 []Visualization
+
 []Dataset processing code
+
 []Notebook for each model
 
 3 Forest modes for real
