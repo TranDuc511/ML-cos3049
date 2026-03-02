@@ -29,17 +29,11 @@ def prepare_data(data_frame):
     # 2.1. Chọn các cột đặc trưng (Features)
     feature_columns = [
         'Transaction amount', 'Account balance', 'Salary (per month)', 
-        'Hour', 'DayOfWeek', 'Age', 
+        'Hour', 'DayOfWeek', 
         'Transaction Detail', 'Geological', 'Device Use', 'Location', 'Working Status'
     ]
     
-    # Lọc lấy cột nào có trong dữ liệu
-    available_columns = []
-    for col in feature_columns:
-        if col in data_frame.columns:
-            available_columns.append(col)
-    
-    features = data_frame[available_columns].copy()
+    features = data_frame[feature_columns]
     target = data_frame['is_fraud']
     
     
@@ -51,8 +45,7 @@ def prepare_data(data_frame):
             encoder = LabelEncoder()
             features[column] = encoder.fit_transform(features[column].astype(str))
         
-    return features, target, available_columns
-
+    return features, target, feature_columns
 
 def train_model(features, target, feature_names):
    
@@ -81,18 +74,19 @@ def train_model(features, target, feature_names):
 
     
     print("Step 5: Important features")
-    importances = model.feature_importances_
-    sorted_indices = np.argsort(importances)[::-1]
-    
-    for i in range(min(5, len(feature_names))):
-        index = sorted_indices[i]
-        print(f"   {i+1}. {feature_names[index]}: {importances[index]:.4f}")
+    importance_df = pd.DataFrame({
+        'Features': feature_names, 
+        'Importances': model.feature_importances_
+    }).sort_values('Importances', ascending=False)
+
+    # Hiển thị kết quả
+    print(importance_df.head(5))
+
+
 
 if __name__ == "__main__":
     FILE_PATH = 'ML/data/data_labeled.json'
-    
     df = load_data(FILE_PATH)
-    if df is not None:
-        X, y, columns = prepare_data(df)
-        train_model(X, y, columns)
-        print("Hoàn tất quá trình")
+    X, y, columns = prepare_data(df)
+    train_model(X, y, columns)
+    print("Hoàn tất quá trình")
