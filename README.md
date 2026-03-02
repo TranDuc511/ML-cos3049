@@ -10,21 +10,27 @@ This project implements a machine learning system to detect anomalous financial 
 
 ## Project Structure
 
-Algorithm_Inno/ML/
-├── data/
-│   ├── data.json           # Raw transaction data
-│   └── data_labeled.json   # Data labeled by Isolation Forest
-├── notebook/
-│   ├── rdclassification.ipynb
-│   |── rdregressor.ipynb
-|   |── iso.ipynb
-├── docs/
-│   ├── random_forest_explanation.md    # Simlified explanation of Random Forest
-│   └── isolation_forest_explanation.md # Simplified explanation of Isolation Forest
-├── src/
-│   ├── isolation_forest_anomaly_detection.py
-│   └── random_forest.py
+```text
+ML-cos3049/
+├── ML/
+│   ├── data/
+│   │   ├── data.json                            # Raw transaction data
+│   │   └── data_labeled.json                    # Data labeled by Isolation Forest
+│   ├── notebook/
+│   │   ├── rdclassification.ipynb
+│   │   ├── rdregressor.ipynb
+│   │   └── iso.ipynb
+│   ├── docs/
+│   │   ├── random_forest_explanation.md         # Explanation of Random Forest
+│   │   ├── isolation_forest_explanation.md      # Explanation of Isolation Forest
+│   │   └── random_forest_regressor_explanation.md  # Explanation of RF Regressor
+│   └── src/
+│       ├── isolation_forest_anomaly_detection.py
+│       ├── random_forest.py
+│       └── rdregressor.py
+├── run_pipeline.py
 └── README.md
+```
 
 ## Instructions
 
@@ -68,18 +74,12 @@ python run_pipeline.py
 
 ## Checklist
 
-[]Clustering (IsolationForest) -> [x] Labeling
-
-[x]Classification (RandomForest)
-
-[]Regression (RandomForest)
-
-[x]Model Evaluation
-
-[]Visualization
-
-[]Dataset processing code
-
-[]Notebook for each model
+- [x] Clustering (IsolationForest) → Labeling
+- [x] Classification (RandomForest)
+- [x] Regression (RandomForest)
+- [x] Model Evaluation
+- [ ] Visualization
+- [ ] Dataset processing code
+- [ ] Notebook for each model
 
 3 Forest modes for real
