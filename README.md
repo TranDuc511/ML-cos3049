@@ -42,6 +42,7 @@ Before running the code, please read the simplified explanations:
 
 - [📖 Random Forest Explanation](docs/random_forest_explanation.md)
 - [📖 Isolation Forest Explanation](docs/isolation_forest_explanation.md)
+- [📖 Random Forest Regressor Explanation](docs/random_forest_regressor_explanation.md)
 
 ### 2. Running the Code
 
