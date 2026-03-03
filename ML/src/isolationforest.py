@@ -1,18 +1,4 @@
-"""
-CHƯƠNG TRÌNH PHÁT HIỆN BẤT THƯỜNG VÀ GẮN NHÃN TỰ ĐỘNG
-
-
-MỤC TIÊU:
----------
-1. Đọc dữ liệu giao dịch từ file `data/data.json`.
-2. Tiền xử lý dữ liệu.
-3. Sử dụng Isolation Forest để phát hiện giao dịch bất thường.
-4. Gắn nhãn và lưu kết quả.
-
-LƯU Ý:
-------
-Code đã được đơn giản hóa và không viết tắt để dễ đọc.
-"""
+##IsolationForest Clustering
 
 import json
 import pandas as pd
@@ -26,29 +12,15 @@ pd.set_option('display.width', 1000)
 
 def load_data(file_path):
 
-    """
-    Step 1: Read from Json
-    """
-    print(f"\n[STEP 1] Reading data from: {file_path}")
-    try:
-        # using pandas to read
-        data_frame = pd.read_json(file_path)
-    except ValueError:
-        # if wrong json format, read manualy and switch to dataframe
-        with open(file_path, 'r', encoding='utf-8') as file:
-            data = json.load(file)
-        data_frame = pd.DataFrame(data)
-    
-    print(f"   -> uploaded {len(data_frame)} data.")
+    print(f"STEP 1 Reading data from: {file_path}")
+    data_frame = pd.read_json(file_path) 
+    print(f"Uploaded {len(data_frame)} data.")
     return data_frame
 
 def clean_and_process_data(data_frame):
-    """
-    Step 2: Clean and Process Data
-    """
-    print("\n[Step 2] Đang xử lý dữ liệu...")
+    print("Step 2 Processing data")
     
-    # 2.1. Làm sạch các cột số (loại bỏ dấu phẩy và chuyển thành số)
+    #1. Clean the number columns (remove commas and convert to numbers)
     numeric_columns = ['Transaction amount', 'Account balance', 'Salary (per month)']
     for column in numeric_columns:
         # Chuyển thành chuỗi (string) để xử lý
@@ -61,7 +33,7 @@ def clean_and_process_data(data_frame):
         # Convert to number (if error then become 0)
         data_frame[column] = pd.to_numeric(data_frame[column], errors='coerce').fillna(0)
 
-    # 2.2. Xử lý thời gian
+    #2. Time processing
     if 'Timestamp' in data_frame.columns:
         # Convert timestamp to datetime
         data_frame['DateTime'] = pd.to_datetime(data_frame['Timestamp'], unit='ms')
@@ -70,7 +42,7 @@ def clean_and_process_data(data_frame):
         data_frame['Hour'] = data_frame['DateTime'].dt.hour
         data_frame['DayOfWeek'] = data_frame['DateTime'].dt.dayofweek
     
-    # 2.3. Label Encoding
+    #3. Label Encoding
     # Machine only understand number, so we need to convert text columns to numbers
     text_columns = [
         'Transaction Detail', 'Geological', 'Device Use', 
@@ -90,10 +62,7 @@ def clean_and_process_data(data_frame):
     return data_frame, data_frame_processed
 
 def detect_anomalies(data_frame, data_frame_processed):
-    """
-    Step 3: Detect Anomalies using Isolation Forest
-    """
-    print("\n[Step 3] Detecting Anomalies...")
+    print("Step 3 Detecting Anomalies...")
     
     # Select features to train the model (only select numeric columns)
     features = [
@@ -110,8 +79,8 @@ def detect_anomalies(data_frame, data_frame_processed):
     X = data_frame_processed[selected_features]
     
     # Initialize Isolation Forest
-    # contamination=0.05 means we predict that 5% of the data is anomalous
-    model = IsolationForest(n_estimators=100, contamination=0.05, random_state=42)
+    # contamination=0.15 means we predict that 15% of the data is anomalous
+    model = IsolationForest(n_estimators=100, contamination=0.15, random_state=42)
     
     # Train model
     model.fit(X)
@@ -127,7 +96,7 @@ def detect_anomalies(data_frame, data_frame_processed):
     data_frame['anomaly_score'] = model.score_samples(X)
     
     fraud_count = data_frame['is_fraud'].sum()
-    print(f"   -> Found {fraud_count} suspicious transactions.")
+    print(f"Found {fraud_count} suspicious transactions.")
     
     return data_frame
 
@@ -135,22 +104,18 @@ def save_result(data_frame, output_path):
     """
     Step 4: Save Result
     """
-    print(f"\n[Step 4] Saving result to file: {output_path}")
+    print(f"Step 4 Saving result to file: {output_path}")
     
     # Convert datetime column to string for JSON saving
     if 'DateTime' in data_frame.columns:
         data_frame['DateTime'] = data_frame['DateTime'].astype(str)
         
     data_frame.to_json(output_path, orient='records', indent=4, force_ascii=False)
-    print("   -> Done!")
+    print("Done!")
 
 def print_top_anomalies(data_frame):
-    """
-    Print top 5 anomalies
-    """
-    print("\n" + "="*80)
+
     print("TOP 5 ANOMALIES")
-    print("="*80)
     
     # Filter Fraud transactions and sort by anomaly score (lower is more different)
     frauds = data_frame[data_frame['is_fraud'] == 1].sort_values('anomaly_score')
@@ -161,34 +126,29 @@ def print_top_anomalies(data_frame):
         'Location', 'anomaly_score'
     ]
     
-    #print 5 columns
+   
     print(frauds[columns_to_show].head(5).to_string(index=False))
-    print("="*80)
+
 
 if __name__ == "__main__":
-    # Path to input and output files
+  
     input_file = 'ML/data/data.json'
     output_file = 'ML/data/data_labeled.json'
-    
-    try:
-        # 1. Read data
-        df = load_data(input_file)
+    # 1. Read data
+    df = load_data(input_file)
         
-        # 2. Clean and process data
-        df, df_processed = clean_and_process_data(df)
+    # 2. Clean and process data
+    df, df_processed = clean_and_process_data(df)
         
-        # 3. Detect anomalies
-        df = detect_anomalies(df, df_processed)
+    # 3. Detect anomalies
+    df = detect_anomalies(df, df_processed)
         
-        # 4. Print top 5 anomalies
-        print_top_anomalies(df)
+    # 4. Print top 5 anomalies
+    print_top_anomalies(df)
         
         # 5. Save result
-        save_result(df, output_file)
+    save_result(df, output_file)
         
-        print("DONE")
+    print("DONE")
         
-    except FileNotFoundError:
-        print(f"Error: Not found {input_file}")
-    except Exception as e:
-        print(f"Error: {e}")
+  

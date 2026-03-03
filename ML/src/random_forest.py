@@ -18,7 +18,7 @@ def load_data(file_path):
     print(f"Step 1: Reading {file_path}")
     
     data_frame = pd.read_json(file_path)
-    print(f"-> Đã tải {len(data_frame)} dòng dữ liệu.")
+    print(f"Đã tải {len(data_frame)} dòng dữ liệu.")
     return data_frame
 
 
@@ -26,7 +26,7 @@ def prepare_data(data_frame):
     
     print("Step 2 Preparing data")
     
-    # 2.1. Chọn các cột đặc trưng (Features)
+    #1.Select the feature columns
     feature_columns = [
         'Transaction amount', 'Account balance', 'Salary (per month)', 
         'Hour', 'DayOfWeek', 
@@ -37,10 +37,10 @@ def prepare_data(data_frame):
     target = data_frame['is_fraud']
     
     
-    # 2.2. Mã hóa dữ liệu phân loại (chuỗi) thành số
+    #2.Encrypting classified data (strings) into numbers
     text_columns = features.select_dtypes(include=['object']).columns
     if len(text_columns) > 0:
-        print(f"-> Đang mã hóa các cột: {list(text_columns)}")
+        print(f"Encryting: {list(text_columns)}")
         for column in text_columns:
             encoder = LabelEncoder()
             features[column] = encoder.fit_transform(features[column].astype(str))
