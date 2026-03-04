@@ -5,6 +5,9 @@ import pandas as pd
 from sklearn.ensemble import IsolationForest
 from sklearn.preprocessing import LabelEncoder
 
+import matplotlib.pyplot as plt
+import seaborn as sns
+
 # print to terminal
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', 1000)
@@ -129,25 +132,51 @@ def print_top_anomalies(data_frame):
    
     print(frauds[columns_to_show].head(5).to_string(index=False))
 
+def visualization(df):
+    # 1. Anomaly Score Distribution
+    plt.figure()
+    plt.hist(df['anomaly_score'], bins=50, color='steelblue')
+    plt.axvline(df[df['is_fraud']==1]['anomaly_score'].max(), color='red', linestyle='--', label='Fraud threshold')
+    plt.title('Anomaly Score Distribution')
+    plt.xlabel('Anomaly Score')
+    plt.legend()
+
+    # 2. Normal vs Fraud Count
+    plt.figure()
+    df['is_fraud'].value_counts().rename({0: 'Normal', 1: 'Fraud'}).plot(kind='bar', color=['green', 'red'])
+    plt.title('Normal vs Fraud Count')
+
+    # 3. Transaction Amount vs Account Balance
+    plt.figure()
+    plt.scatter(df['Transaction amount'], df['Account balance'], c=df['is_fraud'], cmap='coolwarm', alpha=0.5)
+    plt.xlabel('Transaction Amount')
+    plt.ylabel('Account Balance')
+    plt.title('Transaction Amount vs Account Balance')
+
+    # 4. Fraud Heatmap by Hour and Day of Week
+    plt.figure()
+    pivot = df[df['is_fraud']==1].groupby(['DayOfWeek', 'Hour']).size().unstack(fill_value=0)
+    sns.heatmap(pivot, cmap='Reds')
+    plt.title('Fraud Heatmap: Hour vs Day of Week')
+
+    plt.show()
+
 
 if __name__ == "__main__":
   
     input_file = 'ML/data/data.json'
     output_file = 'ML/data/data_labeled.json'
-    # 1. Read data
     df = load_data(input_file)
         
-    # 2. Clean and process data
     df, df_processed = clean_and_process_data(df)
         
-    # 3. Detect anomalies
     df = detect_anomalies(df, df_processed)
         
-    # 4. Print top 5 anomalies
     print_top_anomalies(df)
         
-    # 5. Save result
     save_result(df, output_file)
+
+    visualization(df)
         
     print("DONE")
         
