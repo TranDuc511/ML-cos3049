@@ -108,7 +108,7 @@ pip install pandas numpy scikit-learn
 
 - [x] Clustering (IsolationForest) → Labeling
 - [x] Classification (RandomForest)
-- [] Regression (RandomForest Regressor) (need to review again)
+- [ ] Regression (RandomForest Regressor) (need to review again)
 - [x] Model Evaluation
 - [ ] Visualization
 - [ ] Dataset processing code

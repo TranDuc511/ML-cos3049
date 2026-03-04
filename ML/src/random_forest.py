@@ -6,6 +6,12 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, accuracy_score
 from sklearn.preprocessing import LabelEncoder
 
+import matplotlib.pyplot as plt
+from sklearn.metrics import ConfusionMatrixDisplay
+from sklearn.metrics import PrecisionRecallDisplay
+from sklearn.metrics import RocCurveDisplay
+
+
 import json
 
 # Cấu hình hiển thị pandas
@@ -82,11 +88,30 @@ def train_model(features, target, feature_names):
     # Hiển thị kết quả
     print(importance_df.head(5))
 
+    return importance_df, X_test, y_test, predictions, model
+
+def visualiztion(importance_df, X_test, y_test, predictions, model):
+    importance_df.sort_values('Importances').plot(kind='barh', x='Features', y='Importances', legend=False, color='teal')
+    plt.title('Feature Importances (Random Forest)')
+    plt.xlabel('Importance Score')
+
+    ConfusionMatrixDisplay.from_predictions(y_test, predictions, display_labels=['Normal', 'Fraud'], cmap='Blues')
+
+    RocCurveDisplay.from_estimator(model, X_test, y_test)
+    plt.title('ROC Curve - Random Forest')
+
+    PrecisionRecallDisplay.from_estimator(model, X_test, y_test)
+    plt.title('Precision-Recall Curve')
+
+    plt.tight_layout()
+    plt.show()
+
 
 
 if __name__ == "__main__":
     FILE_PATH = 'ML/data/data_labeled.json'
     df = load_data(FILE_PATH)
     X, y, columns = prepare_data(df)
-    train_model(X, y, columns)
-    print("Hoàn tất quá trình")
+    importance_df, X_test, y_test, predictions, model = train_model(X, y, columns)
+    visualiztion(importance_df, X_test, y_test, predictions, model)
+    print("Done")

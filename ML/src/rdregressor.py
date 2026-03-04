@@ -72,5 +72,5 @@ if __name__ == "__main__":
     if df is not None:
         X, y, columns = prepared_date_rg(df)
         train_regression_model(X, y, columns)
-        print("Hoàn tất quá trình")
+        print("Done")
 

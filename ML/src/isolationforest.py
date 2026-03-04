@@ -146,7 +146,7 @@ if __name__ == "__main__":
     # 4. Print top 5 anomalies
     print_top_anomalies(df)
         
-        # 5. Save result
+    # 5. Save result
     save_result(df, output_file)
         
     print("DONE")
