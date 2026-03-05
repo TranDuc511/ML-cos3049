@@ -1,76 +1,98 @@
-import pandas as pd 
-import numpy as np 
+import pandas as pd
+import numpy as np
+from datetime import datetime
 from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestRegressor 
+from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from sklearn.preprocessing import LabelEncoder
+import matplotlib.pyplot as plt
 
-
-pd.set_option('display.max_columns', None)
-pd.set_option('display.width', 1000)
 
 def load_data(file_path):
-    
-    print(f"Step 1: Reading {file_path}")
-    
-    data_frame = pd.read_json(file_path)
-    print(f"Upload {len(data_frame)}")
-    return data_frame
+    return pd.read_json(file_path)
 
 
-def prepared_date_rg(data_frame):
-    print("Preparing data for regression")
+def prepare_features(df):
+    if 'Date of Birth' in df.columns:
+        df['Date of Birth'] = pd.to_datetime(df['Date of Birth'], errors='coerce')
+        df['Age'] = (datetime(2026, 3, 5) - df['Date of Birth']).dt.days // 365
 
-    feature_columns = ['Account balance', 'Salary (per month)', 'Hour', 'DayOfWeek', 
-        'Age', 'Transaction Detail', 'Geological', 
-        'Location', 'Working Status', 'is_fraud' # We can use is_fraud as a feature now
+    feature_cols = [
+        'Salary (per month)', 'Account balance', 'Transaction Count',
+        'Working Status', 'Hour', 'DayOfWeek', 'Transaction Detail',
+        'Location', 'Geological', 'Gender', 'Age',
     ]
 
-    available_columns = [col for col in feature_columns if col in data_frame.columns]
-        
-    features = data_frame[available_columns].copy()
-    target = data_frame['Transaction amount']
+    available = [col for col in feature_cols if col in df.columns]
+    X = df[available].copy()
+    y = df['Transaction amount']
 
-    
-    text_columns = features.select_dtypes(include=['object']).columns
-    if len(text_columns) > 0:
-        for column in text_columns:
-            encoder = LabelEncoder()
-            features[column] = encoder.fit_transform(features[column].astype(str))
-        
-    return features, target, available_columns
+    for col in X.select_dtypes(include='object').columns:
+        X[col] = LabelEncoder().fit_transform(X[col].astype(str))
+
+    X = X.fillna(X.median(numeric_only=True))
+    return X, y, available
 
 
-def train_regression_model(features, target, feature_names):
-    print("Step 3 Training Regression Model")
-    
-    X_train, X_test, y_train, y_test = train_test_split(features, target, test_size=0.2, random_state=42)
-    
-    # 3. USE RANDOM FOREST REGRESSOR
+def train_and_evaluate(X, y, feature_names):
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
     model = RandomForestRegressor(n_estimators=100, random_state=42, n_jobs=-1)
     model.fit(X_train, y_train)
-    
-    print("Step 4 Evaluating Regression Model")
-    predictions = model.predict(X_test)
 
-    mse = mean_squared_error(y_test, predictions)
-    mae = mean_absolute_error(y_test, predictions)
-    r2 = r2_score(y_test, predictions)
+    preds = model.predict(X_test)
+    print(f"MAE: {mean_absolute_error(y_test, preds):.2f}")
+    print(f"MSE: {mean_squared_error(y_test, preds):.2f}")
+    print(f"R2:  {r2_score(y_test, preds):.4f}")
+
+    importances = sorted(zip(feature_names, model.feature_importances_), key=lambda x: x[1], reverse=True)
+    print("\nFeature Importances:")
+    for name, score in importances:
+        print(f"  {name:<25} {score:.4f}")
+
+    return model, preds, y_test
 
 
-    print(f"Mean Squared Error (MSE): {mse:.2f}")
-    print(f"Mean Absolute Error (MAE): {mae:.2f}")
-    print(f"R-squared (R2): {r2:.2f}")
+def visualize(model, feature_names, y_test, preds):
+    errors = y_test.values - preds
 
+    # 1. Actual vs Predicted
+    plt.figure()
+    plt.scatter(y_test, preds, alpha=0.4, color='steelblue')
+    plt.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], 'r--')
+    plt.xlabel('Actual Transaction Amount')
+    plt.ylabel('Predicted Transaction Amount')
+    plt.title('Actual vs Predicted Transaction Amount')
 
-    
+    # 2. Feature Importances
+    plt.figure()
+    importances = sorted(zip(feature_names, model.feature_importances_), key=lambda x: x[1])
+    names, scores = zip(*importances)
+    plt.barh(names, scores, color='teal')
+    plt.xlabel('Importance Score')
+    plt.title('Feature Importances (Customer Habits)')
+
+    # 3. Prediction Error Distribution
+    plt.figure()
+    plt.hist(errors, bins=50, color='coral')
+    plt.axvline(0, color='black', linestyle='--')
+    plt.xlabel('Prediction Error (Actual - Predicted)')
+    plt.title('Prediction Error Distribution')
+
+    # 4. Residuals vs Predicted
+    plt.figure()
+    plt.scatter(preds, errors, alpha=0.4, color='mediumpurple')
+    plt.axhline(0, color='red', linestyle='--')
+    plt.xlabel('Predicted Amount')
+    plt.ylabel('Residual (Error)')
+    plt.title('Residuals vs Predicted Amount')
+
+    plt.tight_layout()
+    plt.show()
+
 
 if __name__ == "__main__":
-    FILE_PATH = 'ML/data/data_labeled.json'
-    
-    df = load_data(FILE_PATH)
-    if df is not None:
-        X, y, columns = prepared_date_rg(df)
-        train_regression_model(X, y, columns)
-        print("Done")
-
+    df = load_data('ML/data/data_labeled.json')
+    X, y, feature_names = prepare_features(df)
+    model, preds, y_test = train_and_evaluate(X, y, feature_names)
+    visualize(model, feature_names, y_test, preds)
