@@ -4,7 +4,6 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, accuracy_score
-from sklearn.preprocessing import LabelEncoder
 
 import matplotlib.pyplot as plt
 from sklearn.metrics import ConfusionMatrixDisplay
@@ -19,12 +18,9 @@ pd.set_option('display.max_columns', None)
 pd.set_option('display.width', 1000)
 
 def load_data(file_path):
-    """Step 1: Đọc dữ liệu từ file JSON."""
-    
-    print(f"Step 1: Reading {file_path}")
-    
+    """Step 1: read data (already encoded by encoding.py)."""
     data_frame = pd.read_json(file_path)
-    print(f"Đã tải {len(data_frame)} dòng dữ liệu.")
+    print(f" Uploaded {len(data_frame)}.")
     return data_frame
 
 
@@ -32,7 +28,7 @@ def prepare_data(data_frame):
     
     print("Step 2 Preparing data")
     
-    #1.Select the feature columns
+    # Select the feature columns (already encoded, no need to encode again)
     feature_columns = [
         'Transaction amount', 'Account balance', 'Salary (per month)', 
         'Hour', 'DayOfWeek', 
@@ -41,15 +37,6 @@ def prepare_data(data_frame):
     
     features = data_frame[feature_columns]
     target = data_frame['is_fraud']
-    
-    
-    #2.Encrypting classified data (strings) into numbers
-    text_columns = features.select_dtypes(include=['object']).columns
-    if len(text_columns) > 0:
-        print(f"Encryting: {list(text_columns)}")
-        for column in text_columns:
-            encoder = LabelEncoder()
-            features[column] = encoder.fit_transform(features[column].astype(str))
         
     return features, target, feature_columns
 
@@ -109,7 +96,7 @@ def visualiztion(importance_df, X_test, y_test, predictions, model):
 
 
 if __name__ == "__main__":
-    FILE_PATH = 'ML/data/data_labeled.json'
+    FILE_PATH = 'ML/data/data_encoded.json'
     df = load_data(FILE_PATH)
     X, y, columns = prepare_data(df)
     importance_df, X_test, y_test, predictions, model = train_model(X, y, columns)

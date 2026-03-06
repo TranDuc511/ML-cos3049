@@ -4,7 +4,7 @@ from datetime import datetime
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
-from sklearn.preprocessing import LabelEncoder
+
 import matplotlib.pyplot as plt
 
 
@@ -27,8 +27,7 @@ def prepare_features(df):
     X = df[available].copy()
     y = df['Transaction amount']
 
-    for col in X.select_dtypes(include='object').columns:
-        X[col] = LabelEncoder().fit_transform(X[col].astype(str))
+    # Data is already encoded by encoding.py, no need to encode again
 
     X = X.fillna(X.median(numeric_only=True))
     return X, y, available
@@ -92,7 +91,7 @@ def visualize(model, feature_names, y_test, preds):
 
 
 if __name__ == "__main__":
-    df = load_data('ML/data/data_labeled.json')
+    df = load_data('ML/data/data_encoded.json')
     X, y, feature_names = prepare_features(df)
     model, preds, y_test = train_and_evaluate(X, y, feature_names)
     visualize(model, feature_names, y_test, preds)

@@ -3,7 +3,7 @@
 import json
 import pandas as pd
 from sklearn.ensemble import IsolationForest
-from sklearn.preprocessing import LabelEncoder
+from encoding import encode_columns
 
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -55,12 +55,12 @@ def clean_and_process_data(data_frame):
     # Create a copy to train (only contains numbers)
     data_frame_processed = data_frame.copy()
     
-    for column in text_columns:
-        if column in data_frame.columns:
-            encoder = LabelEncoder()
-            # Create new column name with _encoded suffix
-            new_column_name = column + "_encoded"
-            data_frame_processed[new_column_name] = encoder.fit_transform(data_frame[column].astype(str))
+    # Encode text columns and add them with _encoded suffix
+    available_text_cols = [col for col in text_columns if col in data_frame.columns]
+    encoded_df = data_frame[available_text_cols].copy()
+    encoded_df, _ = encode_columns(encoded_df, columns=available_text_cols)
+    for col in available_text_cols:
+        data_frame_processed[col + "_encoded"] = encoded_df[col]
 
     return data_frame, data_frame_processed
 
