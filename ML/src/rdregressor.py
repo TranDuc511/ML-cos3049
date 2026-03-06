@@ -13,21 +13,16 @@ def load_data(file_path):
 
 
 def prepare_features(df):
-    if 'Date of Birth' in df.columns:
-        df['Date of Birth'] = pd.to_datetime(df['Date of Birth'], errors='coerce')
-        df['Age'] = (datetime(2026, 3, 5) - df['Date of Birth']).dt.days // 365
-
     feature_cols = [
         'Salary (per month)', 'Account balance', 'Transaction Count',
         'Working Status', 'Hour', 'DayOfWeek', 'Transaction Detail',
-        'Location', 'Geological', 'Gender', 'Age',
+        'Location', 'Geological', 'Gender', 'Age', 'Is_Weekend', 'Is_Night',
+        'Balance_to_Salary_Ratio', 'Tx_to_Balance_Ratio'
     ]
 
     available = [col for col in feature_cols if col in df.columns]
     X = df[available].copy()
     y = df['Transaction amount']
-
-    # Data is already encoded by encoding.py, no need to encode again
 
     X = X.fillna(X.median(numeric_only=True))
     return X, y, available
@@ -91,7 +86,7 @@ def visualize(model, feature_names, y_test, preds):
 
 
 if __name__ == "__main__":
-    df = load_data('ML/data/data_encoded.json')
+    df = load_data('ML/data/data_labeled.json')
     X, y, feature_names = prepare_features(df)
     model, preds, y_test = train_and_evaluate(X, y, feature_names)
     visualize(model, feature_names, y_test, preds)

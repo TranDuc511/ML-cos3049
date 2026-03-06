@@ -1,5 +1,3 @@
-DO NOT RUN ```run_pipeline.py```, require fixing
-
 # Transaction Anomaly Detection System
 
 This project implements a machine learning pipeline to detect and analyse anomalous financial transactions using **Isolation Forest** (unsupervised anomaly detection), **Random Forest Classifier** (supervised classification), and **Random Forest Regressor** (predicting transaction amounts).
@@ -17,22 +15,20 @@ This project implements a machine learning pipeline to detect and analyse anomal
 ML-cos3049/
 ├── ML/
 │   ├── data/
-│   │   ├── data.json                               # Raw transaction data
-│   │   └── data_labeled.json                       # Data labeled by Isolation Forest
+│   │   ├── data.json                               # Raw merged data
+│   │   ├── data_encoded.json                       # Text fields encoded
+│   │   ├── data_processed.json                     # Normalized & features added
+│   │   └── data_labeled.json                       # Labeled by Isolation Forest
+│   ├── dataprocessing/
+│   │   ├── merge.py                                # Step 1: Merge raw data
+│   │   ├── encoding.py                             # Step 2: Encode categories
+│   │   └── preprocessing.py                        # Step 3: Extract features & normalize
 │   ├── docs/
-│   │   ├── isolation_forest_explanation.md         # Explanation of Isolation Forest
-│   │   ├── random_forest_explanation.md            # Explanation of Random Forest
-│   │   └── random_forest_regressor_explanation.md  # Explanation of RF Regressor
-│   ├── notebook/
-│   │   ├── iso.ipynb                               # Isolation Forest notebook
-│   │   ├── rdclassification.ipynb                  # Classification notebook
-│   │   └── redregressor.ipynb                      # Regression notebook
-│   ├── results/                                    # Saved model outputs
+│   │   └── (Markdown explanations of models)
 │   ├── src/
-│   │   ├── isolation_forest_anomaly_detection.py   # Step 1: Anomaly detection & labeling
-│   │   ├── random_forest.py                        # Step 2: Classification model
-│   │   └── rdregressor.py                          # Step 3: Regression model
-│   ├── visualizations/                             # Saved plots and charts
+│   │   ├── isolationforest.py                      # Step 4: Anomaly detection
+│   │   ├── random_forest.py                        # Step 5: Classification
+│   │   └── rdregressor.py                          # Step 6: Regression
 │   └── requirements.txt
 ├── run_pipeline.py
 └── README.md
@@ -60,19 +56,37 @@ python run_pipeline.py
 
 #### Option B: Run Step-by-Step
 
-**Step 1: Generate Labels (Isolation Forest)**
+**Step 1: Merge Data**
 
 ```bash
-python ML/src/isolation_forest_anomaly_detection.py
+python ML/dataprocessing/merge.py
 ```
 
-**Step 2: Train Classifier (Random Forest)**
+**Step 2: Encode Categorical Features**
+
+```bash
+python ML/dataprocessing/encoding.py
+```
+
+**Step 3: Normalize & Extract Features**
+
+```bash
+python ML/dataprocessing/preprocessing.py
+```
+
+**Step 4: Generate Labels (Isolation Forest)**
+
+```bash
+python ML/src/isolationforest.py
+```
+
+**Step 5: Train Classifier (Random Forest)**
 
 ```bash
 python ML/src/random_forest.py
 ```
 
-**Step 3: Train Regressor (Random Forest Regressor)**
+**Step 6: Train Regressor (Random Forest Regressor)**
 
 ```bash
 python ML/src/rdregressor.py
@@ -108,10 +122,10 @@ pip install pandas numpy scikit-learn
 
 - [x] Clustering (IsolationForest) → Labeling
 - [x] Classification (RandomForest)
-- [ ] Regression (RandomForest Regressor) (Predict transaction amount bases on customer habit - )
+- [x] Regression (RandomForest Regressor) (Predict transaction amount bases on customer habit - )
 - [x] Model Evaluation
 - [ ] Visualization
-- [ ] Dataset processing code
+- [x] Dataset processing code
 - [ ] Notebook for each model
 
 ---

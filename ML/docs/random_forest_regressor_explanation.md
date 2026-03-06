@@ -59,16 +59,14 @@ Since there is no single "correct" answer in regression (only closer or further 
 | **Handles Mixed Data**: works with both numerical and categorical features. | **Memory Intensive**: stores the full forest in memory. |
 | **Feature Importance**: reveals which features most influence the predicted value. | **Extrapolation**: cannot predict values outside the range seen during training. |
 
-## Application in This Project
-
 In this project, the Random Forest Regressor is used to predict `Transaction amount` based on features such as:
 
+- `Tx_to_Balance_Ratio` (most important)
 - `Account balance`
-- `Salary (per month)`
-- `Hour`, `DayOfWeek`
-- `Transaction Detail`, `Geological`, `Location`
-- `Working Status`
-- `is_fraud` (used as a feature — a fraudulent transaction may have a different value pattern)
+- `Balance_to_Salary_Ratio`
+- `Age`, `Salary (per month)`
+- `Hour`, `DayOfWeek`, `Is_Weekend`, `Is_Night`
+- `Transaction Detail`, `Geological`, `Location`, `Working Status`, `Gender`
 
 The model is evaluated using **MAE**, **MSE**, and **R²** to measure how accurately it can estimate the transaction amount.
 

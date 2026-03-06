@@ -23,15 +23,18 @@ if __name__ == "__main__":
     print("=" * 50)
 
     steps = [
-        (1, "Anomaly Detection     (Isolation Forest)", "ML/src/isolationforest.py"),
-        (2, "Fraud Classification  (Random Forest)",    "ML/src/random_forest.py"),
-        (3, "Spending Prediction   (RF Regressor)",     "ML/src/rdregressor.py"),
+        (1, "Merge Data              (merge.py)",        "ML/dataprocessing/merge.py"),
+        (2, "Encode Features         (encoding.py)",     "ML/dataprocessing/encoding.py"),
+        (3, "Normalize & Extract     (preprocessing.py)","ML/dataprocessing/preprocessing.py"),
+        (4, "Anomaly Detection       (Isolation Forest)","ML/src/isolationforest.py"),
+        (5, "Fraud Classification    (Random Forest)",   "ML/src/random_forest.py"),
+        (6, "Spending Prediction     (RF Regressor)",    "ML/src/rdregressor.py"),
     ]
 
     for step_number, description, script in steps:
         if not run_step(step_number, description, script):
             break
 
-    print("\n" + "=" * 50)
+   
     print("  PIPELINE COMPLETE")
-    print("=" * 50)
+
