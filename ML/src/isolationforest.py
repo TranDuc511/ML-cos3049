@@ -12,6 +12,12 @@ pd.set_option('display.width', 1000)
 def load_data(file_path):
     print(f"STEP 1 Reading preprocessed data from: {file_path}")
     df = pd.read_json(file_path) 
+    
+    if 'Timestamp' in df.columns:
+        df['Timestamp'] = pd.to_datetime(df['Timestamp'])
+        df['Hour'] = df['Timestamp'].dt.hour
+        df['DayOfWeek'] = df['Timestamp'].dt.dayofweek
+
     print(f"Loaded {len(df):,} transactions.")
     return df
 
