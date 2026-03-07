@@ -8,21 +8,26 @@ To ensure reproducibility, we use `conda` to manage the project's environment. F
 
 1. **Create the Conda Environment:**
    Run the following command to create a new environment named `ml` with Python 3.10:
+
    ```bash
    conda create -n ml python=3.10 -y
    ```
 
 2. **Activate the Environment:**
+
    ```bash
    conda activate ml
    ```
 
 3. **Install Required Packages:**
    You can either install the packages manually using `pip`:
+
    ```bash
    pip install pandas numpy scikit-learn matplotlib seaborn
    ```
+
    Or install directly from the project's requirements file:
+
    ```bash
    pip install -r ML/requirements.txt
    ```
@@ -32,53 +37,76 @@ To ensure reproducibility, we use `conda` to manage the project's environment. F
 The data processing pipeline prepares the raw dataset for model training. It is broken down into three sequential steps. Ensure you run these from the root directory:
 
 1. **Merge Data**: Combines multiple raw data sources into a single working dataset (`ML/data/data.json`).
+
    ```bash
    python ML/dataprocessing/merge.py
    ```
+
 2. **Encoding**: Converts categorical and text features (like Gender, Location, Working Status) into numerical representations (`ML/data/data_encoded.json`).
+
    ```bash
    python ML/dataprocessing/encoding.py
    ```
+
 3. **Preprocessing & Feature Extraction**: Normalizes numerical continuous values (e.g., using `MinMaxScaler`) and extracts new predictive features, such as `Age` from Date of Birth, time-based flags (`Is_Weekend`, `Is_Night`), and financial ratios (`Balance_to_Salary_Ratio`, `Tx_to_Balance_Ratio`). The final dataset is saved to `ML/data/data_processed.json`.
+
    ```bash
    python ML/dataprocessing/preprocessing.py
    ```
 
 ## 3. Model Training
 
-You can train the models using the preprocessed data. The training pipeline consists of three main components: Anomaly Detection, Classification, and Regression. 
+You can train the models using the preprocessed data. The training pipeline consists of three main components: Anomaly Detection, Classification, and Regression.
 
 *(Alternatively, to run the entire data processing and model training pipeline automatically, you can simply run: `python run_pipeline.py`)*
 
 ### Step 3.1: Anomaly Detection (Isolation Forest)
+
 This step uses an unsupervised **Isolation Forest** to identify suspicious transactions without prior labeling. It assigns an `anomaly_score` and an `is_fraud` label (0 for Normal, 1 for Fraud) to each transaction.
+
 * **Command:**
+
   ```bash
   python ML/src/isolationforest.py
   ```
+
 * **Output:** Saves the labeled dataset to `ML/data/data_labeled.json` and displays anomaly distribution visualizations.
 
 ### Step 3.2: Fraud Classification (Random Forest Classifier)
+
 Trains a supervised **Random Forest Classifier** using the dataset generated in Step 3.1 to learn the specific patterns of the detected anomalies.
+
 * **Command:**
+
   ```bash
   python ML/src/random_forest.py
   ```
+
 * **Outputs:** Prints Model Accuracy, Classification Report (Precision, Recall), Feature Importances, and displays the Confusion Matrix and ROC Curve.
 
 ### Step 3.3: Spending Prediction (Random Forest Regressor)
+
 Trains a **Random Forest Regressor** to predict the expected transaction amount based on customer habits and behavior.
+
 * **Command:**
+
   ```bash
   python ML/src/rdregressor.py
   ```
+
 * **Outputs:** Prints evaluation metrics (MAE, MSE, R²) and visualizes Prediction Errors and Feature Importances.
 
 ## 4. Prediction
 
 To use the trained models to make predictions on new, unseen data, you must first ensure the new data undergoes the exact same **Data Processing** steps (encoding, feature extraction, and scaling) as the training data.
 
-Here is a clear python example illustrating how to make predictions using the trained classification model:
+Here is a clear python example illustrating how to make predictions using the trained classification model. You can save this script as `predict.py`.
+
+* **Command:**
+
+  ```bash
+  python predict.py
+  ```
 
 ```python
 import pandas as pd
@@ -132,6 +160,3 @@ else:
 ```
 
 For the regression model (`rdregressor.py`), the usage is essentially identical. Simply replace the classification model with your trained regressor, and the `.predict()` function will output the **estimated transaction amount**.
-
----
-*For more theoretical details on the chosen algorithms, please refer to the markdown files in the `ML/docs/` directory.*
