@@ -1,133 +1,137 @@
 # Transaction Anomaly Detection System
 
-This project implements a machine learning pipeline to detect and analyse anomalous financial transactions using **Isolation Forest** (unsupervised anomaly detection), **Random Forest Classifier** (supervised classification), and **Random Forest Regressor** (predicting transaction amounts).
+This project implements a machine learning pipeline to detect and analyze anomalous financial transactions using **Isolation Forest** (unsupervised anomaly detection), **Random Forest Classifier** (supervised classification), and **Random Forest Regressor** (predicting transaction amounts).
 
-## Features
+## 1. Environment Setup
 
-- **Automated Anomaly Detection**: Uses Isolation Forest to identify suspicious transactions without prior labeling.
-- **Supervised Classification**: Uses Random Forest to learn and classify the patterns of detected anomalies.
-- **Regression Analysis**: Predicts the expected transaction amount using a Random Forest Regressor.
-- **Explainable AI**: Provides feature importance to explain *why* a transaction is considered anomalous.
+To ensure reproducibility, we use `conda` to manage the project's environment. Follow these step-by-step instructions to set up your environment:
 
-## Project Structure
+1. **Create the Conda Environment:**
+   Run the following command to create a new environment named `ml` with Python 3.10:
+   ```bash
+   conda create -n ml python=3.10 -y
+   ```
 
-```text
-ML-cos3049/
-├── ML/
-│   ├── data/
-│   │   ├── data.json                               # Raw merged data
-│   │   ├── data_encoded.json                       # Text fields encoded
-│   │   ├── data_processed.json                     # Normalized & features added
-│   │   └── data_labeled.json                       # Labeled by Isolation Forest
-│   ├── dataprocessing/
-│   │   ├── merge.py                                # Step 1: Merge raw data
-│   │   ├── encoding.py                             # Step 2: Encode categories
-│   │   └── preprocessing.py                        # Step 3: Extract features & normalize
-│   ├── docs/
-│   │   └── (Markdown explanations of models)
-│   ├── src/
-│   │   ├── isolationforest.py                      # Step 4: Anomaly detection
-│   │   ├── random_forest.py                        # Step 5: Classification
-│   │   └── rdregressor.py                          # Step 6: Regression
-│   └── requirements.txt
-├── run_pipeline.py
-└── README.md
+2. **Activate the Environment:**
+   ```bash
+   conda activate ml
+   ```
+
+3. **Install Required Packages:**
+   You can either install the packages manually using `pip`:
+   ```bash
+   pip install pandas numpy scikit-learn matplotlib seaborn
+   ```
+   Or install directly from the project's requirements file:
+   ```bash
+   pip install -r ML/requirements.txt
+   ```
+
+## 2. Data Processing
+
+The data processing pipeline prepares the raw dataset for model training. It is broken down into three sequential steps. Ensure you run these from the root directory:
+
+1. **Merge Data**: Combines multiple raw data sources into a single working dataset (`ML/data/data.json`).
+   ```bash
+   python ML/dataprocessing/merge.py
+   ```
+2. **Encoding**: Converts categorical and text features (like Gender, Location, Working Status) into numerical representations (`ML/data/data_encoded.json`).
+   ```bash
+   python ML/dataprocessing/encoding.py
+   ```
+3. **Preprocessing & Feature Extraction**: Normalizes numerical continuous values (e.g., using `MinMaxScaler`) and extracts new predictive features, such as `Age` from Date of Birth, time-based flags (`Is_Weekend`, `Is_Night`), and financial ratios (`Balance_to_Salary_Ratio`, `Tx_to_Balance_Ratio`). The final dataset is saved to `ML/data/data_processed.json`.
+   ```bash
+   python ML/dataprocessing/preprocessing.py
+   ```
+
+## 3. Model Training
+
+You can train the models using the preprocessed data. The training pipeline consists of three main components: Anomaly Detection, Classification, and Regression. 
+
+*(Alternatively, to run the entire data processing and model training pipeline automatically, you can simply run: `python run_pipeline.py`)*
+
+### Step 3.1: Anomaly Detection (Isolation Forest)
+This step uses an unsupervised **Isolation Forest** to identify suspicious transactions without prior labeling. It assigns an `anomaly_score` and an `is_fraud` label (0 for Normal, 1 for Fraud) to each transaction.
+* **Command:**
+  ```bash
+  python ML/src/isolationforest.py
+  ```
+* **Output:** Saves the labeled dataset to `ML/data/data_labeled.json` and displays anomaly distribution visualizations.
+
+### Step 3.2: Fraud Classification (Random Forest Classifier)
+Trains a supervised **Random Forest Classifier** using the dataset generated in Step 3.1 to learn the specific patterns of the detected anomalies.
+* **Command:**
+  ```bash
+  python ML/src/random_forest.py
+  ```
+* **Outputs:** Prints Model Accuracy, Classification Report (Precision, Recall), Feature Importances, and displays the Confusion Matrix and ROC Curve.
+
+### Step 3.3: Spending Prediction (Random Forest Regressor)
+Trains a **Random Forest Regressor** to predict the expected transaction amount based on customer habits and behavior.
+* **Command:**
+  ```bash
+  python ML/src/rdregressor.py
+  ```
+* **Outputs:** Prints evaluation metrics (MAE, MSE, R²) and visualizes Prediction Errors and Feature Importances.
+
+## 4. Prediction
+
+To use the trained models to make predictions on new, unseen data, you must first ensure the new data undergoes the exact same **Data Processing** steps (encoding, feature extraction, and scaling) as the training data.
+
+Here is a clear python example illustrating how to make predictions using the trained classification model:
+
+```python
+import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
+
+# 1. Load the pre-trained model (assuming the model is saved or currently in memory)
+# Note: To persist the model across sessions in your own script, use the 'joblib' library:
+# import joblib
+# joblib.dump(model, 'rf_model.pkl') # Save during training
+# model = joblib.load('rf_model.pkl') # Load for prediction
+
+# 2. Prepare your new transaction data
+new_data = pd.DataFrame([{
+    'Transaction amount': 0.85, # Normalized
+    'Account balance': 0.12,    # Normalized
+    'Salary (per month)': 0.45, # Normalized
+    'Hour': 14,
+    'DayOfWeek': 2,
+    'Age': 0.30,                # Normalized
+    'Is_Weekend': 0,
+    'Is_Night': 0,
+    'Balance_to_Salary_Ratio': 0.26, # Normalized
+    'Tx_to_Balance_Ratio': 7.08,     # Normalized
+    'Transaction Detail': 3,    # Encoded
+    'Geological': 1,            # Encoded
+    'Device Use': 2,            # Encoded
+    'Location': 4,              # Encoded
+    'Working Status': 1,        # Encoded
+    'Gender': 0,                # Encoded
+    'Transaction Count': 5
+}])
+
+# 3. Ensure the columns match the exact features the model was trained on
+expected_features = [
+    'Transaction amount', 'Account balance', 'Salary (per month)',
+    'Hour', 'DayOfWeek', 'Age', 'Is_Weekend', 'Is_Night',
+    'Balance_to_Salary_Ratio', 'Tx_to_Balance_Ratio',
+    'Transaction Detail', 'Geological', 'Device Use', 
+    'Location', 'Working Status', 'Gender', 'Transaction Count'
+]
+X_new = new_data[expected_features]
+
+# 4. Make a prediction
+prediction = model.predict(X_new)
+
+# 5. Interpret the result
+if prediction[0] == 1:
+    print("WARNING: This transaction is predicted as FRAUDULENT.")
+else:
+    print("This transaction is predicted as NORMAL.")
 ```
 
-## Instructions
-
-### 1. Understanding the Algorithms
-
-Before running the code, read the simplified explanations in `ML/docs/`:
-
-- [📖 Isolation Forest Explanation](ML/docs/isolation_forest_explanation.md)
-- [📖 Random Forest Explanation](ML/docs/random_forest_explanation.md)
-- [📖 Random Forest Regressor Explanation](ML/docs/random_forest_regressor_explanation.md)
-
-### 2. Running the Code
-
-#### Option A: Run the Entire Pipeline (Recommended)
-
-Runs all steps (Detection → Classification → Regression) in one command:
-
-```bash
-python run_pipeline.py
-```
-
-#### Option B: Run Step-by-Step
-
-**Step 1: Merge Data**
-
-```bash
-python ML/dataprocessing/merge.py
-```
-
-**Step 2: Encode Categorical Features**
-
-```bash
-python ML/dataprocessing/encoding.py
-```
-
-**Step 3: Normalize & Extract Features**
-
-```bash
-python ML/dataprocessing/preprocessing.py
-```
-
-**Step 4: Generate Labels (Isolation Forest)**
-
-```bash
-python ML/src/isolationforest.py
-```
-
-**Step 5: Train Classifier (Random Forest)**
-
-```bash
-python ML/src/random_forest.py
-```
-
-**Step 6: Train Regressor (Random Forest Regressor)**
-
-```bash
-python ML/src/rdregressor.py
-```
-
-### 3. Expected Output
-
-- Labeled dataset saved to `ML/data/data_labeled.json`
-- Classification report with accuracy, precision, recall
-- Regression metrics: MAE, MSE, R²
-- Top 5 most important features for each model
-
-## Requirements
-
-```bash
-pip install -r ML/requirements.txt
-```
-
-- Python 3.x
-- pandas
-- numpy
-- scikit-learn
-
-## Setup (Anaconda)
-
-```bash
-conda create -n ml python=3.10
-conda activate ml
-pip install pandas numpy scikit-learn
-```
-
-## Checklist
-
-- [x] Clustering (IsolationForest) → Labeling
-- [x] Classification (RandomForest)
-- [x] Regression (RandomForest Regressor) (Predict transaction amount bases on customer habit - )
-- [x] Model Evaluation
-- [ ] Visualization
-- [x] Dataset processing code
-- [ ] Notebook for each model
+For the regression model (`rdregressor.py`), the usage is essentially identical. Simply replace the classification model with your trained regressor, and the `.predict()` function will output the **estimated transaction amount**.
 
 ---
-
-*3 Forest modes for real*
+*For more theoretical details on the chosen algorithms, please refer to the markdown files in the `ML/docs/` directory.*
