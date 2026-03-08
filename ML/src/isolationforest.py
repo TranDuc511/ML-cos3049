@@ -5,6 +5,8 @@ from sklearn.ensemble import IsolationForest
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+import joblib 
+
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', 1000)
 
@@ -41,6 +43,8 @@ def detect_anomalies(df):
     # 15% contamination
     model = IsolationForest(n_estimators=100, contamination=0.15, random_state=42)
     model.fit(X)
+
+    joblib.dump(model, 'ML/models/isolation_forest.pkl')
     
     predictions = model.predict(X)
     df['is_fraud'] = [1 if p == -1 else 0 for p in predictions]

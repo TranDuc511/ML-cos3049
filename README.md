@@ -113,10 +113,10 @@ import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 
 # 1. Load the pre-trained model (assuming the model is saved or currently in memory)
-# Note: To persist the model across sessions in your own script, use the 'joblib' library:
-# import joblib
-# joblib.dump(model, 'rf_model.pkl') # Save during training
-# model = joblib.load('rf_model.pkl') # Load for prediction
+Note: To persist the model across sessions in your own script, use the 'joblib' library:
+import joblib
+joblib.dump(model, 'rf_model.pkl') # Save during training
+model = joblib.load('rf_model.pkl') # Load for prediction
 
 # 2. Prepare your new transaction data
 new_data = pd.DataFrame([{

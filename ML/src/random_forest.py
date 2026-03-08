@@ -7,6 +7,8 @@ from sklearn.metrics import classification_report, accuracy_score
 import matplotlib.pyplot as plt
 from sklearn.metrics import ConfusionMatrixDisplay, PrecisionRecallDisplay, RocCurveDisplay
 
+import joblib
+
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', 1000)
 
@@ -38,6 +40,11 @@ def train_model(X, y, feature_names):
 
     model = RandomForestClassifier(n_estimators=100, random_state=42, n_jobs=-1)
     model.fit(X_train, y_train)
+
+    # Save model
+
+    joblib.dump(model, 'ML/models/random_forest_classifier.pkl')
+    print("Model saved to ML/models/random_forest_classifier.pkl")
 
     predictions = model.predict(X_test)
     print(f"Accuracy: {accuracy_score(y_test, predictions):.2%}")

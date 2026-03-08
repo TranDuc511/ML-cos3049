@@ -1,0 +1,8 @@
+# Ignore machine learning models
+ML/models/*.pkl
+ML/models/*.h5
+ML/models/*.joblib
+ML/models/*.pt
+ML/models/*.onnx
+
+# Ignore data folder as well? (Usually a good practice, but focusing on models as requested)

@@ -5,6 +5,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 
+import joblib
+
 import matplotlib.pyplot as plt
 
 
@@ -33,6 +35,10 @@ def train_and_evaluate(X, y, feature_names):
 
     model = RandomForestRegressor(n_estimators=100, random_state=42, n_jobs=-1)
     model.fit(X_train, y_train)
+    
+    # Save model
+    joblib.dump(model, 'ML/models/random_forest_regressor.pkl')
+    print("Model saved to ML/models/random_forest_regressor.pkl")
 
     preds = model.predict(X_test)
     print(f"MAE: {mean_absolute_error(y_test, preds):.2f}")

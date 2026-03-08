@@ -1,0 +1,7 @@
+remote: error: Trace: ffd6d1422b7abe49316485e849c79a5e041f76964bd83eb201e25450cd3f741b        
+remote: error: See https://gh.io/lfs for more information.        
+remote: error: File ML/models/random_forest_regressor.pkl is 197.29 MB; this exceeds GitHub's file size limit of 100.00 MB        
+remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.        
+To https://github.com/TranDuc511/ML-cos3049.git
+ ! [remote rejected] main -> main (pre-receive hook declined)
+error: failed to push some refs to 'https://github.com/TranDuc511/ML-cos3049.git'
