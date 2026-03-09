@@ -67,6 +67,30 @@ def generate_transactions(customer_file, output_file, n=25000):
 
     print(f'Generated {len(transactions):,} transactions -> {output_file}')
 
+    # Update customer transaction counts
+    update_customer_counts(customer_file, transactions)
+
+
+def update_customer_counts(customer_file, transactions):
+    from collections import Counter
+    
+    # Count transactions per customer
+    trans_count = Counter(txn['Sender Account ID'] for txn in transactions)
+    
+    # Load and update customers
+    with open(customer_file, 'r', encoding='utf-8') as f:
+        customers = json.load(f)
+    
+    for customer in customers:
+        cid = customer['Customer ID']
+        customer['Transaction Count'] = trans_count.get(cid, 0)
+    
+    # Save updated customers
+    with open(customer_file, 'w', encoding='utf-8') as f:
+        json.dump(customers, f, indent=4, ensure_ascii=False)
+    
+    print(f'Updated transaction counts for {len(customers):,} customers in {customer_file}')
+
 
 if __name__ == '__main__':
     generate_transactions(
