@@ -67,9 +67,26 @@ def generate_transactions(customer_file, output_file, n=25000):
 
     print(f'Generated {len(transactions):,} transactions -> {output_file}')
 
+    # Update Customer file transaction counts
+    counts = {}
+    for txn in transactions:
+        sid = txn['Sender Account ID']
+        counts[sid] = counts.get(sid, 0) + 1
+
+    for c in customers:
+        if c['Customer ID'] in counts:
+            c['Transaction Count'] = counts[c['Customer ID']]
+        else:
+             c['Transaction Count'] = 0
+
+    with open(customer_file, 'w', encoding='utf-8') as f:
+        json.dump(customers, f, indent=4, ensure_ascii=False)
+    
+    print(f'Synced Transaction Counts back to -> {customer_file}')
+
 
 if __name__ == '__main__':
     generate_transactions(
-        os.path.join(HERE, 'customers.json'),
-        os.path.join(HERE, 'transaction.json'),
+        os.path.join(HERE, '..', 'customers.json'),
+        os.path.join(HERE, '..', 'transaction.json'),
     )

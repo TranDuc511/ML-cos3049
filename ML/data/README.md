@@ -1,10 +1,38 @@
-# dataprocessing/
+# ML Data Pipeline Scripts
 
-This folder contains scripts that clean, encode, and enrich the raw data before it is used by the ML models.
+This folder contains scripts for generating synthetic data (`datacollecting/`) as well as cleaning, encoding, and enriching the raw data (`dataprocessing/`) before it is used by the ML models.
 
-## Scripts
+## 1. Data Collection (`datacollecting/`)
 
-### 1. `merge.py`
+### 1.1 `customer.py`
+
+Generates synthetic customer accounts with initial balances and demographic information.
+
+- **Writes:** `ML/data/customers.json`
+
+```bash
+python ML/data/datacollecting/customer.py
+```
+
+---
+
+### 1.2 `transaction.py`
+
+Generates synthetic transactions between the generated customers and safely updates their transaction counts.
+
+- **Reads:** `ML/data/customers.json`
+- **Writes:** `ML/data/transaction.json`
+- **Modifies:** `ML/data/customers.json` (updates transaction counts)
+
+```bash
+python ML/data/datacollecting/transaction.py
+```
+
+---
+
+## 2. Data Processing (`dataprocessing/`)
+
+### 2.1 `merge.py`
 
 Joins the customer and transaction datasets into a single file.
 
@@ -17,7 +45,7 @@ python ML/data/dataprocessing/merge.py
 
 ---
 
-### 2. `encoding.py`
+### 2.2 `encoding.py`
 
 Converts text (categorical) columns into numbers using Label Encoding.
 
@@ -32,7 +60,7 @@ Columns encoded: `Transaction Detail`, `Geological`, `Device Use`, `Gender`, `Lo
 
 ---
 
-### 3. `preprocessing.py`
+### 2.3 `preprocessing.py`
 
 Normalizes numeric columns and extracts new features from existing ones.
 
@@ -49,13 +77,13 @@ New features: `Age`, `Is_Weekend`, `Is_Night`, `Balance_to_Salary_Ratio`, `Tx_to
 
 ## Run Order
 
-These scripts must be run **in order** before the ML pipeline:
+These scripts must be run **in order** to generate and process the data before the ML pipeline:
 
 ```text
-merge.py → encoding.py → preprocessing.py
+customer.py → transaction.py → merge.py → encoding.py → preprocessing.py
 ```
 
-Or run everything at once from the project root:
+Or run everything (including data processing and model training) at once from the project root:
 
 ```bash
 python run_pipeline.py

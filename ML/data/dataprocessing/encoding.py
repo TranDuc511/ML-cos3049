@@ -40,8 +40,8 @@ def encode_and_export(input_path, output_path, columns=None):
 
 # Run directly to encode the labeled dataset
 if __name__ == "__main__":
-    INPUT_FILE = 'ML/data/data.json'
-    OUTPUT_FILE = 'ML/data/data_encoded.json'
+    INPUT_FILE = 'ML/data/data_2/data.json'
+    OUTPUT_FILE = 'ML/data/data_2/data_encoded.json'
 
     # Columns to encode (text → numbers)
     TEXT_COLUMNS = [

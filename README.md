@@ -9,7 +9,8 @@ Algorithm_Inno/
 ├── ML/
 │   ├── data/
 │   │   ├── datacollecting/
-│   │   │   └── customer.py
+│   │   │   ├── customer.py
+│   │   │   └── transaction.py
 │   │   ├── dataprocessing/
 │   │   │   ├── encoding.py
 │   │   │   ├── merge.py
