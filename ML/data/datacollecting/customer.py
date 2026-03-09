@@ -49,6 +49,6 @@ def generate_customers(transaction_file, output_file, total=10000):
 
 if __name__ == '__main__':
     generate_customers(
-        os.path.join(HERE, 'transaction.json'),
-        os.path.join(HERE, 'customers.json'),
+        os.path.join(HERE, '..', 'transaction.json'),
+        os.path.join(HERE, '..', 'customers.json'),
     )

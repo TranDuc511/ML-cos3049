@@ -2,6 +2,43 @@
 
 This project implements a machine learning pipeline to detect and analyze anomalous financial transactions using **Isolation Forest** (unsupervised anomaly detection), **Random Forest Classifier** (supervised classification), and **Random Forest Regressor** (predicting transaction amounts).
 
+## Project Structure
+
+```text
+Algorithm_Inno/
+├── ML/
+│   ├── data/
+│   │   ├── datacollecting/
+│   │   │   └── customer.py
+│   │   ├── dataprocessing/
+│   │   │   ├── encoding.py
+│   │   │   ├── merge.py
+│   │   │   └── preprocessing.py
+│   │   ├── customers.json
+│   │   ├── data.json
+│   │   ├── data_encoded.json
+│   │   ├── data_labeled.json
+│   │   ├── data_processed.json
+│   │   ├── README.md
+│   │   └── transaction.json
+│   ├── models/
+│   │   ├── isolation_forest.pkl
+│   │   ├── random_forest_classifier.pkl
+│   │   └── random_forest_regressor.pkl
+│   ├── notebook/
+│   │   ├── dataprocessing.ipynb
+│   │   ├── isolationforest.ipynb
+│   │   ├── random_forest.ipynb
+│   │   └── rdregressor.ipynb
+│   ├── src/
+│   │   ├── isolationforest.py
+│   │   ├── random_forest.py
+│   │   └── rdregressor.py
+│   └── requirements.txt
+├── README.md
+└── run_pipeline.py
+```
+
 ## 1. Environment Setup
 
 To ensure reproducibility, we use `conda` to manage the project's environment. Follow these step-by-step instructions to set up your environment:

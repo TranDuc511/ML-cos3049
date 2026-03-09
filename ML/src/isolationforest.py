@@ -115,8 +115,8 @@ def visualization(df):
 
 
 if __name__ == "__main__":
-    input_file = 'ML/data/data_processed.json'
-    output_file = 'ML/data/data_labeled.json'
+    input_file = 'ML/data/data_2/data_processed.json'
+    output_file = 'ML/data/data_2/data_labeled.json'
     
     df = load_data(input_file)
     df = detect_anomalies(df)

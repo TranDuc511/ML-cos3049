@@ -79,7 +79,7 @@ def visualize(importance_df, X_test, y_test, predictions, model):
 
 
 if __name__ == "__main__":
-    df = load_data('ML/data/data_labeled.json')
+    df = load_data('ML/data/data_2/data_labeled.json')
     X, y, columns = prepare_data(df)
     importance_df, X_test, y_test, predictions, model = train_model(X, y, columns)
     visualize(importance_df, X_test, y_test, predictions, model)

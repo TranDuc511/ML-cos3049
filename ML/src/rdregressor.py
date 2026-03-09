@@ -92,7 +92,7 @@ def visualize(model, feature_names, y_test, preds):
 
 
 if __name__ == "__main__":
-    df = load_data('ML/data/data_labeled.json')
+    df = load_data('ML/data_2/data/data_labeled.json')
     X, y, feature_names = prepare_features(df)
     model, preds, y_test = train_and_evaluate(X, y, feature_names)
     visualize(model, feature_names, y_test, preds)

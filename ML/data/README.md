@@ -8,11 +8,11 @@ This folder contains scripts that clean, encode, and enrich the raw data before 
 
 Joins the customer and transaction datasets into a single file.
 
-- **Reads:** `ML/datacollecting/customers.json`, `ML/datacollecting/transaction.json`
+- **Reads:** `ML/data/customers.json`, `ML/data/transaction.json`
 - **Writes:** `ML/data/data.json`
 
 ```bash
-python ML/dataprocessing/merge.py
+python ML/data/dataprocessing/merge.py
 ```
 
 ---
@@ -25,7 +25,7 @@ Converts text (categorical) columns into numbers using Label Encoding.
 - **Writes:** `ML/data/data_encoded.json`
 
 ```bash
-python ML/dataprocessing/encoding.py
+python ML/data/dataprocessing/encoding.py
 ```
 
 Columns encoded: `Transaction Detail`, `Geological`, `Device Use`, `Gender`, `Location`, `Working Status`
@@ -40,7 +40,7 @@ Normalizes numeric columns and extracts new features from existing ones.
 - **Writes:** `ML/data/data_processed.json`
 
 ```bash
-python ML/dataprocessing/preprocessing.py
+python ML/data/dataprocessing/preprocessing.py
 ```
 
 New features: `Age`, `Is_Weekend`, `Is_Night`, `Balance_to_Salary_Ratio`, `Tx_to_Balance_Ratio`
