@@ -47,6 +47,6 @@ if __name__ == '__main__':
     df = pd.read_json('ML/data/data_2/data_encoded.json')
     df = extract_features(df)
     df = normalize(df)
-    df.to_json('ML/data/data_processed.json', orient='records', indent=4)
+    df.to_json('ML/data/data_2/data_processed.json', orient='records', indent=4)
     print(f'Done. Saved {len(df):,} rows -> ML/data/data_2/data_processed.json')
     print(f'Columns: {list(df.columns)}')

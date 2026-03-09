@@ -15,11 +15,12 @@ Algorithm_Inno/
 │   │   │   ├── encoding.py
 │   │   │   ├── merge.py
 │   │   │   └── preprocessing.py
+│   │   ├── data_2/
+│   │   │   ├── data.json
+│   │   │   ├── data_encoded.json
+│   │   │   ├── data_labeled.json
+│   │   │   └── data_processed.json
 │   │   ├── customers.json
-│   │   ├── data.json
-│   │   ├── data_encoded.json
-│   │   ├── data_labeled.json
-│   │   ├── data_processed.json
 │   │   ├── README.md
 │   │   └── transaction.json
 │   ├── models/
@@ -74,19 +75,19 @@ To ensure reproducibility, we use `conda` to manage the project's environment. F
 
 The data processing pipeline prepares the raw dataset for model training. It is broken down into three sequential steps. Ensure you run these from the root directory:
 
-1. **Merge Data**: Combines multiple raw data sources into a single working dataset (`ML/data/data.json`).
+1. **Merge Data**: Combines multiple raw data sources into a single working dataset (`ML/data/data_2/data.json`).
 
    ```bash
    python ML/dataprocessing/merge.py
    ```
 
-2. **Encoding**: Converts categorical and text features (like Gender, Location, Working Status) into numerical representations (`ML/data/data_encoded.json`).
+2. **Encoding**: Converts categorical and text features (like Gender, Location, Working Status) into numerical representations (`ML/data/data_2/data_encoded.json`).
 
    ```bash
    python ML/dataprocessing/encoding.py
    ```
 
-3. **Preprocessing & Feature Extraction**: Normalizes numerical continuous values (e.g., using `MinMaxScaler`) and extracts new predictive features, such as `Age` from Date of Birth, time-based flags (`Is_Weekend`, `Is_Night`), and financial ratios (`Balance_to_Salary_Ratio`, `Tx_to_Balance_Ratio`). The final dataset is saved to `ML/data/data_processed.json`.
+3. **Preprocessing & Feature Extraction**: Normalizes numerical continuous values (e.g., using `MinMaxScaler`) and extracts new predictive features, such as `Age` from Date of Birth, time-based flags (`Is_Weekend`, `Is_Night`), and financial ratios (`Balance_to_Salary_Ratio`, `Tx_to_Balance_Ratio`). The final dataset is saved to `ML/data/data_2/data_processed.json`.
 
    ```bash
    python ML/dataprocessing/preprocessing.py
@@ -108,7 +109,7 @@ This step uses an unsupervised **Isolation Forest** to identify suspicious trans
   python ML/src/isolationforest.py
   ```
 
-* **Output:** Saves the labeled dataset to `ML/data/data_labeled.json` and displays anomaly distribution visualizations.
+* **Output:** Saves the labeled dataset to `ML/data/data_2/data_labeled.json` and displays anomaly distribution visualizations.
 
 ### Step 3.2: Fraud Classification (Random Forest Classifier)
 
