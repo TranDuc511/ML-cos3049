@@ -36,7 +36,7 @@ def generate_customers(transaction_file, output_file, total=10000):
             'Gender':            random.choice(['Male', 'Female', 'Other']),
             'Location':          random.choice(locations),
             'Account balance':   balance,
-            'Transaction Count': counts.get(cid, 0),
+            'Transaction Count': 0,  # Will be updated by transaction.py
             'Working Status':    random.choice(work_statuses),
             'Salary (per month)': salary,
         })
@@ -49,6 +49,6 @@ def generate_customers(transaction_file, output_file, total=10000):
 
 if __name__ == '__main__':
     generate_customers(
-        os.path.join(HERE, '..', 'transaction.json'),
-        os.path.join(HERE, '..', 'customers.json'),
+        os.path.join(HERE, 'transaction.json'),
+        os.path.join(HERE, 'customers.json'),
     )
