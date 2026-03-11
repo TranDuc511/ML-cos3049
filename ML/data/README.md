@@ -22,7 +22,7 @@ Generates synthetic transactions between the generated customers and safely upda
 
 - **Reads:** `ML/data/customers.json`
 - **Writes:** `ML/data/transaction.json`
-- **Modifies:** `ML/data/customers.json` (updates transaction counts)
+- **Modifies:** `ML/data/customers.json` 
 
 ```bash
 python ML/data/datacollecting/transaction.py
