@@ -22,7 +22,7 @@ Generates synthetic transactions between the generated customers and safely upda
 
 - **Reads:** `ML/data/customers.json`
 - **Writes:** `ML/data/transaction.json`
-- **Modifies:** `ML/data/customers.json` 
+- **Modifies:** `ML/data/customers.json`
 
 ```bash
 python ML/data/datacollecting/transaction.py
@@ -71,7 +71,7 @@ Normalizes numeric columns and extracts new features from existing ones.
 python ML/data/dataprocessing/preprocessing.py
 ```
 
-New features: `Age`, `Is_Weekend`, `Is_Night`, `Balance_to_Salary_Ratio`, `Tx_to_Balance_Ratio`
+New features: `Age`, `Is_Weekend`, `Is_Night`, `Balance_to_Salary_Ratio`, `Transaction_to_Balance_Ratio`
 
 ---
 

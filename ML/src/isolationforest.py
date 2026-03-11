@@ -32,7 +32,7 @@ def detect_anomalies(df):
     features = [
         'Transaction amount', 'Account balance', 'Salary (per month)',
         'Hour', 'DayOfWeek', 'Age', 'Is_Weekend', 'Is_Night',
-        'Balance_to_Salary_Ratio', 'Tx_to_Balance_Ratio',
+        'Balance_to_Salary_Ratio', 'Transaction_to_Balance_Ratio',
         'Transaction Detail', 'Geological', 'Device Use', 
         'Location', 'Working Status', 'Gender', 'Transaction Count'
     ]

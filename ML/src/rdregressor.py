@@ -19,7 +19,7 @@ def prepare_features(df):
         'Salary (per month)', 'Account balance', 'Transaction Count',
         'Working Status', 'Hour', 'DayOfWeek', 'Transaction Detail',
         'Location', 'Geological', 'Gender', 'Age', 'Is_Weekend', 'Is_Night',
-        'Balance_to_Salary_Ratio', 'Tx_to_Balance_Ratio'
+        'Balance_to_Salary_Ratio', 'Transaction_to_Balance_Ratio'
     ]
 
     available = [col for col in feature_cols if col in df.columns]

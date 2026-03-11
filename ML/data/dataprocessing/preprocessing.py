@@ -25,7 +25,7 @@ def extract_features(df):
 
     if 'Transaction amount' in df.columns and 'Account balance' in df.columns:
         balance = df['Account balance'].replace(0, np.nan)
-        df['Tx_to_Balance_Ratio'] = df['Transaction amount'] / balance
+        df['Transaction_to_Balance_Ratio'] = df['Transaction amount'] / balance
 
     df = df.fillna(0)
     return df
@@ -34,7 +34,7 @@ def extract_features(df):
 def normalize(df):
     cols_to_scale = [
         'Transaction amount', 'Account balance', 'Salary (per month)',
-        'Age', 'Balance_to_Salary_Ratio', 'Tx_to_Balance_Ratio',
+        'Age', 'Balance_to_Salary_Ratio', 'Transaction_to_Balance_Ratio',
     ]
     available = [c for c in cols_to_scale if c in df.columns]
 

@@ -61,7 +61,7 @@ Since there is no single "correct" answer in regression (only closer or further 
 
 In this project, the Random Forest Regressor is used to predict `Transaction amount` based on features such as:
 
-- `Tx_to_Balance_Ratio` (most important)
+- `Transaction_to_Balance_Ratio` (most important)
 - `Account balance`
 - `Balance_to_Salary_Ratio`
 - `Age`, `Salary (per month)`
