@@ -59,6 +59,11 @@ To ensure reproducibility, we use `conda` to manage the project's environment. F
    ```
 
 3. **Install Required Packages:**
+   If pip is not installed, you can use the get-pip.py bootstrapping script. 
+   ```bash 
+   python get-pip.py
+   ```
+
    You can either install the packages manually using `pip`:
 
    ```bash

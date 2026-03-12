@@ -66,11 +66,14 @@ def visualize(importance_df, X_test, y_test, predictions, model):
     plt.title('Feature Importances (Random Forest)')
     plt.xlabel('Importance Score')
 
+    #ConfusionMatrix
     ConfusionMatrixDisplay.from_predictions(y_test, predictions, display_labels=['Normal', 'Fraud'], cmap='Blues')
 
+    #ROC curve
     RocCurveDisplay.from_estimator(model, X_test, y_test)
     plt.title('ROC Curve - Random Forest')
 
+    #Precision-Recall Curve
     PrecisionRecallDisplay.from_estimator(model, X_test, y_test)
     plt.title('Precision-Recall Curve')
 
