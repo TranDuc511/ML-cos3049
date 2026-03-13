@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 
@@ -40,8 +41,9 @@ def encode_and_export(input_path, output_path, columns=None):
 
 # Run directly to encode the labeled dataset
 if __name__ == "__main__":
-    INPUT_FILE = 'ML/data/data_2/data.json'
-    OUTPUT_FILE = 'ML/data/data_2/data_encoded.json'
+    HERE = os.path.dirname(__file__)
+    INPUT_FILE = os.path.join(HERE, '..', 'data_2', 'data.json')
+    OUTPUT_FILE = os.path.join(HERE, '..', 'data_2', 'data_encoded.json')
 
     # Columns to encode (text → numbers)
     TEXT_COLUMNS = [

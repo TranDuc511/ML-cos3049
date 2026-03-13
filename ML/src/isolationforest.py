@@ -1,3 +1,4 @@
+import os
 import json
 import pandas as pd
 from sklearn.ensemble import IsolationForest
@@ -44,7 +45,8 @@ def detect_anomalies(df):
     model = IsolationForest(n_estimators=100, contamination=0.15, random_state=42)
     model.fit(X)
 
-    joblib.dump(model, 'ML/models/isolation_forest.pkl')
+    model_path = os.path.join(os.path.dirname(__file__), '..', 'models', 'isolation_forest.pkl')
+    joblib.dump(model, model_path)
     
     predictions = model.predict(X)
     df['is_fraud'] = [1 if p == -1 else 0 for p in predictions]
@@ -115,8 +117,9 @@ def visualization(df):
 
 
 if __name__ == "__main__":
-    input_file = 'ML/data/data_2/data_processed.json'
-    output_file = 'ML/data/data_2/data_labeled.json'
+    HERE = os.path.dirname(__file__)
+    input_file = os.path.join(HERE, '..', 'data', 'data_2', 'data_processed.json')
+    output_file = os.path.join(HERE, '..', 'data', 'data_2', 'data_labeled.json')
     
     df = load_data(input_file)
     df = detect_anomalies(df)

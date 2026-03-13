@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import numpy as np
 from datetime import datetime
@@ -44,9 +45,13 @@ def normalize(df):
 
 
 if __name__ == '__main__':
-    df = pd.read_json('ML/data/data_2/data_encoded.json')
+    HERE = os.path.dirname(__file__)
+    INPUT_FILE = os.path.join(HERE, '..', 'data_2', 'data_encoded.json')
+    OUTPUT_FILE = os.path.join(HERE, '..', 'data_2', 'data_processed.json')
+
+    df = pd.read_json(INPUT_FILE)
     df = extract_features(df)
     df = normalize(df)
-    df.to_json('ML/data/data_2/data_processed.json', orient='records', indent=4)
-    print(f'Done. Saved {len(df):,} rows -> ML/data/data_2/data_processed.json')
+    df.to_json(OUTPUT_FILE, orient='records', indent=4)
+    print(f'Done. Saved {len(df):,} rows -> {OUTPUT_FILE}')
     print(f'Columns: {list(df.columns)}')

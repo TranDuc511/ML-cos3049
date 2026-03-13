@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import numpy as np
 from datetime import datetime
@@ -37,8 +38,9 @@ def train_and_evaluate(X, y, feature_names):
     model.fit(X_train, y_train)
     
     # Save model
-    joblib.dump(model, 'ML/models/random_forest_regressor.pkl')
-    print("Model saved to ML/models/random_forest_regressor.pkl")
+    model_path = os.path.join(os.path.dirname(__file__), '..', 'models', 'random_forest_regressor.pkl')
+    joblib.dump(model, model_path)
+    print(f"Model saved to {model_path}")
 
     preds = model.predict(X_test)
     print(f"MAE: {mean_absolute_error(y_test, preds):.2f}")
@@ -92,7 +94,8 @@ def visualize(model, feature_names, y_test, preds):
 
 
 if __name__ == "__main__":
-    df = load_data('ML/data/data_2/data_labeled.json')
+    HERE = os.path.dirname(__file__)
+    df = load_data(os.path.join(HERE, '..', 'data', 'data_2', 'data_labeled.json'))
     X, y, feature_names = prepare_features(df)
     model, preds, y_test = train_and_evaluate(X, y, feature_names)
     visualize(model, feature_names, y_test, preds)
