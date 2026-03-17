@@ -1,0 +1,38 @@
+import json
+import random
+import os
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+
+
+def generate_customers(output_file, total=10000):
+    unique_ids = [f'ACC_{i:05d}' for i in range(1, total + 1)]
+
+    work_statuses = ['Employed', 'Self-employed', 'Freelancer', 'Unemployed', 'Student', 'Retired']
+    locations     = ['Hanoi', 'HCMC', 'Da Nang', 'Hai Phong', 'Can Tho', 'Nha Trang', 'Vung Tau']
+
+    customers = []
+    for cid in unique_ids:
+        salary  = random.randint(5, 50) * 1_000_000
+        balance = random.randint(1, 500) * 1_000_000
+        customers.append({
+            'Customer ID':       cid,
+            'Date of Birth':     f'{random.randint(1965, 2005)}-{random.randint(1, 12):02d}-{random.randint(1, 28):02d}',
+            'Gender':            random.choice(['Male', 'Female']),
+            'Location':          random.choice(locations),
+            'Account balance':   balance,
+            'Transaction Count': 0,
+            'Working Status':    random.choice(work_statuses),
+            'Salary (per month)': salary,
+        })
+
+    with open(output_file, 'w', encoding='utf-8') as f:
+        json.dump(customers, f, indent=4, ensure_ascii=False)
+
+    print(f'Generated {len(customers):,} customers -> {output_file}')
+
+
+if __name__ == '__main__':
+    generate_customers(
+        os.path.abspath(os.path.join(HERE, '..', 'customers.json')),
+    )

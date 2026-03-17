@@ -1,0 +1,1 @@
+Contains other artifacts that you have developed for the assignment project (e.g. design files, design documentations, etc.)
