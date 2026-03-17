@@ -37,8 +37,7 @@ Algorithm_Inno/
 │   │   ├── random_forest.py
 │   │   └── rdregressor.py
 │   └── requirements.txt
-├── README.md
-└── run_pipeline.py
+└── README.md
 ```
 
 ## 1. Environment Setup
@@ -101,8 +100,6 @@ The data processing pipeline prepares the raw dataset for model training. It is 
 ## 3. Model Training
 
 You can train the models using the preprocessed data. The training pipeline consists of three main components: Anomaly Detection, Classification, and Regression.
-
-*(Alternatively, to run the entire data processing and model training pipeline automatically, you can simply run: `python run_pipeline.py`)*
 
 ### Step 3.1: Anomaly Detection (Isolation Forest)
 

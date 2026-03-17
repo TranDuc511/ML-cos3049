@@ -71,7 +71,7 @@ X, y, columns = prepare_data(df)
 coef_df, X_test, y_test, predictions, model = train_model(X, y, columns)
 visualize(coef_df, X_test, y_test, predictions, model)
 ```
-Runs the full pipeline when executed as a script.
+Runs the full model training process when executed as a script.
 
 ---
 
