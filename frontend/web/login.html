@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Underground Transaction Detection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: radial-gradient(circle at top left, #1d4ed8 0, transparent 55%), var(--main-bg);
+    }
+
+    .login-card {
+      width: 100%;
+      max-width: 420px;
+      background: #ffffff;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+      padding: 2rem 2.25rem;
+    }
+
+    .login-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+      color: #111827;
+    }
+
+    .login-subtitle {
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin-bottom: 1.75rem;
+    }
+
+    .login-field {
+      margin-bottom: 1rem;
+    }
+
+    .login-label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #4b5563;
+      margin-bottom: 0.35rem;
+    }
+
+    .login-input {
+      width: 100%;
+      padding: 0.7rem 0.9rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      font-family: inherit;
+      font-size: 0.95rem;
+      background: #f9fafb;
+      transition: border-color 0.15s, box-shadow 0.15s, background-color 0.15s;
+    }
+
+    .login-input:focus {
+      outline: none;
+      background: #ffffff;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    }
+
+    .login-button {
+      width: 100%;
+      margin-top: 0.5rem;
+      padding: 0.8rem 1rem;
+      border-radius: 999px;
+      border: none;
+      background: var(--accent);
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background-color 0.15s, box-shadow 0.15s, transform 0.05s;
+    }
+
+    .login-button:hover {
+      background: var(--accent-hover);
+      box-shadow: var(--shadow-md);
+    }
+
+    .login-button:active {
+      transform: translateY(1px);
+      box-shadow: var(--shadow);
+    }
+
+    .login-footer {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: #9ca3af;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main class="login-card">
+    <h1 class="login-title">Sign in</h1>
+    <p class="login-subtitle">Access the Underground Transaction Detection dashboard.</p>
+    <form id="login-form">
+      <div class="login-field">
+        <label class="login-label" for="login-username">Username</label>
+        <input id="login-username" class="login-input" type="text" autocomplete="username" required />
+      </div>
+      <div class="login-field">
+        <label class="login-label" for="login-password">Password</label>
+        <input id="login-password" class="login-input" type="password" autocomplete="current-password" required />
+      </div>
+      <button type="submit" class="login-button">Login</button>
+    </form>
+    <div class="login-footer">
+      This is a demo login. No real authentication is performed.
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      // TODO: sau này gọi API backend để kiểm tra tài khoản.
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>
+

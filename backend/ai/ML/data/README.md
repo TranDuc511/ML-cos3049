@@ -82,3 +82,9 @@ These scripts must be run **in order** to generate and process the data before t
 ```text
 customer.py → transaction.py → merge.py → encoding.py → preprocessing.py
 ```
+
+Or run everything (including data processing and model training) at once from the project root:
+
+```bash
+python run_pipeline.py
+```

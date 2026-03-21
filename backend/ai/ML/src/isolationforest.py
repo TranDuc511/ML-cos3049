@@ -1,18 +1,18 @@
-    import os
-    import json
-    import pandas as pd
-    from sklearn.ensemble import IsolationForest
+import os
+import json
+import pandas as pd
+from sklearn.ensemble import IsolationForest
 
-    import matplotlib.pyplot as plt
-    import seaborn as sns
+import matplotlib.pyplot as plt
+import seaborn as sns
 
-    import joblib 
+import joblib 
 
-    pd.set_option('display.max_columns', None)
-    pd.set_option('display.width', 1000)
+pd.set_option('display.max_columns', None)
+pd.set_option('display.width', 1000)
 
 
-    def load_data(file_path):
+def load_data(file_path):
         print(f"STEP 1 Reading preprocessed data from: {file_path}")
         df = pd.read_json(file_path) 
         
@@ -25,7 +25,7 @@
         return df
 
 
-    def detect_anomalies(df):
+def detect_anomalies(df):
         print("Step 2 Detecting Anomalies...")
         
         # Select features for the model. We can define exactly what we want,
@@ -56,7 +56,7 @@
         return df
 
 
-    def save_result(df, output_path):
+def save_result(df, output_path):
         print(f"Step 3 Saving result to file: {output_path}")
         
         if 'DateTime' in df.columns:
@@ -68,7 +68,7 @@
         print("Done!")
 
 
-    def print_top_anomalies(df):
+def print_top_anomalies(df):
         print("TOP 5 ANOMALIES")
         frauds = df[df['is_fraud'] == 1].sort_values('anomaly_score')
         
@@ -81,7 +81,7 @@
         print(frauds[available_cols].head(5).to_string(index=False))
 
 
-    def visualization(df):
+def visualization(df):
         # 1. Anomaly Score Distribution
         plt.figure()
         plt.hist(df['anomaly_score'], bins=50, color='steelblue')
@@ -116,7 +116,7 @@
         plt.show()
 
 
-    if __name__ == "__main__":
+if __name__ == "__main__":
         HERE = os.path.dirname(__file__)
         input_file = os.path.join(HERE, '..', 'data', 'data_2', 'data_processed.json')
         output_file = os.path.join(HERE, '..', 'data', 'data_2', 'data_labeled.json')
