@@ -29,19 +29,22 @@ This project provides a comprehensive interface for financial analysts to monito
 
 ### Installation
 
-1.  Clone or navigate to the project directory.
-2.  Install dependencies:
+1. Clone or navigate to the project directory.
+2. Install dependencies:
+
     ```bash
     npm install
     ```
 
 ### Running the Application
 
-1.  Start the development server:
+1. Start the development server:
+
     ```bash
     npm run dev
     ```
-2.  Open your browser and navigate to the URL shown in the terminal (usually `http://localhost:5173`).
+
+2. Open your browser and navigate to the URL shown in the terminal (usually `http://localhost:5173`).
 
 ## Project Structure
 
@@ -49,7 +52,6 @@ This project provides a comprehensive interface for financial analysts to monito
 - `src/views/`: Main page-level components (Overview, Transactions, etc.)
 - `src/App.jsx`: Root component handling authentication and layout.
 - `src/index.css`: Global styles and design system tokens.
-- `legacy/`: Contains the original HTML/JS files for reference.
 
 ## License
 

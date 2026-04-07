@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import Sidebar from '../components/Sidebar'
 import Dashboard from './Dashboard'
 import TransactionList from './TransactionList'
-import Customers from './Customers'
-import UploadData from './UploadData'
+import Form from './Form'
+
 
 /**
  * AppLayout Component
@@ -33,10 +33,7 @@ const AppLayout = ({ onLogout }) => {
   const getPageTitle = () => {
     if (currentView === 'dashboard') return 'Dashboard'
     if (currentView === 'transactions') return 'Transaction List'
-    if (currentView === 'customers') return 'Customer Segmentation'
-    if (currentView === 'upload') return 'Upload Data'
-    if (currentView === 'accounts') return 'Account List'
-    if (currentView === 'report') return 'AI Report'
+    if (currentView === 'form') return 'Predict Fraud Analysis'
     return 'Dashboard'
   }
 
@@ -70,20 +67,10 @@ const AppLayout = ({ onLogout }) => {
           {/* We show the correct component based on 'currentView' */}
           {currentView === 'dashboard' && <Dashboard />}
           {currentView === 'transactions' && <TransactionList />}
-          {currentView === 'customers' && <Customers />}
-          {currentView === 'upload' && <UploadData />}
+          {currentView === 'form' && <Form />}
           
-          {/* Simple placeholder pages */}
-          {currentView === 'accounts' && (
-            <div className="content-panel">
-              <p className="placeholder-text">Account List — content area</p>
-            </div>
-          )}
-          {currentView === 'report' && (
-            <div className="content-panel">
-              <p className="placeholder-text">AI Report — content area</p>
-            </div>
-          )}
+          
+        
         </section>
       </main>
     </div>

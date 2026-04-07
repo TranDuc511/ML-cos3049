@@ -14,11 +14,9 @@ const Sidebar = ({ currentView, onViewChange, onLogout, breadcrumb, isOpen, onTo
   const navItems = [
     { key: 'dashboard', label: 'Dashboard' },
     { key: 'transactions', label: 'Transaction List' },
-    { key: 'customers', label: 'Customers' },
-    { key: 'accounts', label: 'Account List' },
-    { key: 'report', label: 'AI Report' },
-    { key: 'upload', label: 'Upload Data' }
+    { key: 'form', label: 'Predict Fraud' },
   ]
+
 
   return (
     <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
@@ -30,7 +28,7 @@ const Sidebar = ({ currentView, onViewChange, onLogout, breadcrumb, isOpen, onTo
         <button className="menu-toggle" onClick={onToggle}>✕</button>
         
         <div className="avatar"></div>
-        <span className="account-name">Account name</span>
+        <span className="account-name">Account Name</span>
       </div>
 
       {/* 2. MIDDLE SECTION: Navigation Links */}
@@ -44,7 +42,7 @@ const Sidebar = ({ currentView, onViewChange, onLogout, breadcrumb, isOpen, onTo
                 className={`nav-link ${currentView === item.key ? 'active' : ''}`}
                 onClick={(e) => {
                   e.preventDefault()        // Prevent page refresh
-                  onViewChange(item.key)    // Tell Dashboard to swap the page
+                  onViewChange(item.key)    // Tell AppLayout to swap the page
                 }}
               >
                 → {item.label}

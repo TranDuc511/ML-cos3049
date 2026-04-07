@@ -11,11 +11,11 @@
   const breadcrumbEl = document.getElementById('sidebar-breadcrumb');
   const navLinks = document.querySelectorAll('.nav-link[data-view]');
 
-  // ===== Sample data layer (sau này chỉ cần thay bằng API/database) =====
-  // Transaction dataset schema chuẩn theo bảng:
+  // ===== Mock data layer (ready for API/database integration) =====
+  // Transaction dataset schema follow table form:
   // Transaction ID, Sender Account ID, Receiver Account ID, Transaction amount,
   // Timestamp, Transaction Detail, Geological, Device Use.
-  // Hiện để trống ([]) cho đúng yêu cầu, sau này chỉ cần fill từ database/API.
+  // Initialized as empty; to be populated with data from API or database.
   const transactionData = [];
 
   const customerData = [
@@ -169,7 +169,7 @@
     });
   }
 
-  // ===== Search / filter logic (làm việc trên data layer phía trên) =====
+  // ===== Search and filter logic (processes the data layer) =====
   const transactionSearchInput = document.getElementById('transaction-search');
   const customerSearchInput = document.getElementById('customer-search');
 
@@ -197,7 +197,7 @@
     });
   }
 
-  // Render data lần đầu (sau này chỉ cần thay transactionData / customerData = dữ liệu từ API)
+  // Initial data rendering (replace with API-driven data in production)
   renderTransactions(transactionData);
   renderCustomers(customerData);
 
