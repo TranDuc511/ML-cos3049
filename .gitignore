@@ -170,3 +170,17 @@ ENV/
 # OS Files
 .DS_Store
 Thumbs.db
+
+# IDE / Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Data / Databases
+*.csv
+*.db
+*.sqlite3
