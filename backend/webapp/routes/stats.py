@@ -56,15 +56,27 @@ def get_history_trend():
 
 @router.get("/amount_distribution")
 def get_amount_distribution():
-    ranges = {"0-1K": 0, "1K-10K": 0, "10K-50K": 0, "50K-100K": 0, "100K+": 0}
+    ranges = {
+        "0-50K":    {"clean": 0, "fraud": 0},
+        "50K-200K": {"clean": 0, "fraud": 0},
+        "200K-1M":  {"clean": 0, "fraud": 0},
+        "1M-5M":    {"clean": 0, "fraud": 0},
+        "5M-10M":   {"clean": 0, "fraud": 0},
+        "10M+":     {"clean": 0, "fraud": 0},
+    }
     for tx in transactions:
         amt = tx.get("amount", 0)
-        if amt < 1_000:          ranges["0-1K"]    += 1
-        elif amt < 10_000:       ranges["1K-10K"]   += 1
-        elif amt < 50_000:       ranges["10K-50K"]  += 1
-        elif amt < 100_000:      ranges["50K-100K"] += 1
-        else:                    ranges["100K+"]    += 1
-    data = [{"range": k, "count": v} for k, v in ranges.items()]
+        is_fraud = tx.get("is_fraud", 0)
+        key = "clean" if is_fraud == 0 else "fraud"
+
+        if amt < 50_000:           ranges["0-50K"][key]    += 1
+        elif amt < 200_000:        ranges["50K-200K"][key] += 1
+        elif amt < 1_000_000:      ranges["200K-1M"][key]  += 1
+        elif amt < 5_000_000:      ranges["1M-5M"][key]    += 1
+        elif amt < 10_000_000:     ranges["5M-10M"][key]   += 1
+        else:                      ranges["10M+"][key]     += 1
+        
+    data = [{"range": k, "clean": v["clean"], "fraud": v["fraud"]} for k, v in ranges.items()]
     return {"status": "success", "data": data}
 
 

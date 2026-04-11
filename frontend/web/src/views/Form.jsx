@@ -21,43 +21,57 @@ const initialTransaction = {
   geological: '10.762622, 106.660172',
 };
 
+const DEMO_DATA = [
+  { c: { customerId: 'CUST_001', dob: '1986-03-06', gender: 'Female', location: 'Can Tho', workingStatus: 'Retired', salary: '14000000' }, t: { transactionId: 'TXN_300001', senderId: 'ACC_04339', receiverId: 'REC_3587', amount: '8325793', accountBalance: '312000000', date: '2025-09-22', hour: '11', minute: '31', detail: 'Phone Bill', device: 'Android Phone', geological: 'Hanoi - VN' } },
+  { c: { customerId: 'CUST_002', dob: '1987-11-22', gender: 'Female', location: 'Can Tho', workingStatus: 'Employed', salary: '34000000' }, t: { transactionId: 'TXN_300002', senderId: 'ACC_00782', receiverId: 'REC_6075', amount: '2315346', accountBalance: '46000000', date: '2025-04-30', hour: '14', minute: '23', detail: 'Starbucks', device: 'MacBook Air', geological: 'Can Tho - VN' } },
+  { c: { customerId: 'CUST_003', dob: '1982-12-27', gender: 'Male', location: 'HCMC', workingStatus: 'Employed', salary: '49000000' }, t: { transactionId: 'TXN_300003', senderId: 'ACC_01310', receiverId: 'REC_6280', amount: '6508780', accountBalance: '296000000', date: '2025-12-04', hour: '15', minute: '44', detail: 'Grocery Store', device: 'Samsung S23', geological: 'Can Tho - VN' } },
+  { c: { customerId: 'CUST_004', dob: '1965-10-21', gender: 'Male', location: 'Hai Phong', workingStatus: 'Student', salary: '36000000' }, t: { transactionId: 'TXN_300004', senderId: 'ACC_04495', receiverId: 'REC_4469', amount: '6912206', accountBalance: '263000000', date: '2025-03-27', hour: '00', minute: '22', detail: 'Monthly Salary', device: 'Web Browser', geological: 'Can Tho - VN' } },
+  { c: { customerId: 'CUST_005', dob: '1973-05-02', gender: 'Female', location: 'HCMC', workingStatus: 'Student', salary: '11000000' }, t: { transactionId: 'TXN_300005', senderId: 'ACC_07039', receiverId: 'REC_2240', amount: '48354341', accountBalance: '302000000', date: '2025-10-01', hour: '20', minute: '09', detail: 'Gaming Chip Purchase', device: 'Android Phone', geological: 'Cambodia - KH' } },
+  { c: { customerId: 'CUST_006', dob: '1997-02-15', gender: 'Male', location: 'Hai Phong', workingStatus: 'Student', salary: '12000000' }, t: { transactionId: 'TXN_300006', senderId: 'ACC_07187', receiverId: 'REC_7970', amount: '23028341', accountBalance: '426000000', date: '2025-06-09', hour: '08', minute: '32', detail: 'Betting Wallet Deposit', device: 'MacBook Air', geological: 'Cambodia - KH' } },
+  { c: { customerId: 'CUST_007', dob: '1993-11-24', gender: 'Male', location: 'Hai Phong', workingStatus: 'Student', salary: '36000000' }, t: { transactionId: 'TXN_300007', senderId: 'ACC_04707', receiverId: 'REC_6077', amount: '9823153', accountBalance: '73000000', date: '2025-12-09', hour: '07', minute: '57', detail: 'Supermarket', device: 'iPhone 15', geological: 'Da Nang - VN' } },
+  { c: { customerId: 'CUST_008', dob: '1996-01-24', gender: 'Male', location: 'Nha Trang', workingStatus: 'Freelancer', salary: '46000000' }, t: { transactionId: 'TXN_300008', senderId: 'ACC_04174', receiverId: 'REC_8937', amount: '388937', accountBalance: '41000000', date: '2025-03-03', hour: '06', minute: '47', detail: 'Restaurant', device: 'Web Browser', geological: 'HCMC - VN' } },
+  { c: { customerId: 'CUST_009', dob: '2000-06-01', gender: 'Male', location: 'HCMC', workingStatus: 'Self-employed', salary: '26000000' }, t: { transactionId: 'TXN_300009', senderId: 'ACC_00865', receiverId: 'REC_5267', amount: '26344848', accountBalance: '144000000', date: '2025-08-21', hour: '20', minute: '01', detail: 'Betting Wallet Deposit', device: 'MacBook Air', geological: 'Cambodia - KH' } },
+  { c: { customerId: 'CUST_010', dob: '1998-07-12', gender: 'Male', location: 'Can Tho', workingStatus: 'Unemployed', salary: '29000000' }, t: { transactionId: 'TXN_300010', senderId: 'ACC_00871', receiverId: 'REC_5537', amount: '8305767', accountBalance: '379000000', date: '2025-04-22', hour: '03', minute: '16', detail: 'Restaurant', device: 'Samsung S23', geological: 'Da Nang - VN' } }
+];
+
 // ── Validation rules ──────────────────────────────────────────────────────
 const validateCustomer = (c) => {
   const errs = {};
-  if (!c.customerId.trim())   errs.customerId = 'Customer ID is required.';
-  if (!c.dob)                 errs.dob = 'Date of Birth is required.';
+  if (!c.customerId.trim()) errs.customerId = 'Customer ID is required.';
+  if (!c.dob) errs.dob = 'Date of Birth is required.';
   else if (new Date(c.dob) >= new Date()) errs.dob = 'Date of Birth must be in the past.';
-  if (!c.location.trim())     errs.location = 'Location is required.';
-  if (!c.salary)              errs.salary = 'Salary is required.';
+  if (!c.location.trim()) errs.location = 'Location is required.';
+  if (!c.salary) errs.salary = 'Salary is required.';
   else if (Number(c.salary) < 0) errs.salary = 'Salary must be a positive number.';
   return errs;
 };
 
 const validateTransaction = (t) => {
   const errs = {};
-  if (!t.transactionId.trim())  errs.transactionId = 'Transaction ID is required.';
-  if (!t.amount)                errs.amount = 'Amount is required.';
+  if (!t.transactionId.trim()) errs.transactionId = 'Transaction ID is required.';
+  if (!t.amount) errs.amount = 'Amount is required.';
   else if (Number(t.amount) <= 0) errs.amount = 'Amount must be greater than 0.';
-  if (!t.accountBalance)         errs.accountBalance = 'Account balance is required.';
+  if (!t.accountBalance) errs.accountBalance = 'Account balance is required.';
   else if (Number(t.accountBalance) < 0) errs.accountBalance = 'Balance must be non-negative.';
   const h = Number(t.hour);
   if (!t.hour || h < 0 || h > 23) errs.hour = 'Hour must be 0–23.';
   const m = Number(t.minute);
   if (!t.minute || m < 0 || m > 59) errs.minute = 'Minute must be 0–59.';
-  if (!t.detail.trim())         errs.detail = 'Transaction detail is required.';
+  if (!t.detail.trim()) errs.detail = 'Transaction detail is required.';
   return errs;
 };
 
 const Form = () => {
   const toast = useToast();
-  const [customer, setCustomerState]         = useState(initialCustomer);
-  const [transaction, setTransactionState]   = useState(initialTransaction);
+  const [customer, setCustomerState] = useState(initialCustomer);
+  const [transaction, setTransactionState] = useState(initialTransaction);
   const [cErrors, setCErrors] = useState({});
   const [tErrors, setTErrors] = useState({});
-  const [result, setResult]   = useState(null);
+  const [result, setResult] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [demoIndex, setDemoIndex] = useState(0);
 
-  const setCustomer    = patch => setCustomerState(c => ({ ...c, ...patch }));
+  const setCustomer = patch => setCustomerState(c => ({ ...c, ...patch }));
   const setTransaction = patch => setTransactionState(t => ({ ...t, ...patch }));
 
   // Live validation: clear individual error as user corrects a field
@@ -82,15 +96,15 @@ const Form = () => {
         'Salary (per month)': Number(customer.salary) || 0,
       },
       transaction: {
-        'Transaction ID':      transaction.transactionId,
-        'Timestamp':           timestamp,
-        'Sender Account ID':   transaction.senderId || 'N/A',
+        'Transaction ID': transaction.transactionId,
+        'Timestamp': timestamp,
+        'Sender Account ID': transaction.senderId || 'N/A',
         'Receiver Account ID': transaction.receiverId || 'N/A',
-        'Transaction amount':  Number(transaction.amount) || 0,
-        'Transaction Detail':  transaction.detail || 'Payment',
-        'Geological':          transaction.geological,
-        'Device Use':          transaction.device,
-        'Account balance':     Number(transaction.accountBalance) || 0,
+        'Transaction amount': Number(transaction.amount) || 0,
+        'Transaction Detail': transaction.detail || 'Payment',
+        'Geological': transaction.geological,
+        'Device Use': transaction.device,
+        'Account balance': Number(transaction.accountBalance) || 0,
       },
     };
   };
@@ -108,7 +122,7 @@ const Form = () => {
 
     setIsLoading(true);
     try {
-      const res  = await fetch(API_URL, {
+      const res = await fetch(API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(buildPayload()),
@@ -139,9 +153,20 @@ const Form = () => {
     toast('Form cleared.', 'info');
   };
 
+  const handleDemo = () => {
+    const data = DEMO_DATA[demoIndex];
+    setCustomerState(data.c);
+    setTransactionState(data.t);
+    setCErrors({});
+    setTErrors({});
+    setResult(null);
+    setDemoIndex((demoIndex + 1) % DEMO_DATA.length);
+    toast(`Demo data ${demoIndex + 1} loaded.`, 'info');
+  };
+
   const fraudScore = result ? Object.values(result.votes).reduce((s, v) => s + v, 0) : 0;
-  const fraudPct   = result ? (fraudScore / 3) * 100 : 0;
-  const isFraud    = result?.is_fraud ?? false;
+  const fraudPct = result ? (fraudScore / 3) * 100 : 0;
+  const isFraud = result?.is_fraud ?? false;
 
   const chartData = {
     labels: ['Risk', 'Safe'],
@@ -258,13 +283,18 @@ const Form = () => {
             <button id="btn-predict" onClick={handlePredict} disabled={isLoading} style={primaryBtnStyle}>
               {isLoading ? ' Processing…' : 'Run AI Prediction'}
             </button>
-            <button id="btn-reset" onClick={handleReset} style={secondaryBtnStyle}>Reset</button>
+            <button id="btn-demo" type="button" onClick={handleDemo} style={{ ...secondaryBtnStyle, background: '#10b981', color: '#fff', borderColor: '#059669' }}>
+              Demo Data
+            </button>
+            <button id="btn-reset" type="button" onClick={handleReset} style={secondaryBtnStyle}>Reset</button>
           </div>
         </div>
 
         {/* ── Result Panel ── */}
         <div style={resultPanelStyle}>
-          <h3 style={{ marginBottom: '16px', fontWeight: 700, color: '#1f2937' }}>AI Risk Assessment</h3>
+          <h3 style={{ marginBottom: '16px', fontWeight: 700, color: '#1f2937' }}>
+            {result === null ? 'AI Risk Assessment' : `Fraud Rate: ${fraudPct.toFixed(0)}% (avg)`}
+          </h3>
           <div style={{ position: 'relative', width: '180px', height: '180px', margin: '0 auto' }}>
             <Doughnut data={chartData} options={{ plugins: { legend: { display: false } }, maintainAspectRatio: false }} />
             <div style={{
@@ -292,31 +322,25 @@ const Form = () => {
               </div>
 
               <div style={{ marginTop: '14px' }}>
-                <p style={labelStyle}>Model Votes ({fraudScore}/3 flagged)</p>
+                <p style={labelStyle}>Model Votes ({Object.values(result.votes).filter(v => v > 0.5).length}/3 flagged)</p>
                 {Object.entries(result.votes).map(([model, vote]) => (
                   <div key={model} style={voteRowStyle}>
                     <span style={{ fontSize: '0.82rem', color: '#374151', textTransform: 'capitalize' }}>
                       {model.replace(/_/g, ' ')}
                     </span>
-                    <span style={{ fontWeight: 700, color: vote ? '#ef4444' : '#22c55e' }}>
-                      {vote ? 'FRAUD' : 'SAFE'}
-                    </span>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <span style={{ fontSize: '0.78rem', color: vote > 0.5 ? '#ef4444' : '#22c55e', fontWeight: 600 }}>
+                        {(vote * 100).toFixed(1)}% fraud
+                      </span>
+                      <span style={{ fontWeight: 700, color: vote > 0.5 ? '#ef4444' : '#22c55e' }}>
+                        {vote > 0.5 ? 'FRAUD' : 'SAFE'}
+                      </span>
+                    </div>
                   </div>
                 ))}
               </div>
 
-              <div style={{ marginTop: '14px', padding: '12px', background: '#f9fafb', borderRadius: '8px', border: '1px solid #e5e7eb' }}>
-                <p style={labelStyle}>Regression: Predicted Normal Amount</p>
-                <p style={{ fontSize: '1.2rem', fontWeight: 700, color: '#2563eb' }}>
-                  {result.predicted_amount.toLocaleString('vi-VN')} VND
-                </p>
-                <p style={{ fontSize: '0.78rem', color: '#6b7280', marginTop: '4px' }}>
-                  Actual: {Number(transaction.amount).toLocaleString('vi-VN')} VND
-                  {Number(transaction.amount) > result.predicted_amount * 3 && (
-                    <span style={{ color: '#ef4444', marginLeft: '6px' }}>⚠ &gt;3× predicted</span>
-                  )}
-                </p>
-              </div>
+
             </div>
           )}
         </div>
@@ -366,7 +390,7 @@ const resultPanelStyle = {
   borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
   border: '1px solid #e5e7eb',
 };
-const labelStyle  = { fontSize: '0.78rem', fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', marginBottom: '6px' };
+const labelStyle = { fontSize: '0.78rem', fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', marginBottom: '6px' };
 const voteRowStyle = { display: 'flex', justifyContent: 'space-between', padding: '6px 0', borderBottom: '1px solid #f3f4f6' };
 
 export default Form;

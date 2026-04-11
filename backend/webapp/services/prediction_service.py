@@ -14,9 +14,7 @@ import pandas as pd
 
 from ai.ML.data.dataprocessing.preprocessing import extract_features
 
-# ---------------------------------------------------------------------------
 # Model paths (resolved relative to this file → backend/webapp/services/)
-# ---------------------------------------------------------------------------
 _HERE       = os.path.dirname(__file__)
 MODELS_DIR  = os.path.abspath(os.path.join(_HERE, '..', '..', 'ai', 'ML', 'models'))
 
@@ -26,9 +24,7 @@ ISO_PATH      = os.path.join(MODELS_DIR, 'isolation_forest.pkl')
 RFR_PATH      = os.path.join(MODELS_DIR, 'random_forest_regressor.pkl')
 RFC_PATH      = os.path.join(MODELS_DIR, 'random_forest_classifier.pkl')
 
-# ---------------------------------------------------------------------------
 # Load artefacts once at startup (graceful degradation if missing)
-# ---------------------------------------------------------------------------
 def _load(path, label):
     try:
         obj = joblib.load(path)
@@ -44,9 +40,7 @@ model_iso   = _load(ISO_PATH,      "isolation_forest")
 model_rf_reg = _load(RFR_PATH,     "random_forest_regressor")
 model_rf    = _load(RFC_PATH,      "random_forest_classifier")
 
-# ---------------------------------------------------------------------------
 # Text columns that must be label-encoded
-# ---------------------------------------------------------------------------
 TEXT_COLUMNS = [
     'Transaction Detail', 'Geological', 'Device Use',
     'Gender', 'Location', 'Working Status',
@@ -77,9 +71,7 @@ def _inverse_amount(scaled_value: float) -> float:
     return float(scaled_value * (col_max - col_min) + col_min)
 
 
-# ---------------------------------------------------------------------------
 # Helper: align a DataFrame to exactly the features a model expects
-# ---------------------------------------------------------------------------
 def _align(model, df: pd.DataFrame) -> pd.DataFrame:
     """Return a copy of df with exactly the columns the model was trained on."""
     if not hasattr(model, 'feature_names_in_'):
@@ -92,9 +84,7 @@ def _align(model, df: pd.DataFrame) -> pd.DataFrame:
     return tmp[expected]
 
 
-# ---------------------------------------------------------------------------
 # Public API
-# ---------------------------------------------------------------------------
 def process_and_predict(customer_data: dict, transaction_data: dict) -> dict:
     """
     Merge customer + transaction dicts, run the full preprocessing pipeline,
@@ -130,15 +120,11 @@ def process_and_predict(customer_data: dict, transaction_data: dict) -> dict:
     if model_iso is None:
         return result   # Models not trained / loaded yet
 
-    # ------------------------------------------------------------------
     # 1. Merge into a single-row DataFrame
-    # ------------------------------------------------------------------
     combined = {**customer_data, **transaction_data}
     df = pd.DataFrame([combined])
 
-    # ------------------------------------------------------------------
     # 2. Encode text columns with the fitted LabelEncoders
-    # ------------------------------------------------------------------
     if encoders:
         for col in TEXT_COLUMNS:
             if col in df.columns and col in encoders:
@@ -148,14 +134,10 @@ def process_and_predict(customer_data: dict, transaction_data: dict) -> dict:
                     # Unseen category → assign -1 (out-of-distribution signal)
                     df[col] = -1
 
-    # ------------------------------------------------------------------
     # 3. Feature engineering (Age, Hour, ratios, etc.)
-    # ------------------------------------------------------------------
     df = extract_features(df)
 
-    # ------------------------------------------------------------------
     # 4. Drop raw ID / timestamp columns not used as model features
-    # ------------------------------------------------------------------
     for col in _COLS_TO_DROP:
         if col in df.columns:
             df = df.drop(columns=[col])
@@ -166,41 +148,50 @@ def process_and_predict(customer_data: dict, transaction_data: dict) -> dict:
 
     df = df.fillna(0)
 
-    # ------------------------------------------------------------------
     # 5. Scale numeric columns with the fitted scaler
-    # ------------------------------------------------------------------
     if scaler:
         available = [c for c in _COLS_TO_SCALE if c in df.columns]
         if available:
             df[available] = scaler.transform(df[available])
 
-    # ------------------------------------------------------------------
     # 6. Run each model on its expected feature subset
-    # ------------------------------------------------------------------
     # --- Isolation Forest ---
-    p_iso = model_iso.predict(_align(model_iso, df))[0]
-    is_fraud_iso = int(p_iso <= 0)   # -1 → anomaly
+    # decision_function: <0 is anomaly. The more negative, the more anomalous.
+    iso_score = model_iso.decision_function(_align(model_iso, df))[0]
+    import math
+    prob_iso = 1.0 / (1.0 + math.exp(iso_score * 5))
+    is_fraud_iso = int(prob_iso > 0.5)
 
     # --- RF Regressor: predict normal spend, inverse-transform to VND, compare ---
     raw_amount        = float(combined.get('Transaction amount', 0))
     p_rf_reg_scaled   = model_rf_reg.predict(_align(model_rf_reg, df))[0]
-    p_rf_reg          = _inverse_amount(p_rf_reg_scaled)   # now in real VND
-    is_fraud_rfr      = int(raw_amount > p_rf_reg * 3)
+    p_rf_reg          = max(_inverse_amount(p_rf_reg_scaled), 1.0)   # prevent div0
+    ratio = raw_amount / p_rf_reg
+    # if ratio > 3, fraud. Map ratio to prob smoothly.
+    prob_rfr = min(ratio / 5.0, 0.99) if ratio >= 1 else 0.05
+    is_fraud_rfr = int(prob_rfr > 0.6) # because ratio=3 -> prob=0.6
 
     # --- RF Classifier ---
-    p_rf         = model_rf.predict(_align(model_rf, df))[0]
-    is_fraud_rfc = int(p_rf == 1)
+    if hasattr(model_rf, "predict_proba"):
+        prob_rfc = float(model_rf.predict_proba(_align(model_rf, df))[0][1])
+    else:
+        p_rf = model_rf.predict(_align(model_rf, df))[0]
+        prob_rfc = 0.95 if p_rf == 1 else 0.05
+    is_fraud_rfc = int(prob_rfc > 0.5)
 
-    # ------------------------------------------------------------------
     # 7. Majority vote (≥ 2 of 3 models flag fraud → fraud)
-    # ------------------------------------------------------------------
     fraud_score = is_fraud_iso + is_fraud_rfr + is_fraud_rfc
     result["is_fraud"]  = bool(fraud_score >= 2)
     result["predicted_amount"] = round(float(p_rf_reg), 2)
+    
+    # Clip probabilities so they are not exactly 0.0 or 1.0 (e.g. 0.01 to 0.99)
+    def clip(val):
+        return max(0.01, min(0.99, float(val)))
+
     result["votes"] = {
-        "isolation_forest":        is_fraud_iso,
-        "random_forest_regressor": is_fraud_rfr,
-        "random_forest_classifier": is_fraud_rfc,
+        "isolation_forest":        clip(prob_iso),
+        "random_forest_regressor": clip(prob_rfr),
+        "random_forest_classifier": clip(prob_rfc),
     }
 
     return result

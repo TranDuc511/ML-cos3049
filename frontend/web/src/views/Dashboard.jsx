@@ -21,10 +21,10 @@ const HourTooltip = ({ active, payload, label }) => {
 };
 
 const Dashboard = () => {
-  const [summary, setSummary]   = useState({ total_transactions: 0, fraud_count: 0, safe_count: 0, fraud_rate: 0 });
+  const [summary, setSummary] = useState({ total_transactions: 0, fraud_count: 0, safe_count: 0, fraud_rate: 0 });
   const [hourData, setHourData] = useState([]);
   const [trendData, setTrendData] = useState([]);
-  const [distData, setDistData]   = useState([]);
+  const [distData, setDistData] = useState([]);
   const [lastUpdated, setLastUpdated] = useState(null);
   const [isLive, setIsLive] = useState(true);
 
@@ -63,8 +63,8 @@ const Dashboard = () => {
   return (
     <div style={{ padding: '4px 0' }}>
 
-      {/* ── Live indicator bar ── */}
-      <div style={liveBarStyle}>
+      {/* ── Live indicator bar (hidden) ── */}
+      {/* <div style={liveBarStyle}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           <span style={{ ...dotStyle, background: isLive ? '#22c55e' : '#9ca3af' }} />
           <span style={{ fontSize: '0.82rem', fontWeight: 600, color: '#374151' }}>
@@ -84,14 +84,14 @@ const Dashboard = () => {
             ↻ Refresh
           </button>
         </div>
-      </div>
+      </div> */}
 
       {/* ── Metric Cards ── */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16, marginBottom: 20 }}>
-        <MetricCard label="Transactions Analyzed" value={summary.total_transactions.toLocaleString()} color="#2563eb" icon="📊" />
-        <MetricCard label="Safe Transactions"      value={summary.safe_count.toLocaleString()}        color="#22c55e" icon="✅" />
-        <MetricCard label="Fraud Detected"         value={summary.fraud_count.toLocaleString()}       color="#ef4444" icon="⚠️" />
-        <MetricCard label="Fraud Rate"             value={`${summary.fraud_rate}%`}                   color={rateColor} icon="📈" />
+        <MetricCard label="Transactions Analyzed" value={summary.total_transactions.toLocaleString()} color="#2563eb"  />
+        <MetricCard label="Safe Transactions" value={summary.safe_count.toLocaleString()} color="#22c55e"  />
+        <MetricCard label="Fraud Detected" value={summary.fraud_count.toLocaleString()} color="#ef4444" />
+        <MetricCard label="Fraud Rate" value={`${summary.fraud_rate}%`} color={rateColor} />
       </div>
 
       {/* ── Charts Grid ── */}
@@ -139,17 +139,16 @@ const Dashboard = () => {
           <ResponsiveContainer width="100%" height={220}>
             <BarChart data={distData} margin={{ top: 4, right: 8, left: -10, bottom: 0 }}>
               <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f3f4f6" />
-              <XAxis dataKey="range" tick={{ fontSize: 12 }} />
+              <XAxis dataKey="range" xAxisId={0} tick={{ fontSize: 12 }} />
+              <XAxis dataKey="range" xAxisId={1} hide />
               <YAxis allowDecimals={false} tick={{ fontSize: 11 }} />
               <Tooltip contentStyle={tooltipStyle} />
-              <Bar dataKey="count" name="Count" radius={[4, 4, 0, 0]} maxBarSize={80}>
-                {distData.map((_, i) => (
-                  <Cell key={i} fill={['#6366f1','#3b82f6','#22c55e','#f59e0b','#ef4444'][i % 5]} />
-                ))}
-              </Bar>
+              <Legend wrapperStyle={{ fontSize: '0.8rem' }} />
+              <Bar dataKey="clean" xAxisId={0} name="Clean" fill="#93c5fd" radius={[4, 4, 0, 0]} maxBarSize={80} />
+              <Bar dataKey="fraud" xAxisId={1} name="Fraud" fill="rgba(239, 68, 68, 0.8)" radius={[4, 4, 0, 0]} maxBarSize={80} />
             </BarChart>
           </ResponsiveContainer>
-          {distData.every(d => d.count === 0) && <EmptyNote />}
+          {distData.length > 0 && distData.every(d => d.clean === 0 && d.fraud === 0) && <EmptyNote />}
         </div>
       </div>
     </div>
